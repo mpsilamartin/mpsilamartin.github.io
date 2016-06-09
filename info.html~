@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<meta http-equiv="Content-Language" content="fr">
+  	<meta name=viewport content="width=device-width, initial-scale=1">
+  	<title> MPSI 2 La Martinière Monplaisir </title>
+  	<style type="text/css" media="screen">@import url(css/style.css);</style>
+	<link rel="icon" href="img/favicon.png" type="image/png" />
+        
+</head>
+
+
+<body id="fondinfo">
+<html>
+    <head>
+        
+    </head>
+    <body>
+       
+<div id="nav">
+<ul id="menu">
+  <li><a href="orga.html"> Orga </a> </li><!--
+  
+  
+--><li><a href="maths.html"> Maths </a>
+    <ul>
+      <li><a href="maths/cours.html"> Cours </a></li>
+      <li><a href="maths/cdt.html"> Cahier de textes </a></li>
+      <li><a href="maths/colles.html"> Colles </a></li>
+      <li><a href="maths/TD.html"> TD </a></li>
+      <li><a href="maths/DM.html"> DM </a></li>
+      <li><a href="maths/DS.html"> DS </a></li>
+      <li><a href="maths/interros.html"> Interros </a></li>
+    </ul>
+  </li><!--
+  
+ 
+--><li><a href="http://mpsi2lamartin.net16.net/physique.html"> Physique</a>
+    <ul>
+      <li><a href="http://mpsi2lamartin.net16.net/physique/Programme-physique&chimie-MPSI-2013.pdf"> Programmes officiels </a></li>
+      <li><a href="http://mpsi2lamartin.net16.net/physique/catexte.pdf" target="_blank"> Cahier de textes </a></li>
+      <li><a href="http://mpsi2lamartin.net16.net/physique/colles.html"> Programmes de colles</a></li>
+      <li><a href="http://mpsi2lamartin.net16.net/physique/resultats.html"> Résultats DS </a></li>
+      <li><a href="http://mpsi2lamartin.net16.net/physique/documents.html"> Documents </a></li>
+      <li><a href="http://mpsi2lamartin.net16.net/physique/Animations.html"> Animations </a></li>
+    </ul>
+  </li><!--
+  
+  
+--><li><a href="../info.html" id="actif3"> Info </a>
+    <ul>
+      <li><a href="info/cours.html"> Cours </a></li>
+      <li><a href="info/cdt.html"> Cahier de textes </a></li>
+      <li><a href="info/TP.html"> TP </a></li>
+      <li><a href="info/DM.html"> DM </a></li>
+      <li><a href="info/DS.html"> DS </a></li>
+      <li><a href="info/envoi.html"> Envoi de fichiers </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+       
+       
+
+<div id="hideoverflow">
+    <div id="outer">
+        <div id="inner">
+        <div id="contenu">
+        
+        <table>	<tbody>
+     <tr>	<td> &bull; <a id="ipt" href="info/cours.html"> Cours </a></td></tr> 
+     <tr>	<td> &bull; <a id="ipt" href="info/cdt.html"> Cahier de textes </a></td></tr> 
+     <tr>	<td> &bull; <a id="ipt" href="info/TP.html"> TP </a></td></tr> 
+     <tr>	<td> &bull; <a id="ipt" href="info/DM.html"> DM </a></td></tr> 
+     <tr>	<td> &bull; <a id="ipt" href="info/DS.html"> DS </a></td></tr> 
+     <tr>	<td> &bull; <a id="ipt" href="info/envoi.html"> Envoi de fichiers </a></td></tr> 
+        
+	</tbody></table>
+        
+        
+	<br><br>
+	
+      Cette année, les travaux pratiques en informatique se feront uniquement sous le système d'exploitation Linux (sous lequel travaillent d'ailleurs vos enseignants).
+
+Plusieurs raisons à celà.
+<ul>
+  <li>C'est un système d'exploitation libre et gratuit, sous lequel l'usage des logiciels (libres) tels que Python est parfaitement adapté.</li>
+  <li>D'expérience, l'installation et l'usage de certains modules de Python est compliqué, voire impossible en pratique, sous Windows.</li>
+  <li>Pédagogiquement, manipuler Linux permet d'appréhender beaucoup de notions informatiques plus directement que sous Windows, notamment.</li>
+</ul>
+
+Pour celà, nous vous recommandons très fortement de pouvoir travailler sous Linux sur votre ordinateur personnel. Il existe plusieurs distributions de Linux, la plus connue et 
+grand public est <a href="https://www.ubuntu-fr.org/" id="lien1">Ubuntu</a>, sa version <a href="http://xubuntu.org/" id="lien1">Xubuntu</a> est légère et très pratique. Une simple 
+recherche sur votre moteur de recherche préféré vous permettra de la télécharger.
+
+Ensuite, si Linux n'est pas votre système d'exploitation habituel, vous avez plusieurs solutions à votre disposition.
+
+<ul>
+  <li>Installer Linux en dual boot, c'est-à-dire en parallèle de votre autre système habituel avec un choix à faire à chaque démarrage. 
+  C'est malheureusement impossible sous Mac, et presque impossible depuis Windows 8. C'est la solution la plus pratique (le système Linux est pérenne), mais un peu technique. Il 
+  faut notamment repartitionner le disque dur : il est impératif de sauvarder ses données avant de se lancer dedans.</li>
+  <li>Installer Linux sur un clef USB bootable. Pour cela, une distribution légère est recommandée, comme Xubuntu. 
+  Il faut alors indiquer au BIOS de l'ordinateur de démarrer en priorité à partir d'un clef USB (par rapport au disque dur habituel). 
+  À partir de Windows 8, la nouvelle gestion du BIOS rend cette méthode compliquée.</li>
+  <li>Travailler sous machine virtuelle. C'est la méthode la plus simple à mettre en oeuvre et qui devrait fonctionner dans tous les cas. Dans 
+  votre système d'exploitation habituel,  il suffit d'installer un logicielle comme <a href="https://www.virtualbox.org/"  id="lien1">VirtualBox</a> (gratuit). 
+  Ce dernier permet d'émuler un autre système d'exploitation, dans lequel vous pourrez travailler de manière transparente, bien qu'un peu ralentie parfois. Il suffit pour cela de réserver 
+  suffisamment d'espace disque lors de l'installation du logiciel.</li>
+</ul>
+
+Nous sommes à votre disposition pour vous aider à mettre en oeuvre une de ces trois méthodes.   
+   
+</div>
+</div>
+</div>
+</div> 
+</body>
+</html>

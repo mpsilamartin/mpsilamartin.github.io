@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<meta http-equiv="Content-Language" content="fr">
+  	<meta name=viewport content="width=device-width, initial-scale=1">
+  	<title> MPSI 2 La Martinière Monplaisir </title>
+  	<style type="text/css" media="screen">@import url(css/style.css);</style>
+	<link rel="icon" href="img/favicon.png" type="image/png" />
+        
+</head>
+
+
+<body id="fondphysique">
+<html>
+    <head>
+        
+    </head>
+    <body>
+       
+<div id="nav">
+<ul id="menu">
+  <li><a href="http://mpsi2lamartin.fr/orga.html"> Orga </a> </li><!--
+  
+  
+--><li><a href="http://mpsi2lamartin.fr/maths.html"> Maths </a>
+    <ul>
+      <li><a href="http://mpsi2lamartin.fr/maths/cours.html"> Cours </a></li>
+      <li><a href="http://mpsi2lamartin.fr/maths/cdt.html"> Cahier de textes </a></li>
+      <li><a href="http://mpsi2lamartin.fr/maths/colles.html"> Colles </a></li>
+      <li><a href="http://mpsi2lamartin.fr/maths/TD.html"> TD </a></li>
+      <li><a href="http://mpsi2lamartin.fr/maths/DM.html"> DM </a></li>
+      <li><a href="http://mpsi2lamartin.fr/maths/DS.html"> DS </a></li>
+      <li><a href="http://mpsi2lamartin.fr/maths/interros.html"> Interros </a></li>
+    </ul>
+  </li><!--
+  
+  
+--><li><a id="actif2" color=#6DB66C> Physique </a>
+    <ul>
+      <li><a href="physique/Programme-physique&chimie-MPSI-2013.pdf"> Programmes officiels </a></li>
+      <li><a href="physique/catexte.pdf" target="_blank"> Cahier de textes </a></li>
+      <li><a href="physique/colles.html"> Programmes de colles</a></li>
+      <li><a href="physique/resultats.html"> Résultats DS </a></li>
+      <li><a href="physique/documents.html"> Documents </a></li>
+      <li><a href="physique/Animations.html"> Animations </a></li>
+    </ul>
+  </li><!--
+  
+  
+--><li><a href="http://mpsi2lamartin.fr/info.html"> Info </a>
+    <ul>
+      <li><a href="http://mpsi2lamartin.fr/info/cours.html"> Cours </a></li>
+      <li><a href="http://mpsi2lamartin.fr/info/cdt.html"> Cahier de textes </a></li>
+      <li><a href="http://mpsi2lamartin.fr/info/TP.html"> TP </a></li>
+      <li><a href="http://mpsi2lamartin.fr/info/DM.html"> DM </a></li>
+      <li><a href="http://mpsi2lamartin.fr/info/DS.html"> DS </a></li>
+      <li><a href="http://mpsi2lamartin.fr/info/envoi.html"> Envoi de fichiers </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+        
+          
+<div id="hideoverflow">
+    <div id="outer">
+        <div id="inner">
+        <div id="contenu">
+        
+     <table>	<tbody>
+     <tr>	<td> &bull; <a id="phys" href="physique/Programme-physique&chimie-MPSI-2013.pdf"> Programmes officiels </a></td></tr> 
+     <tr>	<td> &bull; <a  id="phys" href="http://mpsi2lamartin.fr/info/cdt.html"> Cahier de textes </a></td></tr> 
+     <tr>	<td> &bull; <a  id="phys" href="physique/colles.html"> Programmes de colles</a></td></tr> 
+     <tr>	<td> &bull; <a  id="phys" href="physique/resultats.html"> Résultats DS </a></td></tr> 
+     <tr>	<td> &bull; <a  id="phys" href="physique/documents.html"> Documents </a></td></tr> 
+     <tr>	<td> &bull; <a  id="phys" href="physique/Animations.html"> Animations </a></td></tr> 
+        
+	</tbody></table>
+			</div>
+		</div>
+	</div>
+</div>     
+   
+</body>
+</html>

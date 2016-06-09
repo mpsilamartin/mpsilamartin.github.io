@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<meta http-equiv="Content-Language" content="fr">
+  	<meta name=viewport content="width=device-width, initial-scale=1">
+  	<title> MPSI 2 La Martinière Monplaisir </title>
+  	<style type="text/css" media="screen">@import url(../css/style.css);</style>
+	<link rel="icon" href="../img/favicon.png" type="image/png" />
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function(){
+               $('#targetinfo').load('menuinfo.html');
+           });
+     		</script>   
+	
+</head>
+
+
+<body id="fondinfo">
+
+<div id="targetinfo">
+
+</div>
+
+
+<div id="hideoverflow">
+    <div id="outer">
+        <div id="inner">
+        <div id="contenu">
+        
+<font style="font-weight: bold ;"> Les cours :</font><br><br>
+	
+	<table>
+	<tbody>		
+	<tr><td> &bull; <a id="ipt" href="cours/14-bd-sql.poly.pdf" target="_blank"> Chapitre XIV : Bases de données, deuxième partie. &nbsp;</a> </td></tr>
+	<tr><td> &bull; <a id="ipt" href="cours/13-bd.poly.pdf" target="_blank"> Chapitre XIII : Bases de données, première partie. &nbsp;</a> </td></tr>
+	<tr><td> &bull; <a id="ipt" href="cours/12-systemes-lineaires.poly.pdf" target="_blank"> Chapitre XII : Résolution numérique de systèmes linéaires. &nbsp;</a> </td></tr>
+	<tr><td> &bull; <a id="ipt" href="cours/11-resol-eq.poly.pdf" target="_blank"> Chapitre XI : Résolution numérique d'équations. &nbsp;</a> </td></tr>	
+	<tr><td> &bull; <a id="ipt" href="cours/10-eq-diff2.poly.pdf" target="_blank"> Chapitre X : Équations différentielles, seconde partie. &nbsp;</a> </td></tr>	
+	<tr><td> &bull; <a id="ipt" href="cours/09-eq-diff-euler.poly.pdf" target="_blank"> Chapitre IX : Équations différentielles, première partie. &nbsp;</a> </td></tr>	
+	<tr><td> &bull; <a id="ipt" href="cours/08-complexite.poly.pdf" target="_blank"> Chapitre VIII : Complexité. &nbsp;</a> </td></tr>	
+	<tr><td> &bull; <a id="ipt" href="cours/07-nombres.poly.pdf" target="_blank"> Chapitre VII : Représentation des nombres. &nbsp;</a> </td></tr>	
+	<tr><td> &bull; <a id="ipt" href="cours/06-fichiers.poly.pdf" target="_blank"> Chapitre VI : Fichiers. &nbsp;</a> </td></tr>	
+	<tr><td> &bull; <a id="ipt" href="cours/05-chaines.poly.pdf" target="_blank"> Chapitre V : Chaînes. &nbsp;</a> </td></tr>	
+	<tr><td> &bull; <a id="ipt" href="cours/04-listes.poly.pdf" target="_blank"> Chapitre IV : Listes Python. &nbsp;</a> </td></tr>
+	<tr><td> &bull; <a id="ipt" href="cours/03-if-for-while.poly.pdf" target="_blank"> Chapitre III : If, for, while. &nbsp;</a> </td></tr>
+	<tr><td> &bull; <a id="ipt" href="cours/02-expressions-types-variables.poly.pdf" target="_blank"> Chapitre II : Expressions, types, variables. &nbsp;</a> </td></tr>
+	<tr><td> &bull; <a id="ipt" href="cours/01-ordi-os.poly.pdf" target="_blank"> Chapitre I : Ordinateur, système d'exploitation. &nbsp;</a> </td></tr>
+	
+
+	</tbody></table>	
+			</div>
+		</div>
+	</div>
+</div>
+
+</html>

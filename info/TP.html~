@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<meta http-equiv="Content-Language" content="fr">
+  	<meta name=viewport content="width=device-width, initial-scale=1">
+  	<title> MPSI 2 La Martinière Monplaisir </title>
+  	<style type="text/css" media="screen">@import url(../css/style.css);</style>
+	<link rel="icon" href="../img/favicon.png" type="image/png" />
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function(){
+               $('#targetinfo').load('menuinfo.html');
+           });
+     		</script>   
+	
+</head>
+
+
+<body id="fondinfo">
+
+<div id="targetinfo">
+
+</div>
+
+
+
+
+<div id="hideoverflow">
+    <div id="outer">
+        <div id="inner">
+        <div id="contenu">
+	<br>
+	<font style="font-weight: bold ;"> Feuilles de travaux pratiques :</font><br><br><br>
+	<table>
+	<tbody>
+
+
+
+<tr><td> Projet de fin d'année :  </td>
+		<td>&bull; <a id="ipt" href="TP/TPprojet.pdf" target="_blank"> présentation et consignes &nbsp;</a></td>
+		
+<tr><td> TP n° 14 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP14.pdf" target="_blank"> Bases de données et langage SQL &nbsp;</a></td>
+		<td>&bull; <a id="ipt" href="TP/peche.sqlite" target="_blank"> peche.sqlite &nbsp;</a></td>
+		
+<tr><td> TP n° 13 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP13.pdf" target="_blank"> Décomposition LU &nbsp;</a></td>
+		<td>&bull; <a id="ipt" href="TP/test_tp13.py" target="_blank"> Fichier de test &nbsp;</a></td>
+		<td>&bull; <a id="ipt" href="TP/random_matrix.py" target="_blank"> random_matrix.py &nbsp;</a></td>
+
+<tr><td> TP n° 12 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP12.pdf" target="_blank"> Régression et cinétique chimique &nbsp;</a></td>
+		<td>&bull; <a id="ipt" href="TP/fig_ex_tracefun.png" target="_blank"> fig_ex_tracefun &nbsp;</a></td>
+		<td>&bull; <a id="ipt" href="TP/fig_ex_ajustement.png" target="_blank"> fig_ex_ajustement &nbsp;</a></td>
+
+<tr><td> TP n° 11 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP11.pdf" target="_blank"> Équations différentielles et pendule simple &nbsp;</a></td>
+
+<tr><td> TP n° 10 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP10.pdf" target="_blank"> Calcul approché d'intégrale et ondelettes &nbsp;</a></td>
+		<td>&bull; <a id="ipt" href="TP/test_tp10.py" target="_blank"> Fichier de test &nbsp;</a></td>
+
+<tr><td> TP n° 9 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP09.pdf" target="_blank"> Exercices de révision &nbsp;</a></td>
+		<td>&bull; <a id="ipt" href="TP/test_tp09.py" target="_blank"> Fichier de test &nbsp;</a></td>
+	</tr><tr><td>
+		</td>
+	<td>&bull; <a id="ipt" href="TP/exemple1.txt" target="_blank"> exemple1.txt &nbsp;</td>
+	<td>&bull; <a id="ipt" href="TP/exemple2.txt" target="_blank"> exemple2.txt &nbsp;</td>
+		
+<tr><td> TP n° 8 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP08.pdf" target="_blank"> Manipulation de fichiers et traitement d'images &nbsp;</a></td>
+		</tr>
+		<tr><td>
+		</td>
+	<td>&bull; <a id="ipt" href="TP/degrade.pgm" target="_blank"> degrade.pgm &nbsp;</td>
+	<td>&bull; <a id="ipt" href="TP/joconde.pgm" target="_blank"> joconde.pgm &nbsp;</td>
+	</tr><tr><td>
+		</td>
+	<td>&bull; <a id="ipt" href="TP/image_noire.py" target="_blank"> image_noire.py &nbsp;</td>
+	<td>&bull; <a id="ipt" href="TP/dim.py" target="_blank"> dim.py &nbsp;</td>
+	<td>&bull; <a id="ipt" href="TP/lit_valeurs.py" target="_blank"> lit_valeurs.py &nbsp;</td>
+	</tr>
+	
+<tr><td> TP n° 7 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP07.pdf" target="_blank"> Manipulation de fichiers &nbsp;</a></td>
+		</tr>
+		<tr><td>
+		</td>
+	<td>&bull; <a id="ipt" href="TP/desdichado.txt" target="_blank"> desdichado.txt &nbsp;</td>
+	<td>&bull; <a id="ipt" href="TP/body.txt" target="_blank"> body.txt &nbsp;</td>
+	</tr>
+	
+<tr><td> TP n° 6 :  </td>
+		<td>&bull; <a id="ipt" href="TP/TP06.pdf" target="_blank"> Algorithmes sur les tableaux &nbsp;</a></td>
+		
+<tr><td> TP n° 5 :  </td>
+		<td> &bull; <a id="ipt" href="TP/TP05.pdf" target="_blank"> tracé de fonction et synthèse de Fourier &nbsp;</a></td>
+		</tr>
+		<tr><td>
+		</td>
+	<td>&bull; <a id="ipt" href="TP/tp05_ex_sin.py" target="_blank"> tp05_ex_sin.py &nbsp;</td>
+	<td>&bull; <a id="ipt" href="TP/tp05_ex_complet.py" target="_blank"> tp05_ex_complet.py &nbsp;</td>
+	</tr>
+	
+<tr><td> TP n° 3 - 4 :  </td>
+		<td> &bull; <a id="ipt" href="TP/TP03-04.pdf" target="_blank"> Expressions, variables, fonctions &nbsp;</a> </td>
+	<td>&bull; <a id="ipt" href="TP/test_tp04.py" target="_blank"> test_tp04.py &nbsp;</td>
+	</tr>
+	
+<tr><td> TP n° 2 :  </td>
+		<td> &bull; <a id="ipt" href="TP/TP02.pdf" target="_blank"> Linux et shell &nbsp;</a></td>
+		</tr>
+		<tr>
+	<td></td><td>&bull; <a id="ipt" href="TP/toto.sh" target="_blank"> toto.sh &nbsp;</td>
+	<td>&bull; <a id="ipt" href="TP/titi.py" target="_blank"> titi.py &nbsp;</td>
+	</tr>
+	
+<tr><td> TP n° 1 :  </td>
+		<td> &bull; <a id="ipt" href="TP/TP01.pdf" target="_blank"> Démontage d'un PC &nbsp;</a> </td></tr>
+	
+	
+</tbody></table>
+			</div>
+		</div>
+	</div>
+</div>
+   
+</body>
+</html>
