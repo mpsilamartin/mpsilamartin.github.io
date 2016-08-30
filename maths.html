@@ -5,73 +5,62 @@
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   	<meta http-equiv="Content-Language" content="fr">
   	<meta name=viewport content="width=device-width, initial-scale=1">
-  	<title> MPSI 2 La Martinière Monplaisir </title>
+  	<title> MPSI La Martinière Monplaisir </title>
   	<style type="text/css" media="screen">@import url(css/style.css);</style>
 	<link rel="icon" href="img/favicon.png" type="image/png" />
+      <script type="text/javascript" src="script/jquery-1.5.1.min.js"></script>
         
+     		
+       	 <script type="text/javascript">
+           $(document).ready(function(){
+               $('#target-onglet-orga').load('menus/onglet-orga.html');
+           });
+     		</script>  
+     		
+     		
+       	 <script type="text/javascript">
+           $(document).ready(function(){
+               $('#target-onglet-actif-maths').load('menus/onglet-actif-maths.html');
+           });
+     		</script>  
+     		
+     		
+        <script type="text/javascript">
+           $(document).ready(function(){
+               $('#target-onglet-info').load('menus/onglet-info.html');
+           });
+     		</script> 
+     		
+     		
+        <script type="text/javascript">
+           $(document).ready(function(){
+               $('#target-onglet-physique').load('menus/onglet-physique.html');
+           });
+     		</script> 
+     		
+     		
+        <script type="text/javascript">
+           $(document).ready(function(){
+               $('#target-onglet-tipe').load('menus/onglet-tipe.html');
+           });
+     		</script> 
 </head>
 
 
 <body id="fondmaths">
        
+
 <div id="nav">
 <ul  id="menu"  >
 
-	<script type="text/javascript" src="script/jquery-1.5.1.min.js"></script>
-        <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-orga').load('https://mpsilamartin.github.io/menus/onglet-orga.html');
-           });
-     		</script> 
-  
-  
-  <li><a id="actif1"> Maths </a>
-    <ul>
-      <li><a href="maths/cours.html"> Cours </a></li>
-      <li><a href="maths/colles.html"> Colles </a></li>
-      <li><a href="maths/TD.html"> TD </a></li>
-      <li><a href="maths/DM.html"> DM </a></li>
-      <li><a href="maths/DS.html"> DS </a></li>
-      <li><a href="maths/mpsi1.html"> MPSI 1 </a></li>
-      <li><a href="maths/mpsi2.html"> MPSI 2 </a></li>
-    </ul>
-  </li><!--
-  
-  
---><li><a href="http://mpsi2lamartin.net16.net/physique.html"> Physique</a>
-    <ul>
-      <li><a href="http://mpsi2lamartin.net16.net/physique/Programme-physique&chimie-MPSI-2013.pdf"> Programmes officiels </a></li>
-      <li><a href="http://mpsi2lamartin.net16.net/physique/catexte.pdf" target="_blank"> Cahier de textes </a></li>
-      <li><a href="http://mpsi2lamartin.net16.net/physique/colles.html"> Programmes de colles</a></li>
-      <li><a href="http://mpsi2lamartin.net16.net/physique/resultats.html"> Résultats DS </a></li>
-      <li><a href="http://mpsi2lamartin.net16.net/physique/documents.html"> Documents </a></li>
-      <li><a href="http://mpsi2lamartin.net16.net/physique/Animations.html"> Animations </a></li>
-    </ul>
-  </li>
-  
-  
-<script type="text/javascript" src="script/jquery-1.5.1.min.js"></script>
-        <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-info').load('https://mpsilamartin.github.io/menus/onglet-info.html');
-           });
-     		</script> 
-  
-  
-  <li><a href="tipe.html"> Tipe </a>
-    <ul>
-    	<li><a href="TIPE/presentation.pdf" target="_blank"> Présentation TIPE &nbsp;</a></td></tr>
-	 	<!--<li><a href="https://docs.google.com/spreadsheets/d/1gUkdGtJgSB2P4Nh7SniYF3DwO1R-F1DXVuspjvfRWwo/edit?pref=2&pli=1#gid=0" target="_blank"> 
-			Groupes &nbsp;</a></li>
-		<li><a href="https://docs.google.com/spreadsheets/d/1gUkdGtJgSB2P4Nh7SniYF3DwO1R-F1DXVuspjvfRWwo/edit?pref=2&pli=1#gid=1055610722" target="_blank"> 
-			Soutenances &nbsp;</a></li>-->
-    </ul>
-  </li>
-  
+    <li id="target-onglet-orga"></li>   
+    <li id="target-onglet-actif-maths"></li>   
+    <li id="target-onglet-physique"></li>   
+    <li id="target-onglet-info"></li>  
+    <li id="target-onglet-tipe"></li>    
+
 </ul>
 </div>
-      
-
         
 <div id="hideoverflow">
     <div id="outer">
