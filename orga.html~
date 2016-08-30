@@ -9,6 +9,13 @@
   	<style type="text/css" media="screen">@import url(css/style.css);</style>
 	<link rel="icon" href="img/favicon.png" type="image/png" />
         
+<script type="text/javascript" src="script/jquery-1.5.1.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function(){
+               $('#target-onglet-info').load('https://mpsilamartin.github.io/menus/onglet-info.html');
+           });
+</script>         
+        
 </head>
 
 
@@ -55,13 +62,11 @@
     </ul>
   </li>  
   
-<script type="text/javascript" src="script/jquery-1.5.1.min.js"></script>
-        <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-info').load('https://mpsilamartin.github.io/menus/onglet-info.html');
-           });
-</script> 
+
   
+<li id="target-onglet-info">
+
+</li>
   
 <li><a href="tipe.html"> Tipe </a>
     <ul>
