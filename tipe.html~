@@ -12,11 +12,15 @@
 </head>
 
 
-<body id="fondmaths">
+<body id="fondorga">
+<html>
+    <head>
+        
+    </head>
+    <body>
        
 <div id="nav">
-<ul  id="menu"  >
-
+<ul id="menu">
 	<li><a href="orga.html" > Orga </a> <ul>
 		<li><a href="edt_S2.pdf" target="_blank"> Emploi du temps &nbsp;</a> </li>
 		<li><a href="coll_S2.pdf" target="_blank"> Colloscope &nbsp;</a></li>
@@ -25,17 +29,8 @@
     </ul></li><!--
   
   
-  --><li><a id="actif1"> Maths </a>
-    <ul>
-      <li><a href="maths/cours.html"> Cours </a></li>
-      <li><a href="maths/colles.html"> Colles </a></li>
-      <li><a href="maths/TD.html"> TD </a></li>
-      <li><a href="maths/DM.html"> DM </a></li>
-      <li><a href="maths/DS.html"> DS </a></li>
-      <li><a href="maths/mpsi1.html"> MPSI 1 </a></li>
-      <li><a href="maths/mpsi2.html"> MPSI 2 </a></li>
-    </ul>
-  </li><!--
+
+      <li><a href="https://mpsilamartin.github.io/maths/mpsi1.html"> MPSI 1 </a></li>
   
   
 --><li><a href="http://mpsi2lamartin.net16.net/physique.html"> Physique</a>
@@ -59,10 +54,11 @@
       <li><a href="info/DS.html"> DS </a></li>
       <li><a href="info/envoi.html"> Envoi de fichiers </a></li>
     </ul>
-  </li><!--
+  </li>
+  <!--
   
   
---><li><a href="tipe.html"> Tipe </a>
+--><li><a id="actif4"> Tipe </a>
     <ul>
     	<li><a href="TIPE/presentation.pdf" target="_blank"> Présentation TIPE &nbsp;</a></td></tr>
 	 	<!--<li><a href="https://docs.google.com/spreadsheets/d/1gUkdGtJgSB2P4Nh7SniYF3DwO1R-F1DXVuspjvfRWwo/edit?pref=2&pli=1#gid=0" target="_blank"> 
@@ -71,32 +67,51 @@
 			Soutenances &nbsp;</a></li>-->
     </ul>
   </li>
-  
 </ul>
 </div>
       
-
-        
 <div id="hideoverflow">
     <div id="outer">
         <div id="inner">
         <div id="contenu">
-	<font style="font-weight: bold ;"> Maths :</font><br>        
-     <table>	<tbody>
-     <tr>	<td> &bull; <a id="math" href="maths/cours.html"> Cours </a></td></tr> 
-     <tr>	<td> &bull; <a id="math" href="maths/colles.html"> Colles </a></td></tr> 
-     <tr>	<td> &bull; <a id="math" href="maths/TD.html"> TD </a></td></tr> 
-     <tr>	<td> &bull; <a id="math" href="maths/DM.html"> DM </a></td></tr> 
-     <tr>	<td> &bull; <a id="math" href="maths/DS.html"> DS </a></td></tr> 
-     <tr>	<td> &bull; <a id="math" href="maths/mpsi1.html"> MPSI 1 </a></td></tr>  
-     <tr>	<td> &bull; <a id="math" href="maths/mpsi2.html"> MPSI 2 </a></td></tr>  
-        
+	<font style="font-weight: bold ;"> TIPE :</font><br>
+	<table>
+	<tbody>
+	<tr><td> &bull; <a id="tip" href="TIPE/presentation.pdf" target="_blank"> Présentation TIPE &nbsp;</a></td></tr>
+	<!--<tr><td> &bull; <a id="tip" href="https://docs.google.com/spreadsheets/d/1gUkdGtJgSB2P4Nh7SniYF3DwO1R-F1DXVuspjvfRWwo/edit?pref=2&pli=1#gid=0" target="_blank"> 
+			Déclaration des groupes &nbsp;</a></li>
+	<tr><td> &bull; <a id="tip" href="https://docs.google.com/spreadsheets/d/1gUkdGtJgSB2P4Nh7SniYF3DwO1R-F1DXVuspjvfRWwo/edit?pref=2&pli=1#gid=1055610722" 
+			Inscription aux soutenances &nbsp;</a></li>-->
 	</tbody></table>
+	
 			</div>
 		</div>
 	</div>
-</div>
-   <div id="hideoverflow">
+</div>  
+         
+
+      
+<!--<div id="hideoverflow">
+    <div id="outer">
+        <div id="inner">
+        <div id="contenu">
+	<h3>Calendrier de rendu.</h3>
+<p>Vous devrez rendre :</p>
+<ul>
+  <li>un état de l'art de 800 mots maximum ;</li>
+  <li>cinq mots clefs en français ; </li>
+  <li>une bibliographie contenant au moins deux publications (livres, articles).</li>
+</ul>
+<p>Tout ceci est à remettre le 16 juin au plus tard à votre examinateur. </p>
+<p>Vous trouverez la liste des soutenances (horaires et examinateurs) sur le document en ligne. </p>
+<p>D'autre part, vous devez vous inscrire en tant que juré, avec les contraintes suivantes :</p>
+<ul>
+  <li>chaque étudiant doit participer au moins à quatre jurys par demi-journée ; </li>
+  <li>chaque jury doit être constitué d'au moins trois étudiants.</li>
+</ul>
+<p>Merci de vous inscrire rapidement sur le document en ligne, dès que les soutenances seront arrêtées. </p>-->
+
+<div id="hideoverflow">
     <div id="outer">
         <div id="inner">
         <div id="contenu">
@@ -118,5 +133,7 @@ Le thème de français - philosophie est : "Servitude et soumission", et les oeu
 		</div>
 	</div>
 </div>   
+        
+   
 </body>
 </html>

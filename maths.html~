@@ -84,12 +84,12 @@
 	<font style="font-weight: bold ;"> Maths :</font><br>        
      <table>	<tbody>
      <tr>	<td> &bull; <a id="math" href="maths/cours.html"> Cours </a></td></tr> 
+     <tr>	<td> &bull; <a id="math" href="maths/cdt.html"> Cahier de textes </a></td></tr> 
      <tr>	<td> &bull; <a id="math" href="maths/colles.html"> Colles </a></td></tr> 
      <tr>	<td> &bull; <a id="math" href="maths/TD.html"> TD </a></td></tr> 
      <tr>	<td> &bull; <a id="math" href="maths/DM.html"> DM </a></td></tr> 
      <tr>	<td> &bull; <a id="math" href="maths/DS.html"> DS </a></td></tr> 
-     <tr>	<td> &bull; <a id="math" href="maths/mpsi1.html"> MPSI 1 </a></td></tr>  
-     <tr>	<td> &bull; <a id="math" href="maths/mpsi2.html"> MPSI 2 </a></td></tr>  
+     <tr>	<td> &bull; <a id="math" href="maths/interros.html"> Interros </a></td></tr>   
         
 	</tbody></table>
 			</div>
