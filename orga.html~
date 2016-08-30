@@ -31,7 +31,7 @@
     </li><!--
   
   
---><li><a id="actif1"> Maths </a>
+--><li><a href="maths.html"> Maths </a>
     <ul>
       <li><a href="maths/cours.html"> Cours </a></li>
       <li><a href="maths/colles.html"> Colles </a></li>

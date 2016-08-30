@@ -17,15 +17,15 @@
 <div id="nav">
 <ul  id="menu"  >
 
-	<li><a href="orga.html" > Orga </a> <ul>
-		<li><a href="edt_S2.pdf" target="_blank"> Emploi du temps &nbsp;</a> </li>
-		<li><a href="coll_S2.pdf" target="_blank"> Colloscope &nbsp;</a></li>
-		<li><a href="groupes_S2.pdf" target="_blank"> Groupes &nbsp;</a></li>
-		<li><a href="calendrier_S2.pdf" target="_blank"> Calendrier &nbsp;</a></li>
-    </ul></li><!--
+	<script type="text/javascript" src="../script/jquery-1.5.1.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function(){
+               $('#target-onglet-orga').load('https://mpsilamartin.github.io/menus/onglet-orga.html');
+           });
+     		</script> 
   
   
-  --><li><a id="actif1"> Maths </a>
+  <li><a id="actif1"> Maths </a>
     <ul>
       <li><a href="maths/cours.html"> Cours </a></li>
       <li><a href="maths/colles.html"> Colles </a></li>
@@ -50,16 +50,18 @@
   </li><!--
   
   
---><li><a href="info.html"> Info </a>
+--><li><a href="../info.html" id="actif3"> Info </a>
     <ul>
       <li><a href="info/cours.html"> Cours </a></li>
-      <li><a href="info/cdt.html"> Cahier de textes </a></li>
       <li><a href="info/TP.html"> TP </a></li>
       <li><a href="info/DM.html"> DM </a></li>
       <li><a href="info/DS.html"> DS </a></li>
+      <li><a href="info/mpsi1.html"> MPSI 1 </a></li>
+      <li><a href="info/mpsi2.html"> MPSI 2 </a></li>
       <li><a href="info/envoi.html"> Envoi de fichiers </a></li>
     </ul>
-  </li><!--
+  </li>
+  <!--
   
   
 --><li><a href="tipe.html"> Tipe </a>
