@@ -1,0 +1,50 @@
+prenoms = ['Laura',
+	   'Clémentine',
+           'Solène',
+           'Donovan',
+           'Élodie',
+           'Ugo',
+           'Léna',
+           'Éloïse',
+           'Elien',
+           'Jean',
+           'Justine',
+           'Blaise',
+           'Romane',
+           'Luca',
+           'Diego',
+           'Jérémie',
+           'Oscar',
+           'Sarah',
+           'Damien',
+           'Estelle',
+           'Lucas',
+           'Judith',
+           'Nathanaël',
+           'Walid',
+           'Thamer',
+           'Guillaume',
+           'Mathieu',
+           'Nestor',
+           'Anne',
+           'Alexia',
+           'Alban',
+           'Adrien',
+           'Augustin',
+           'Maxime',
+           'Clémence',
+           'Grégory',
+           'Eliott',
+           'Jimmy',
+           'Theo',
+           'Remi',
+           'Mayeul',
+           'Samuel']
+
+for petitcoeur in prenoms:
+    print(petitcoeur + " aime les maths et l'info")
+
+
+def somme(n):
+    """Calcule 1+2+...+n"""
+
