@@ -1,3 +1,5 @@
+# Corrigé de l'exercice n°11 du chapitre 2
+
 def unite(a):
     """Chiffre des unités de a
        Précondition : a entier naturel"""
