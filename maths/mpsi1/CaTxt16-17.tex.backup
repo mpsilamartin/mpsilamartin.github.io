@@ -525,7 +525,6 @@ MPSI 1 La Martinière Monplaisir\\ 2016-2017
 % compagnie (début).\\
 % \bu\ Exercices : feuille n° 7, ex. 4, 5 et 7.\vspace{.4cm}\\
 %  
-% \noindent\textbf{Vendredi 06 novembre 2016 }\\
 % $\bullet$\ Cours : 5 - Un peu de physique.
 % \bu\ Exercices : feuille n° 7, ex. 3 (fin) et 4 (qu. 4, 5, 6 et 8).\\
 % \bu\ À faire pour lundi 09 novembre : feuille n° 7, ex. 7, qu. 1 à 4.\vspace{.4cm}\\
@@ -536,73 +535,57 @@ MPSI 1 La Martinière Monplaisir\\ 2016-2017
 % \bu\ Exercices : feuille n° 7, ex. 3 (début).\vspace{.4cm}\\
 %  
 % \noindent\textbf{\bf Mercredi 04 novembre 2016 } \\
-% $\bullet$\ Cours : 3.2 - Équations différentielles du premier ordre avec 
-% second membre.\\
 % \bu\ Exercices : feuille n° 7, ex. 2.\\
 % \bu\ À faire pour jeudi 05 novembre : feuille n° feuille n° 7, 
 % ex. 4, qu. 4, 5, 6 et 8.\vspace{.4cm}\\
 %   
 % \noindent\textbf{ Lundi 02 novembre 2016 } \\
 % $\bullet$\ Interrogation surprise n° 6.\\
-% $\bullet$\ Cours : 2 - Généralités (fin) ; 3.1 - Équations différentielles 
-% homogènes du premier ordre.\\
 % \bu\ Exercices : feuille n° 6, ex. 08 et 14, et feuille n° 7, ex.
 % 1.\vspace{.4cm}\\
-%  
-% \noindent\textbf{ Vacances de novembre }\vspace{.4cm}\\
-%  
-% \noindent\textbf{Vendredi 16 octobre 2016 }\\
-% $\bullet$\ Cours : 1 - Résultats d'analyse relatifs aux fonctions à valeurs
-% complexes d'une variable réelle, et intégration (fin) ; 2 - Généralités (début).\\
-% $\bullet$\ Exercices : feuille n° 6, ex. 9 et 13.\\
-% \bu\ À faire pour lundi 02 novembre : feuille n° 6, ex. 8 et 14, et feuille n° 7, 
-% ex. 1.\vspace{.4cm}\\
-%  
-% \noindent\textbf{\bf Jeudi 15 octobre 2016 } \\
-% $\bullet$\ Distribution : DM n° 5 (à rendre le 05 novembre).\\
-% $\bullet$\ Cours : 1 - Résultats d'analyse relatifs aux fonctions à valeurs
-% complexes d'une variable réelle, et intégration (suite).\\
-% $\bullet$\ Exercices : feuille n° 6, ex. 6, 7, 10, 11, 12, 15 et 16.
-% \bu\ À faire pour vendredi 16 : feuille n° 6, ex. 13.\vspace{.4cm}\\
-% 
-% \noindent\textbf{\bf Mercredi 14 octobre 2016 } \\
-% $\bullet$\ Cours : \bf Chapitre VII \rm : Équations différentielles linéaires : 1 - Résultats 
-% d'analyse relatifs aux fonctions à valeurs complexes d'une variable réelle, et intégration 
-% (début).\\
-% $\bullet$\ Exercices : feuille n° 6, ex. 2 et 5.\\
-% \bu\ À faire pour jeudi 15 : feuille n° 6, ex. 6 et 7.\vspace{.4cm}\\
-% 
-% \noindent\textbf{Lundi 12 octobre 2016 }\\
-% $\bullet$\ Interrogation surprise n° 5.\\
-% $\bullet$\ Cours :  6 - Fonctions trigonométriques inverses (fin) ; 7 -
-% Fonctions hyperboliques.\\
-% $\bullet$\ Exercices : feuille n° 5, ex. 5 (fin), 7 et 8, et feuille n° 6, ex.
-% 1 et 4.\vspace{.4cm}\\
-%  
-% \noindent\textbf{Vendredi 09 octobre 2016 }\\
-% \bu\ Devoir surveillé n° 2.\\
-% $\bullet$\ Cours :  5 - Fonctions exponentielle, logarithme et 
-% exponentielles de base $a$ (fin) ; 6 - Fonctions trigonométriques inverses (début).\\
-% $\bullet$\ Exercices : feuille n° 5, ex. 5 (début).\vspace{.4cm}\\
-%  
-% \noindent\textbf{\bf Jeudi 08 octobre 2016 } \\
-% $\bullet$\ Cours : 3 - Valeur absolue ; 4 - Puissances entières, fonctions 
-% polynomiales et rationnelles ; 5 - Fonctions exponentielle, logarithme et 
-% exponentielles de base $a$ (début).\\
-% $\bullet$\ Exercices : feuille n° 5, ex. 6, 9, 10 et 12.\vspace{.4cm}\\
-% 
-% \noindent\textbf{\bf Mercredi 07 octobre 2016 } \\
-% $\bullet$\ Cours : 2 - Théorèmes d'analyse admis.\\
-% \bu\ Exercices : à faire pour jeudi 08 : ex. 2.0.9 du chapitre VI, et feuille n° 6, ex. 
-% 1.\vspace{.4cm}\\
-%   
-% \noindent\textbf{Lundi 05 octobre 2016 }\\
-% $\bullet$\ Interrogation surprise n° 4.\\
-% \es\ \bf Chapitre VI \rm : Fonctions usuelles : 1 - Vocabulaire usuel (début).\\
-% $\bullet$\ Exercices : feuille n° 4, ex. 8, et feuille n° 5, ex. 1, 3 et 4.\vspace{.4cm}\\
-%   
-% \noindent\textbf{Vendredi 02 octobre 2016 }(2 +4 \\
-% \bu\ Devoir surveillé n° 2.\vspace{.4cm}\\
+
+\noindent\textbf{Vendredi 04 novembre 2016 }\\
+$\bullet$\ Cours : 3.2 - Équations différentielles du premier ordre avec 
+second membre (début).\\
+
+\noindent\textbf{Jeudi 03 novembre 2016 }\\
+$\bullet$\ Cours : 3.1 - Équations différentielles homogènes du premier ordre.\\
+
+\noindent\textbf{ Vacances de novembre }\vspace{.4cm}\\
+
+\noindent\textbf{\bf Mardi 18 octobre 2016 }\\
+$\bullet$\ Cours : 2 - Généralités.\\
+
+\noindent\textbf{Lundi 17 octobre 2016 }\\
+$\bullet$\ Interrogation surprise n° 4.\\
+$\bullet$\ Cours : 1 - Résultats d'analyse relatifs aux fonctions à valeurs complexes d'une variable réelle, et 
+intégration (fin).\\
+   
+\noindent\textbf{Vendredi 14 octobre 2016 }\\
+$\bullet$\ Cours : \bf Chapitre VII \rm : Équations différentielles linéaires : 1 - Résultats d'analyse relatifs aux 
+fonctions à valeurs complexes d'une variable réelle, et intégration (début).\\
+$\bullet$\ Exercices : feuille n° 5, ex. 11 (début).\\
+\bu\ À faire pour lundi 17 :feuille n° 5, ex. 9 et 11.2.b.\vspace{.4cm}\\
+
+\noindent\textbf{Jeudi 13 octobre 2016 }\\
+$\bullet$\ Cours :  6 - Fonctions trigonométriques inverses (fin) ; 7 - Fonctions hyperboliques.\\
+$\bullet$\ Exercices : feuille n° 5, ex. 3, 4 et 5.\vspace{.4cm}\\
+
+\noindent\textbf{\bf Mardi 11 octobre 2016 }\\
+$\bullet$\ Cours : 4 - Puissances entières, fonctions 
+polynomiales et rationnelles ; 5 - Fonctions exponentielle, logarithme et 
+exponentielles de base $a$ ; 6 - Fonctions trigonométriques inverses (début).\\
+$\bullet$\ À faire pour jeudi 13 : feuille n° 5, ex. 4, qu. 1 et 2.\vspace{.4cm}\\
+
+\noindent\textbf{Lundi 10 octobre 2016 }\\
+\bu\ Cours :  2 - Théorèmes d'analyse admis ; 3 - Valeur absolue.\\
+$\bullet$\ Exercices : feuille n° 5, ex. 1 et 2.\vspace{.4cm}\\
+   
+\noindent\textbf{Vendredi 07 octobre 2016 }\\
+\bu\ Devoir surveillé n° 2.\\
+$\bullet$\ Cours : \bf Chapitre VI \rm : Fonctions usuelles : 1 - Vocabulaire.\\
+$\bullet$\ Exercices : feuille n° 4, ex. 7 et 8.\\
+\bu\ À faire pour lundi 10 : exercices du cours.\vspace{.4cm}\\
 
 \noindent\textbf{Jeudi 06 octobre 2016 }\\
 \bu\ Cours : 4 - Bijectivité ; 5 - Images directe et réciproque.\\
