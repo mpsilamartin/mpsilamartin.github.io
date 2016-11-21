@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 ### TPn°04, correction
 
-from prog import *
+from __future__ import division
 
 # Q39
 
-from math import floor, sqrt
+exec(open("./prog.py").read())
 
 def cor_racine(x):
-    """Racine carrée de x, de type int ou float"""
-    s = sqrt(x)
-    if s  == floor(s):
-        s = int(s)
-    return s
+    if ((type(x) == int) or (type(x) == float)) and x>=0:
+        from math import sqrt
+        return sqrt(x)
+    else:
+        return "Pas de racine carrée. "
 
 def test_01_racine() :
     c1 = cor_racine(0)
@@ -27,7 +27,7 @@ def test_02_racine() :
 def test_03_racine() :
     c1 = cor_racine(16**2+1)
     c2 = racine(16**2+1)
-    assert c1 == c2
+    assert abs(c1-c2)<10**(-6)
 
 # Q40
 
@@ -42,52 +42,26 @@ def cor_touche(a,b,x):
 
 
 def test_04_touche() :
-    """Alignés verticalement, touche pas"""
-    a,b,x = (3,2),(6,2),(0,2)
-    c1 = cor_touche(a,b,x)
-    c2 = touche(a,b,x)
-    assert c1 == c2
+    print(touche((0,1),(2,3),(1,2)))
     
 def test_05_touche() :
-    """Alignés verticalement, touche"""
-    a,b,x = (2,0),(2,3),(2,1)
-    c1 = cor_touche(a,b,x)
-    c2 = touche(a,b,x)
+    c1 = cor_touche((2,0),(2,3),(2,1))
+    c2 = touche((2,0),(2,3),(2,1))
     assert c1 == c2
     
 def test_06_touche() :
-    """Idem que 05 mais renversés"""
-    a,b,x = (2,3),(2,0),(2,1)
-    c1 = cor_touche(a,b,x)
-    c2 = touche(a,b,x)
+    c1 = cor_touche((2,0),(2,3),(1,1))
+    c2 = touche((2,0),(2,3),(1,1))
     assert c1 == c2
     
 def test_07_touche() :
-    """Alignés horizontalement, touche pas"""
-    a,b,x = (3,5),(3,2),(3,8)
-    c1 = cor_touche(a,b,x)
-    c2 = touche(a,b,x)
+    c1 = cor_touche((3,1),(0,1),(2,1))
+    c2 = touche((3,1),(0,1),(2,1))
     assert c1 == c2
     
 def test_08_touche() :
-    """Alignés horizontalement, touche"""
-    a,b,x = (7,2),(7,8),(7,4)
-    c1 = cor_touche(a,b,x)
-    c2 = touche(a,b,x)
-    assert c1 == c2
-
-def test_10_touche() :
-    """Pas alignés verticalement"""
-    a,b,x = (5,1),(3,1),(4,0)
-    c1 = cor_touche(a,b,x)
-    c2 = touche(a,b,x)
-    assert c1 == c2
-
-def test_11_touche() :
-    """Pas alignés horizontalement"""
-    a,b,x = (7,2),(7,8),(8,4)
-    c1 = cor_touche(a,b,x)
-    c2 = touche(a,b,x)
+    c1 = cor_touche((3,1),(0,1),(2,3))
+    c2 = touche((3,1),(0,1),(2,3))
     assert c1 == c2
 
     
@@ -105,26 +79,18 @@ def cor_reste_a_payer(p,t,m,d):
         montant = montant*(1+t)-m
     return montant
 
-
+pret = 400000 ; taux = 0.0025 ; mensualite = 1431.93 ; duree = 40
     
-def test_01_reste_a_payer() :
-    pret = 400000
-    taux = 0.0025
-    mensualite = 1431.93
-    duree = 40
+def test_09_reste_a_payer() :
     c1 = cor_reste_a_payer(pret,taux,mensualite,duree)
     c2 = reste_a_payer(pret,taux,mensualite,duree)
-    assert abs(c1 - c2) < 10**-5
+    assert abs(c1-c2)<10**(-6)
     
-def test_02_reste_a_payer() :
-    pret = 200000
-    taux = 0.0015
-    mensualite = 11268.65
-    duree = 15 
-    c1 = cor_reste_a_payer(pret,taux,mensualite,duree)
-    c2 = reste_a_payer(pret,taux,mensualite,duree)
-    assert abs(c1 - c2) < 10**-5
-
+def test_10_reste_a_payer() :
+    c1 = cor_reste_a_payer(200000,0.0015,1268.65,15)
+    c2 = reste_a_payer(200000,0.0015,1268.65,15)
+    assert abs(c1-c2)<10**(-6)
+    
 #b
 def cor_somme_totale_payee(p,t,m,d):
     """p = montant du pret
@@ -136,25 +102,11 @@ def cor_somme_totale_payee(p,t,m,d):
     return total
 
     
-def test_01_somme_totale_payee() :
-    pret = 400000
-    taux = 0.0025
-    mensualite = 1431.93
-    duree = 40
+def test_11_somme_totale_payee() :
     c1 = cor_somme_totale_payee(pret,taux,mensualite,duree)
     c2 = somme_totale_payee(pret,taux,mensualite,duree)
-    assert abs(c1 - c2) < 10**-5
-
-def test_02_somme_totale_payee() :
-    pret = 200000
-    taux = 0.0015
-    mensualite = 11268.65
-    duree = 15 
-    c1 = cor_somme_totale_payee(pret,taux,mensualite,duree)
-    c2 = somme_totale_payee(pret,taux,mensualite,duree)
-    assert abs(c1 - c2) < 10**-5
-
-# c 
+    assert abs(c1-c2)<10**(-6)
+    
 def cor_cout_total(p,t,m,d):
     """p = montant du pret
        t = taux
@@ -164,23 +116,10 @@ def cor_cout_total(p,t,m,d):
     cout = cor_somme_totale_payee(p,t,m,d) - p
     return cout
 
-def test_01_cout_total() :
-    pret = 400000
-    taux = 0.0025
-    mensualite = 1431.93
-    duree = 40
+def test_12_cout_total() :
     c1 = cor_cout_total(pret,taux,mensualite,duree)
     c2 = cout_total(pret,taux,mensualite,duree)
-    assert abs(c1 - c2) < 10**-5
-
-def test_02_cout_total() :
-    pret = 200000
-    taux = 0.0015
-    mensualite = 11268.65
-    duree = 15 
-    c1 = cor_cout_total(pret,taux,mensualite,duree)
-    c2 = cout_total(pret,taux,mensualite,duree)
-    assert abs(c1 - c2) < 10**-5
+    assert abs(c1-c2)<10**(-6)
 
 # Q42
 
@@ -193,21 +132,13 @@ def cor_duree_mensualite(p,t,m):
         emprunt = (1+t)*emprunt-m
     return d
 
-def test_01_duree_mensualite() :
-    pret = 400000
-    taux = 0.0025
-    mensualite = 1431.93
-    c1 = cor_duree_mensualite(pret,taux,mensualite)
-    c2 = duree_mensualite(pret,taux,mensualite)
+def test_13_duree_mensualite() :
+    c1 = cor_duree_mensualite(pret+50000,taux,mensualite+100)
+    c2 = duree_mensualite(pret+50000,taux,mensualite+100)
     assert c1 == c2
-
-def test_02_duree_mensualite() :
-    pret = 500000
-    taux = 0.0025
-    mensualite = 1250.00000001
-    c1 = cor_duree_mensualite(pret,taux,mensualite)
-    c2 = duree_mensualite(pret,taux,mensualite)
-    assert c1 == c2
+    
+def test_14_duree_mensualite() :    
+    print(duree_mensualite(pret+50000,taux,100))
     
 
 # Q43
@@ -227,20 +158,15 @@ def cor_comb(p,n):
             combinaison = combinaison*(n-p+k+1)//(k+1)
     return combinaison
 
-def test_01_comb() :
+def test_15_comb() :
     c1 = cor_comb(15,32)
     c2 = comb(15,32)
-    assert c1 == c2 and type(c1) == type(c2)
+    assert c1 == c2
     
-def test_02_comb() :
+def test_16_comb() :
     c1 = cor_comb(0,32)
     c2 = comb(0,32)
-    assert c1 == c2 and type(c1) == type(c2)
-
-def test_03_comb() :
-    c1 = cor_comb(-5,32)
-    c2 = comb(-5,32)
-    assert c1 == c2 and type(c1) == type(c2)
+    assert c1 == c2
 
 # Q44
 
@@ -254,22 +180,17 @@ def cor_fib(n):
     return F[1]
 
 
-def test_01_fib() :
+def test_17_fib() :
     c1 = cor_fib(0)
     c2 = fib(0)
     assert c1 == c2
     
-def test_02_fib() :
+def test_18_fib() :
     c1 = cor_fib(1)
     c2 = fib(1)
     assert c1 == c2
 
-def test_03_fib() :
-    c1 = cor_fib(10)
-    c2 = fib(10)
-    assert c1 == c2
-
-def test_04_fib() :
+def test_19_fib() :
     c1 = cor_fib(450)
     c2 = fib(450)
     assert c1 == c2
@@ -278,42 +199,25 @@ def test_04_fib() :
 
 def cor_f(n):
     """n = entier naturel
-       Calcule le n-eme terme de la suite u (TP04, exo 44)"""
+       Calcule le n-eme terme de la suite u (TP03, exo 4)"""
     assert n >=0, 'Argument incompatible : n<0'
-    u = 1
-    v = 1
-    for k in range(n):
-	# Invariants : u = u_k et v = v_k
-        u = (u+(k+1)/u)/2
-        v = v + (1/u**5)
-        # u = u_(k+1) et v = v_(k+1)
-    # v = v_(n-1+1)
+    u = 1 # u = u_0
+    v = 1 # v = v_0
+    for k in range(n): # u = u_k
+        u = (u+(k+1)/u)/2 # u = u_{k+1}
+        v = v + (1/u**5) # v = v_{k+1}
     return v
 
-def test_01_f() :
-    c1 = cor_f(0)
-    c2 = f(0)
-    assert abs(c1 - c2) < 10**-5
 
-def test_02_f() :
-    c1 = cor_f(1)
-    c2 = f(1)
-    assert abs(c1 - c2) < 10**-5
-
-def test_03_f() :
-    c1 = cor_f(2)
-    c2 = f(2)
-    assert abs(c1 - c2) < 10**-5
-
-def test_04_f() :
+def test_20_f() :
     c1 = cor_f(10)
     c2 = f(10)
-    assert abs(c1 - c2) < 10**-5
+    assert abs(c1-c2)<10**(-6)
     
-def test_05_f() :
+def test_21_f() :
     c1 = cor_f(10**6)
     c2 = f(10**6)
-    assert abs(c1 - c2) < 10**-5
+    assert abs(c1-c2)<10**(-6)
 
 # Q46
 
@@ -328,15 +232,15 @@ def cor_somme1(n):
     return s
 
 
-def test_01_somme1() :
+def test_22_somme1() :
     c1 = cor_somme1(1)
     c2 = somme1(1)
-    assert abs(c1-c2) < 10**(-5)
+    assert abs(c1-c2) < 10**(-6)
     
-def test_02_somme1() :
+def test_23_somme1() :
     c1 = cor_somme1(100)
     c2 = somme1(100)
-    assert abs(c1-c2) < 10**(-5)
+    assert abs(c1-c2) < 10**(-6)
 
 
 def cor_somme2(n):
@@ -351,12 +255,12 @@ def cor_somme2(n):
     return s
 
 
-def test_01_somme2() :
+def test_24_somme2() :
     c1 = cor_somme2(2)
     c2 = somme2(2)
     assert abs(c1-c2) < 10**(-5)
     
-def test_02_somme2() :
+def test_25_somme2() :
     c1 = cor_somme2(100)
     c2 = somme2(100)
     assert abs(c1-c2) < 10**(-5)
