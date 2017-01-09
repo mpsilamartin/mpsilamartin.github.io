@@ -1,2 +1,2 @@
-find /home/skanderk/prepa/cours-git/cours2.0/cours/ -name "*.chap.pdf" | xargs -I{} cp "{}" .&
+find /home/skanderk/prepa/cours_git/cours2.0/cours/ -name "*.chap.pdf" | xargs -I{} cp "{}" .&
 cp /home/skanderk/prepa/cours-git/cours2.0/cours/tou/TOU.pdf .
