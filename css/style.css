@@ -71,6 +71,14 @@ a {
 	color: #5A1218;
   	text-decoration: none;}
   	
+#sii:hover {
+	color: #56C039;
+  	text-decoration: none;}
+  	
+#sii:visited {
+	color: #125A2D;
+  	text-decoration: none;}
+  	
 #tip:hover {
 	color: #BB5DEA;
   	text-decoration: none;}
