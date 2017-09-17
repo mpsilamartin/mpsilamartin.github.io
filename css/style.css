@@ -31,10 +31,6 @@ body {
   background: url(../img/poincare.jpg) no-repeat center fixed; 
 }
 
-#fondsii {
-  background: url(../img/eiffel.jpg) no-repeat center fixed; 
-}
-
 a {
 	color: #222;
   	text-decoration: none;}
@@ -72,15 +68,15 @@ a {
   	text-decoration: none;}
   	
 #ipt:visited {
-	color: #03968a;
+	color: #5A1218;
   	text-decoration: none;}
   	
 #sii:hover {
-	color: #40c1d8;
+	color: #56C039;
   	text-decoration: none;}
   	
 #sii:visited {
-	color: #2caac1;
+	color: #125A2D;
   	text-decoration: none;}
   	
 #tip:hover {
@@ -166,7 +162,186 @@ a[href$=".swf"]{
 }
 
 #menu a#actif4 {
-  color:#40c1d8;
+  color:#A853F3;
+}
+
+#menu ul li a {
+  padding:5px 8px;
+}
+
+@font-face {
+  font-family: 'simplifica';
+  src: url('https://mpsilamartin.github.io/fonts/simplifica.eot?#iefix') format('embedded-opentype'), 
+  url('https://mpsilamartin.github.io/fonts/simplifica.woff') format('woff'), url('https://mpsilamartin.github.io/fonts/simplifica.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "simplifica", "Lucida Grande", Tahoma, Arial, sans-serif;
+  font-size: 160%;
+  background-color: #ffffff;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+  color: #222;
+}
+
+#fondmaths {
+  background: url(../img/cantor.jpg) no-repeat center fixed; 
+}
+
+#fondphysique {
+  background: url(../img/curie.jpg) no-repeat center fixed; 
+}
+
+#fondinfo {
+  background: url(../img/turing.jpg) no-repeat center fixed; 
+}
+
+#fondorga {
+  background: url(../img/poincare.jpg) no-repeat center fixed; 
+}
+
+#fondsii {
+  background: url(../img/eiffel.jpg) no-repeat center fixed; 
+}
+
+a {
+	color: #222;
+  	text-decoration: none;}
+  	
+#lien1 {
+	color: #D57070;
+  	text-decoration: none;}
+  	
+#organ:hover {
+	color: #4878D7;
+  	text-decoration: none;}
+  	
+#organ:visited {
+	color: #2B278A;
+  	text-decoration: none;}
+  	
+#math:hover {
+	color: #DCC26D;
+  	text-decoration: none;}
+  	
+#math:visited {
+	color: #68550B;
+  	text-decoration: none;}
+  	
+#phys:hover {
+	color: #56C039;
+  	text-decoration: none;}
+  	
+#phys:visited {
+	color: #125A2D;
+  	text-decoration: none;}
+  	
+#ipt:hover {
+	color: #D03A46;
+  	text-decoration: none;}
+  	
+#ipt:visited {
+	color: #03968a;
+  	text-decoration: none;}
+  	
+#sii:hover {
+	color: #719cf3;
+  	text-decoration: none;}
+  	
+#sii:visited {
+	color: #2963d9;
+  	text-decoration: none;}
+  	
+#tip:hover {
+	color: #BB5DEA;
+  	text-decoration: none;}
+  	
+#tip:visited {
+	color: #672F97;
+  	text-decoration: none;}
+  		
+a[href$=".pdf"]{
+	background: url(../img/iconepdf.jpg) no-repeat right top;
+	padding-right:20px;
+	}
+	
+a[href$=".swf"]{
+	background: url(../img/iconeswf.jpg) no-repeat right top;
+	padding-right:20px;
+	}
+
+#nav{ 
+	z-index:10;
+  color:#fff;
+	background-color: #222; 
+	position: fixed; 
+	width: 100%; 
+	top: 0;  
+	margin-bottom: 50px;}
+
+#nav-wrapper{margin: 0 auto; text-align: center; margin-bottom: 50px;}
+
+#menu {
+  	background-color: #222;
+  	padding:0;
+  	margin:0;
+  	text-align: center;
+}
+
+#menu li {
+	padding-top:12px;
+  	width: 10%;
+  	min-width: 80px;
+  	display:inline-block;
+  	position: relative;
+  	background: #222;
+	height: 38px;
+}
+#menu li li {
+  	display:inherit;
+	height: 30px;
+	padding-top:0;
+}
+#menu li:hover {
+  	background: #666;
+	height: 38px;
+  	width: 10%;
+}
+#menu a {
+  padding:5px 5px;
+  display:block;
+  text-decoration: none;
+  color:#fff;
+  font-family:arial;
+  font-family: "simplifica", "Lucida Grande", Tahoma, Arial, sans-serif;
+  font-size: 94%;
+  font-weight: bold ;
+}
+
+#menu a#actif0 {
+  color:#75A9DA;
+}
+
+#menu a#actif1 {
+  color:#DCC26D;
+}
+
+#menu a#actif2 {
+  color:#6DB66C;
+}
+
+#menu a#actif3 {
+  color:#D57070;
+}
+
+#menu a#actif4 {
+  color:#A853F3;
+}
+
+#menu a#actif5 {
+  color:#719cf3;
 }
 
 #menu ul li a {
@@ -229,3 +404,4 @@ a[href$=".swf"]{
 	padding: 20px;
 	line-height:1.3em;
 }
+
