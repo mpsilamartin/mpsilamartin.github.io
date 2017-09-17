@@ -31,6 +31,10 @@ body {
   background: url(../img/poincare.jpg) no-repeat center fixed; 
 }
 
+#fondsii {
+  background: url(../img/eiffel.jpg) no-repeat center fixed; 
+}
+
 a {
 	color: #222;
   	text-decoration: none;}
@@ -68,11 +72,11 @@ a {
   	text-decoration: none;}
   	
 #ipt:visited {
-	color: #5A1218;
+	color: #03968a;
   	text-decoration: none;}
   	
 #sii:hover {
-	color: #56C039;
+	color: #2fc0b4;
   	text-decoration: none;}
   	
 #sii:visited {
@@ -162,7 +166,7 @@ a[href$=".swf"]{
 }
 
 #menu a#actif4 {
-  color:#A853F3;
+  color:#125A2D;
 }
 
 #menu ul li a {
