@@ -76,11 +76,11 @@ a {
   	text-decoration: none;}
   	
 #sii:hover {
-	color: #2fc0b4;
+	color: #40c1d8;
   	text-decoration: none;}
   	
 #sii:visited {
-	color: #125A2D;
+	color: #2caac1;
   	text-decoration: none;}
   	
 #tip:hover {
@@ -166,7 +166,7 @@ a[href$=".swf"]{
 }
 
 #menu a#actif4 {
-  color:#125A2D;
+  color:#40c1d8;
 }
 
 #menu ul li a {
