@@ -1,121 +1,103 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
-<head>
+  <head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title> MPSI La Martinière Monplaisir </title>
+    <style type="text/css" media="screen">@import url(../css/style.css);</style>
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
+    
+    <script type="text/javascript" src="../script/jquery-1.5.1.min.js"></script>
+    
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('#target-onglet-orga').load('https://mpsilamartin.github.io/menus/onglet-orga.html');
+      });
+    </script>  
+    
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('#target-onglet-actif-maths').load('https://mpsilamartin.github.io/menus/onglet-actif-maths.html');
+      });
+    </script>  
+    
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('#target-onglet-info').load('https://mpsilamartin.github.io/menus/onglet-info.html');
+      });
+    </script> 
+    
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('#target-onglet-physique').load('https://mpsilamartin.github.io/menus/onglet-physique.html');
+      });
+    </script> 
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('#target-onglet-sii').load('https://mpsilamartin.github.io/menus/onglet-sii.html');
+      });
+    </script> 
+     		
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $('#target-onglet-tipe').load('https://mpsilamartin.github.io/menus/onglet-tipe.html');
+           });
+    </script>       
+  </head>
+  
+  
+  <body id="fondmaths">
+    
+    <div id="nav">
+      <ul  id="menu"  >
 
-  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  	<meta http-equiv="Content-Language" content="fr">
-  	<meta name=viewport content="width=device-width, initial-scale=1">
-  	<title> MPSI La Martinière Monplaisir </title>
-  	<style type="text/css" media="screen">@import url(../css/style.css);</style>
-	<link rel="icon" href="../img/favicon.png" type="image/png" />
+	<li id="target-onglet-orga"></li>   
+	<li id="target-onglet-actif-maths"></li>   
+	<li id="target-onglet-physique"></li>   
+	<li id="target-onglet-info"></li>  
+	<li id="target-onglet-sii"></li>   
+	<li id="target-onglet-tipe"></li>    
 	
-	<script type="text/javascript" src="../script/jquery-1.5.1.min.js"></script>
-        
-     		
-       	 <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-orga').load('https://mpsilamartin.github.io/menus/onglet-orga.html');
-           });
-     		</script>  
-     		
-     		
-       	 <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-actif-maths').load('https://mpsilamartin.github.io/menus/onglet-actif-maths.html');
-           });
-     		</script>  
-     		
-     		
-        <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-info').load('https://mpsilamartin.github.io/menus/onglet-info.html');
-           });
-     		</script> 
-     		
-     		
-        <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-physique').load('https://mpsilamartin.github.io/menus/onglet-physique.html');
-           });
-     		</script> 
-     		
-        <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-sii').load('https://mpsilamartin.github.io/menus/onglet-sii.html');
-           });
-     		</script> 
-     		
-     		
-        <script type="text/javascript">
-           $(document).ready(function(){
-               $('#target-onglet-tipe').load('https://mpsilamartin.github.io/menus/onglet-tipe.html');
-           });
-     		</script>       
-</head>
-
-
-<body id="fondmaths">
-       
-<div id="nav">
-<ul  id="menu"  >
-
-    <li id="target-onglet-orga"></li>   
-    <li id="target-onglet-actif-maths"></li>   
-    <li id="target-onglet-physique"></li>   
-    <li id="target-onglet-info"></li>  
-    <li id="target-onglet-sii"></li>   
-    <li id="target-onglet-tipe"></li>    
-
-</ul>
-</div>
-
-
-
-<div id="hideoverflow">
-    <div id="outer">
+      </ul>
+    </div>
+    
+    
+    
+    <div id="hideoverflow">
+      <div id="outer">
         <div id="inner">
-        <div id="contenu">
-        
-        <!--<br>
-	<font style="font-weight: bold ;"> Devoirs de révisions de mathématiques :</font><br><br><br>
-<table>
-	<tbody>
-	<tr><td> &bull; <a id="math" href="DM/DR02.pdf" target="_blank"> Devoir de révisions n°2 (probabilités) &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DR01.pdf" target="_blank"> Devoir de révisions n°1 (petites mines 2009) &nbsp;</a></td></tr>
-
-	</tbody></table>
-	<br>-->
-	<font style="font-weight: bold ;"> Devoirs à la maison de mathématiques :</font><br><br><br>
-<table>
-	<tbody>
-	<!--<tr><td> &bull; <a id="math" href="DM/DM21.pdf" target="_blank"> DM n° 21 à rendre le 15 juin &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM20.pdf" target="_blank"> DM n° 20 à rendre le 08 juin &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM19.pdf" target="_blank"> DM n° 19 à rendre le 01 juin &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM18.pdf" target="_blank"> DM n° 18 à rendre le 11 mai &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM17.pdf" target="_blank"> DM n° 17 à rendre le 4 mai &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM16.pdf" target="_blank"> DM n° 16 à rendre le 6 avril &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM15.pdf" target="_blank"> DM n° 15 à rendre le 30 mars &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM14.pdf" target="_blank"> DM n° 14 à rendre le 16 mars &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM13.pdf" target="_blank"> DM n° 13 à rendre le 9 février &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM12.pdf" target="_blank"> DM n° 12 à rendre le 2 février &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM11.pdf" target="_blank"> DM n° 11 à rendre le 19 janvier &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM10.pdf" target="_blank"> DM n° 10 à rendre le 12 janvier &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM09.pdf" target="_blank"> DM n° 9 à rendre le 8 décembre &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM08.pdf" target="_blank"> DM n° 8 à rendre le 1er décembre &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM07.pdf" target="_blank"> DM n° 7 à rendre le 17 novembre &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM06.pdf" target="_blank"> DM n° 6 à rendre le 10 novembre &nbsp;</a></td></tr>-->
-	<tr><td> &bull; <a id="math" href="DM/DM05.pdf" target="_blank"> DM n° 5 à rendre le 09 novembre &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM04.pdf" target="_blank"> DM n° 4 à rendre le 12 octobre &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM03.pdf" target="_blank"> DM n° 3 à rendre le 5 octobre &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM02.pdf" target="_blank"> DM n° 2 à rendre le 21 septembre &nbsp;</a></td></tr>
-	<tr><td> &bull; <a id="math" href="DM/DM01.pdf" target="_blank"> DM n° 1 à rendre le 14 septembre &nbsp;</a></td></tr>
-
-	</tbody></table>
-</div>
-</div>
-</div>
-</div>
-   
-   
-</body>
+          <div id="contenu">
+            
+            <!--<br>
+		<font style="font-weight: bold ;"> Devoirs de révisions de mathématiques :</font><br><br><br>
+		<table>
+		  <tbody>
+		    <tr><td> &bull; <a id="math" href="DM/DR02.pdf" target="_blank"> Devoir de révisions n°2 (probabilités) &nbsp;</a></td></tr>
+		    <tr><td> &bull; <a id="math" href="DM/DR01.pdf" target="_blank"> Devoir de révisions n°1 (petites mines 2009) &nbsp;</a></td></tr>
+		    
+		</tbody></table>
+		<br>-->
+	    <font style="font-weight: bold ;"> Devoirs à la maison de mathématiques :</font><br><br><br>
+	    <table>
+	      <tbody>
+		<tr><td> &bull; <a id="math" href="DM/DM05.pdf" target="_blank"> DM n° 5 à rendre le 09 novembre &nbsp;</a></td></tr>
+		<tr><td> &bull; <a id="math" href="DM/DM04.pdf" target="_blank"> DM n° 4 à rendre le 12 octobre &nbsp;</a></td></tr>
+		<tr><td> &bull; <a id="math" href="DM/DM03.pdf" target="_blank"> DM n° 3 à rendre le 5 octobre &nbsp;</a></td></tr>
+		<tr><td> &bull; <a id="math" href="DM/DM02.pdf" target="_blank"> DM n° 2 à rendre le 21 septembre &nbsp;</a></td></tr>
+		<tr><td> &bull; <a id="math" href="DM/DM01.pdf" target="_blank"> DM n° 1 à rendre le 14 septembre &nbsp;</a></td></tr>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+      </div>
+    </div>    
+  </body>
 </html>
