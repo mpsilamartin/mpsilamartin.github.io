@@ -16,6 +16,7 @@ c=conn.cursor()
 
 
 liste_quizz=['C4','C4-2']#Liste des quiz à traiter pour la modification de la bdd
+liste_quizz=['C5-2']#Liste des quiz à traiter pour la modification de la bdd
 
 #Mise à 0 des scores
 req_etudiants="select nom, prenom from etudiants"
