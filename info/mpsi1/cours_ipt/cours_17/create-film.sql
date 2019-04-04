@@ -1,0 +1,8 @@
+CREATE TABLE FILM (
+  id INTEGER,
+  titre VARCHAR(50) NOT NULL,
+  date DATE,
+  idrealisateur INTEGER,
+  PRIMARY KEY(id),
+  FOREIGN KEY(idrealisateur) REFERENCES PERSONNE
+);
