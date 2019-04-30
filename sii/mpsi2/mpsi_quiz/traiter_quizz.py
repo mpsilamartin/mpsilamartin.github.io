@@ -16,7 +16,7 @@ c=conn.cursor()
 
 
 liste_quizz=['C4','C4-2']#Liste des quiz à traiter pour la modification de la bdd
-liste_quizz=['C5-2']#Liste des quiz à traiter pour la modification de la bdd
+liste_quizz=['C6-2']#Liste des quiz à traiter pour la modification de la bdd
 
 #Mise à 0 des scores
 req_etudiants="select nom, prenom from etudiants"
@@ -70,17 +70,17 @@ for q in liste_quizz:
     tab_quiz.sort(key=lambda colonnes: colonnes[2])
     tab_quiz=np.flipud(tab_quiz)
     rank=1
-    sc_quiz=[int(tab_quiz[0,2])]
+    sc_quiz=[float(tab_quiz[0,2])]
     cl_quiz=[rank]
     for l in tab_quiz[1:]:
         #print(l[2],sc_quiz[-1])
-        if int(l[2])==sc_quiz[-1]:
+        if float(l[2])==sc_quiz[-1]:
             cl_quiz.append(cl_quiz[-1])
             rank+=1
         else: 
             rank+=1
             cl_quiz.append(rank)
-        sc_quiz.append(int(l[2]))
+        sc_quiz.append(float(l[2]))
     tab_quiz=np.array(np.transpose(np.concatenate((np.mat(tab_quiz[:,0]),np.mat(tab_quiz[:,1]),np.mat(tab_quiz[:,2]),np.mat(np.array(cl_quiz))),axis=0)))
     tab_quiz2=[]
     for l in tab_quiz:
