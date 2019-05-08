@@ -57,7 +57,7 @@ smin t m (n-1) (p-1);;
 
 (* Calcul itératif *)
 
-let rec smin_it m =
+let smin_it m =
   let n = Array.length m in
   let p= Array.length m.(0) in
   let t = Array.make_matrix n p (-1) in
@@ -76,8 +76,10 @@ let rec smin_it m =
   t
 ;;
 
+smin_it m;;
+
 (* Réduction de la complexité spatiale *)
-let rec smin_it2 m =
+let smin_it2 m =
   let n = Array.length m in
   let p= Array.length m.(0) in
   let t = Array.make p (-1) in
