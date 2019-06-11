@@ -1,5 +1,5 @@
 import numpy as np
-
+import matplotlib.pyplot as plt
 # Filtrage du signal par un passe bas
 def filtrage_passe_bas(freq,t,signal):
     tau = 1/freq # Coupure du filtre
@@ -76,7 +76,7 @@ with open(filename,'r') as f:
                 tp.append(3600*float(h)+60*float(m)+float(s.strip('Z'))-tp0)
                 
                 
-
+#Q4
 #Superposition sur une carte 
 import folium
 macarte = folium.Map(location=[(max(lat)+min(lat))/2,(min(long)+max(long))/2], zoom_start=13)
@@ -102,22 +102,49 @@ r=R+np.array(alt)
 phi=np.array(long)
 theta=90-np.array(lat) 
  
- 
-    
-# plt.clf()
-# plt.figure(figsize=(20,10))
-# plt.title('Dérivée temporelle des coordonnees sphériques')
-# plt.subplot(1,3,1)
-# plt.plot(tp,dif(r,tp))
-# plt.xlabel('temps (s)')
-# plt.ylabel('$\dot{r}(t)$ (en m/s)')
-# plt.subplot(1,3,2)
-# plt.plot(tp,dif(theta,tp))
-# plt.xlabel('temps (s)')
-# plt.ylabel('$\dot{\\theta}(t)$ (en $^{\\circ}$/s)')
-# plt.subplot(1,3,3)
-# plt.plot(tp,dif(phi,tp))
-# plt.xlabel('temps (s)')
-# plt.ylabel('$\dot{\\varphi}(t)$ (en $^{\\circ}$/s)')
-# plt.savefig('der_coor_sph.png')
+vtau=[1,10,100]
 
+# for tau in vtau:
+
+    
+plt.clf()
+plt.figure(figsize=(20,10))
+plt.title('Dérivée temporelle des coordonnees sphériques')
+plt.subplot(1,3,1)
+plt.plot(tp,dif(r,tp))
+for tau in vtau:
+    plt.plot(tp,dif(filtrage_passe_bas(1/tau,tp,r),tp),label='$\\tau=$'+str(tau))
+plt.xlabel('temps (s)')
+plt.ylabel('$\dot{r}(t)$ (en m/s)')
+plt.legend()
+plt.subplot(1,3,2)
+plt.plot(tp,dif(theta,tp))
+for tau in vtau:
+    plt.plot(tp,dif(filtrage_passe_bas(1/tau,tp,theta),tp),label='$\\tau=$'+str(tau))
+plt.xlabel('temps (s)')
+plt.ylabel('$\dot{\\theta}(t)$ (en $^{\\circ}$/s)')
+plt.legend()
+plt.subplot(1,3,3)
+plt.plot(tp,dif(phi,tp))
+for tau in vtau:
+    plt.plot(tp,dif(filtrage_passe_bas(1/tau,tp,phi),tp),label='$\\tau=$'+str(tau))
+plt.xlabel('temps (s)')
+plt.ylabel('$\dot{\\varphi}(t)$ (en $^{\\circ}$/s)')
+plt.legend()
+plt.savefig('der_coor_sph.png')
+
+tau=10
+rf=filtrage_passe_bas(1/tau,tp,r)
+thetaf=filtrage_passe_bas(1/tau,tp,theta)
+phif=filtrage_passe_bas(1/tau,tp,phi)
+
+def vitesse(r,theta,phi,t):
+    """renvoie le vecteur vitesse en coordonnee spherique a chaque instant et sa norme V"""
+    vr=dif(r,t)
+    vtheta=r*dif(theta*np.pi/180,t)
+    vphi=r*np.sin(theta*np.pi/180)*dif(phi*np.pi/180,t)
+    V=np.sqrt(vr**2+vtheta**2+vphi**2)
+    return vr,vtheta,vphi,V
+
+
+(vr,vtheta,vphi,V)=vitesse(np.array(rf),np.array(thetaf),np.array(phif),tp)
