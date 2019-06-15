@@ -74,4 +74,50 @@ with open(filename,'r') as f:
                 tp0=3600*float(h)+60*float(m)+float(s.strip('Z'))
             if len(alt)>0:
                 tp.append(3600*float(h)+60*float(m)+float(s.strip('Z'))-tp0)
+                
+                
+
+#Superposition sur une carte 
+import folium
+macarte = folium.Map(location=[(max(lat)+min(lat))/2,(min(long)+max(long))/2], zoom_start=13)
+points=[]
+for k in range(len(lat)):
+    points.append(tuple([lat[k],long[k]]))
+folium.PolyLine(points).add_to(macarte)
+macarte.save('carte.html')
+
+#Ouverture de firefox
+#os.system('/Applications/Firefox.app/Contents/MacOS/firefox -new-tab test.html')
+
+                #Derivation numérique
+def dif(y,t):
+    dy=np.copy(y)
+    for k in range(len(y)-1):
+        dy[k]=(y[k+1]-y[k])/(t[k+1]-t[k])
+    dy[len(y)-1]=(y[-1]-y[-2])/(t[-1]-t[-2])
+    return dy
+ 
+R=6371*1E3 
+r=R+np.array(alt)  
+phi=np.array(long)
+theta=90-np.array(lat) 
+ 
+ 
+    
+# plt.clf()
+# plt.figure(figsize=(20,10))
+# plt.title('Dérivée temporelle des coordonnees sphériques')
+# plt.subplot(1,3,1)
+# plt.plot(tp,dif(r,tp))
+# plt.xlabel('temps (s)')
+# plt.ylabel('$\dot{r}(t)$ (en m/s)')
+# plt.subplot(1,3,2)
+# plt.plot(tp,dif(theta,tp))
+# plt.xlabel('temps (s)')
+# plt.ylabel('$\dot{\\theta}(t)$ (en $^{\\circ}$/s)')
+# plt.subplot(1,3,3)
+# plt.plot(tp,dif(phi,tp))
+# plt.xlabel('temps (s)')
+# plt.ylabel('$\dot{\\varphi}(t)$ (en $^{\\circ}$/s)')
+# plt.savefig('der_coor_sph.png')
 
