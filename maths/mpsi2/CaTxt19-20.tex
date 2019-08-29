@@ -1,0 +1,765 @@
+\documentclass[12pt,a4paper]{article}
+
+\textheight=25cm
+\topmargin=-50pt
+\input{/home/skanderk/.latex/intro2.sty}
+
+\begin{document}
+
+\begin{center}
+\Large\bf CAHIER DE TEXTES DE MATHÉMATIQUES\\
+MPSI 2 La Martinière Monplaisir\\ 2020-2020
+\end{center}
+\vspace{1cm}
+\vspace{.4cm}
+
+% 
+% \noindent\textbf{\bf Jeudi 18 juin 2019} \\
+% 
+% 
+% \noindent\textbf{\bf Mercredi 17 juin 2019} \\
+% 
+% \noindent\textbf{\bf Lundi 15 juin 2019} \\
+% \bu\ Interrogation n° 24.\\
+% \bu\ Cours : \bf Chapitre XXV \rm : Dénombrement : fin.\\
+% \bu\ Exercices : feuille n° 24, ex. 20 à 22 et feuille n° 25, ex. 2, 3, 6 et 7.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Vendredi 12 juin 2019} \\
+% \bu\ Exercices : feuille n° 24, ex. 17 à 19.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Jeudi 11 juin 2019} \\
+% \bu\ Exercices : feuille n° 24, ex. 12 à 16.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Mercredi 10 juin 2019} \\
+% \bu\ Cours : 3 - Automorphismes orthogonaux (fin).\\
+% \bu\ Exercices : feuille n° 24, ex. 6 à 11.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 08 juin 2019} \\
+% \bu\ Interrogation n° 23.\\
+% \bu\ Cours : 3 - Automorphismes orthogonaux (suite).\\
+% \bu\ Exercices : feuille n° 23, ex. 14 et feuille n° 24, ex. 1 à 5.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 05 juin 2019}\\ 
+
+% 
+% \noindent\textbf{ Mercredi 29 avril 2019} \\
+% \bu\ Cours : 4 - Séries absolument convergentes ; 5 - Représentation décimale des réels ; 6 - 
+% Compléments.\\
+% \bu\ Exercices : feuille n° 20, ex. 19, et feuille n° 21, ex. 1.\vspace{.4cm}\\
+%
+
+%\bu\ Exercices : feuille n° 20, ex. 11 et 13 à 18.\vspace{.4cm}\\
+
+% \noindent\textbf{\bf Lundi 13 juin 2020}\\
+%  ; 2 - Séries à termes réels positifs ; 3 - Comparaison série - intégrale.\\
+% \bu\ Exercices : feuille n° 25, ex. 14 à 22.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 10 juin 2020}\\
+% \bu\ Devoir surveillé n° 10.\\
+% \bu\ Exercices : feuille n° 25, ex. 12 et 13.\vspace{.4cm}\\
+
+% \noindent\textbf{Vendredi 09 juin 2020}\\
+% \bu\ Cours : \bf Chapitre XXV \rm : Séries : 1 - Prolégomènes.\\
+% \bu\ Exercices : feuille n° 25, ex. 20 et 16.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Jeudi 08 juin 2020}\\
+% \bu\ Exercices : feuille n° 25, ex. 12, 14, 15, 17, 19 et 21.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Mardi 06 juin 2020} \\
+% \bu\ Interrogation n° 19.\\
+% \bu\ Cours : 3 - Automorphismes orthogonaux (fin).\\
+% \bu\ Exercices : feuille n° 25, ex. 9 et 10.\\
+% \bu\ À faire pour jeudi 08 juin : feuille n° 25, ex. 21 et 22.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 02 juin 2020}\\
+% \bu\ Cours : 3 - Automorphismes orthogonaux (suite).\\
+% \bu\ Exercices : feuille n° 25, ex. 11 et 13.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Jeudi 01 juin 2020}\\
+% \bu\ Distribution : DM n° 20 (à rendre le 08 juin).\\
+% \bu\ Cours : 3 - Automorphismes orthogonaux (début).\\
+% \bu\ Exercices : feuille n° 25, ex. 7 et 8.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mardi 30 mai 2020}\\
+% \bu\ Cours : 2 - Orthogonalité (fin).\\
+% \bu\ Exercices : feuille n° 25, ex. 5 et 6.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 29 mai 2020} \\
+% \bu\ Interrogation n° 18.\\
+% \bu\ Cours :  2 - Orthogonalité (suite).\\
+% \bu\ Exercices : feuille n° 24, ex. 14 et 17, et feuille n° 25, ex. 1 à 4.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mardi 23 mai 2020}\\
+% \bu\ Cours : \bf Chapitre XXIV \rm : Espaces vectoriels euclidiens : 1 - Produits scalaires, normes et distances 
+% (fin).\\
+% .\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 22 mai 2020} \\
+% \bu\ Interrogation n° 17.\\
+% \bf Chapitre XXIV \rm : Espaces vectoriels euclidiens : 1 - Produits scalaires, normes et distances 
+% (suite).\\
+% \bu\ Exercices : feuille n° 24, ex. 10, 12 et 13.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 19 mai 2020}\\
+% (début).\\
+% \bu\ Exercices : feuille n° 24, ex. 1 à 5.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Jeudi 18 mai 2020} \\
+% \bu\ Distribution : DM n° 19 (à rendre le 01 juin).\\
+% 
+% 
+% \noindent\textbf{Mercredi 12 juin 2020}\\
+% \bu\ Cours :  2 - Orthogonalité (début).\\
+% \bu\ Exercices : feuille n° 25, ex. 8 à 14.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 07 juin 2020}\\
+% \bf Chapitre XXVI \rm : Espaces vectoriels euclidiens : 1 - Produits scalaires, normes et distances .\\
+% \bu\ Exercices : feuille n° 25, ex. 14.1).\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 06 juin 2020}\\
+% \bu\ Cours : 5 - Déterminant d'une matrice carrée.
+% \bu\ Exercices : feuille n° 25, ex. 6 et 7.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 05 juin 2020}\\
+% \bu\ Distribution : DM n° 22 (à rendre le 13 juin).\\
+% \bu\ Exercices : feuille n° 25, ex. 1 à 5.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 3 juin 2020}\\
+% \bu\ Interrogation n° 21.\\
+% \bu\ Cours : 2. Applications multilinéaires - 3. Déterminant d’une famille de vecteurs.\\
+% \bu\ Exercices : feuille n° 24, ex. 12 à 20.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 29 mai 2020}\\
+% \bu\ Cours : \bf Chapitre XXV \rm : Déterminants : 1 - Groupe symétrique.\\
+% \bu\ Exercices : feuille n° 24, ex. 2, 3 et 11.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 27 mai 2020}\\
+% \bu\ Cours : 7 - Matrices semblables et trace ; 8 - Matrices par blocs.\\
+% \bu\ Exercices : feuille n° 24, ex. 7 à 10.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 24 mai 2020}\\
+% \bu\ Devoir surveillé n° 09.\\
+% \bu\ Cours : 5 - Rang ; 6 - Systèmes linéaires.\\
+% \bu\ Distribution : DM n° 21 (à rendre le 6 juin).\\
+% \bu\ Exercices : feuille n° 24, ex. 1 et 4 à 6.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 23 mai 2020}\\
+% \bu\ Cours : 3 - Matrices remarquables ; 4 - Opérations élémentaires.\\
+% \bu\ Exercices : feuille n° 23, ex. 14, 17 et 18.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 22 mai 2020}\\
+% \bu\ Cours : 2 - Matrices, familles de vecteurs et applications linéaires (fin).\\
+% \bu\ Exercices : feuille n° 23, ex. 11 à 13.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 20 mai 2020}\\
+% \bu\ Interrogation n° 20.\\
+% \bu\ Cours : 2 - Matrices, familles de vecteurs et applications linéaires (suite).\\
+% \bu\ Exercices : feuille n° 23, ex. 11 à 13.\\
+% \bu\ À faire pour mercredi 22 : feuille n° 23, ex. 17.\\
+% \bu\ À faire pour jeudi 23 : feuille n° 24, ex. 01 et 04.\\
+% \bu\ À faire pour vendredi 24 : feuille n° 24, ex. 05 et 06.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Vendredi 17 mai 2020}\\
+% \bu\ Cours : 2 - Matrices, familles de vecteurs et applications linéaires (suite).\\
+% \bu\ Exercices : feuille n° 23, ex. 08 et 16.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 16 mai 2020}\\
+% \bu\ Cours : 2 - Matrices, familles de vecteurs et applications linéaires (suite).\\
+% \bu\ Exercices : feuille n° 23, ex. 07, 10 et 15.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 15 mai 2020}\\
+% \bu\ Distribution : DM n° 20 (à rendre le 23 mai).\\
+% \bu\ Cours : \bf Chapitre XXIV \rm : Matrices ; 1 - Structure de $\mcal M_{n,p}(\K)$ ; 2 - Matrices, familles de 
+% vecteurs et applications linéaires (début).\\
+% \bu\ Exercices : feuille n° 23, ex. 06 et 09.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 13 mai 2020}\\
+% \bu\ Interrogation surprise n° 19.\\
+% \bu\ Cours : 2 - Variables aléatoires (fin).\\
+% \bu\ Exercices : feuille n° 23, ex. 01 à 05.\\
+% \bu\ À faire pour mercredi 15 : feuille n° 23, ex. 06.\\
+% \bu\ À faire pour jeudi 16 : feuille n° 23, ex. 07.\\
+% \bu\ À faire pour vendredi 17 : feuille n° 23, ex. 08.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 10 mai 2020}\\
+% \bu\ Cours : 2 - Variables aléatoires (suite).\\
+% \bu\ Exercices : feuille n° 22, ex. 15 et 17 à 20.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 09 mai 2020}\\
+% \bu\ Distribution : DM n° 20 (à rendre le 16 mai).\\
+% \bu\ Cours : 2 - Variables aléatoires (suite).\\
+% \bu\ Exercices : feuille n° 22, ex. 12 et 16.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 06 mai 2020}\\
+% \bu\ Cours : 2 - Variables aléatoires (suite).\\
+% \bu\ Exercices : feuille n° 22, ex. 06 à 11, 13 et 14.\\
+% \bu\ À faire pour jeudi 09 : feuille n° 22, ex. 12.\\
+% \bu\ À faire pour vendredi 10 : feuille n° 22, ex. 15.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 03 mai 2020}\\
+% \bu\ Devoir surveillé n° 08.\\
+% \bu\ Cours : 2 - Variables aléatoires (début).\\
+% \bu\ Exercices : feuille n° 22, ex. 02.\\
+% \bu\ À faire pour lundi 06 : feuille n° 22, ex. 06 et 07.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 02 mai 2020}\\
+% \bu\ Cours : 1 - Événements (fin).\\
+% \bu\ Exercices : feuille n° 21, ex. 03 et feuille n° 22, ex. 04 et 05.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 29 avril 2020}\\
+% \bu\ Interrogation surprise n° 18.\\
+% \bu\ Cours : Événements (suite).\\
+% \bu\ Exercices : feuille n° 21, ex. 02, 04 et 06 à 08, et feuille n° 22, ex. 01.\\
+% \bu\ À faire pour jeudi 02 : feuille n° 21, ex. 03.\\
+% \bu\ À faire pour vendredi 03 : feuille n° 22, ex. 02 et 03.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Vacances de printemps}.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 11 avril 2020}\\
+% \bu\ Cours : \bf Chapitre XXIII \rm : Probabilités : 1 - Événements (début).\\
+% \bu\ Exercices : feuille n° 21, ex. 01 et 05.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 10 avril 2020}\\
+% \bu\ Distribution : DM n° 18 (à rendre le 02 mai).\\
+% \bu\ Cours : 3 - Applications linéaires en dimension finie ; 4 - Formes linéaires et hyperplans.\\
+% \bu\ Exercices : feuille n° 20, ex. 20 et 27 à 28.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercedi 09 avril 2020}\\
+% \bu\ Cours : 2 - Sev en dimension finie (fin).\\
+% \bu\ Exercices : feuille n° 20, ex. 19.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 08 avril 2020}\\
+% \bu\ Interrogations surprises n° 17 et 17bis.\\
+% \bu\ Cours : 2 - Sev en dimension finie (début).\\
+% \bu\ Exercices : feuille n° 20, ex. 21, 22, 25, 26 et 30.\\
+% \bu\ À faire pour mercredi 10 : feuille n° 20, ex. 19.\\
+% \bu\ À faire pour jeudi 11 : feuille n° 20, ex. 27 et 28.\\
+% \bu\ À faire pour vendredi 12 : feuille n° 21, ex. 05.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 04 avril 2020}\\
+% \bu\ Cours : 1 - Notion de dimension (fin).\\
+% \bu\ Exercices : feuille n° 20, ex. 09, 12, 16 et 17.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercedi 03 avril 2020}\\
+% \bu\ Cours : 1 - Notion de dimension (début).\\
+% \bu\ Exercices : feuille n° 20, ex. 08, 10 et 11.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 01 avril 2020}\\
+% \bu\ Cours : Dénombrement (fin).\\
+% \bf Chapitre XXII \rm : Espaces vectoriels de dimension finie  : 1 - Notion de dimension (début).\\
+% \bu\ Exercices : feuille n° 20, ex. 03 à 07.\\
+% \bu\ À faire pour mercredi 03 : feuille n° 20, ex. 08.\\
+% \bu\ À faire pour jeudi 04 : feuille n° 20, ex. 09.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Vendredi 29 mars 2020} \\
+% \bu\ Devoir surveillé n° 07.\\
+% \bu\ Cours : \bf Chapitre XXI \rm : Dénombrement (début).\\
+% \bu\ À faire pour lundi 01 : feuille n° 19, ex. 12, et feuille n° 20, ex. 01 et 02.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 28 mars 2020}\\
+% \bu\ Cours : Intégration (fin).\\
+% \bu\ Exercices : feuille n° 19, ex. 11, 13 et 15.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 27 mars 2020} \\
+% \bu\ Cours : Intégration (suite).\\
+% \bu\ Exercices : feuille n° 19, ex. 06, 07 et 14.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 25 mars 2020} \\
+% \bu\ Interrogation surprise n° 16.\\
+% \bf Chapitre XX \rm : Intégration (début).\vspace{.4cm}\\
+% \bu\ Exercices : feuille n° 19, ex. 04, 05 et 08 à 10.\\
+% \bu\ À faire pour mercredi 27 : feuille n° 19, ex. 07.\\
+% \bu\ À faire pour jeudi 28 : feuille n° 19, ex. 11.\\
+% \bu\ À faire pour vendredi 29 : feuille n° 19, ex. 12.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Vendredi 22 mars 2020} \\
+% \bu\ Cours : Applications linéaires et familles de vecteurs (fin).\\
+% \bu\ Exercices : feuille n° 19, ex. 01 et 03.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 21 mars 2020}\\
+% \bu\ Cours : Applications linéaires et familles de vecteurs (suite).\\
+% \bu\ Exercices : feuille n° 18, ex. 32.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 20 mars 2020} \\
+% \bu\ Cours : Applications linéaires et familles de vecteurs (suite).\\
+% \bu\ Exercices : feuille n° 18, ex. 28, 29 et 31.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 18 mars 2020} \\
+% \bu\ Interrogation surprise n° 15.\\
+% \bu\ Distribution : DM n° 16 (à rendre le 28 mars).\\
+% \bu\ Cours : Applications linéaires et familles de vecteurs (suite).\\
+% \bu\ Exercices : feuille n° 18, ex. 20, 21, 25 à 27 et 30.\\
+% \bu\ À faire pour mercredi 20 : feuille n° 18, ex. 29.\\
+% \bu\ À faire pour jeudi 21 : feuille n° 18, ex. 32.\\
+% \bu\ À faire pour vendredi 22 : feuille n° 19, ex. 01 et 03.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Vendredi 15 mars 2020} \\
+% \bu\ Cours : Applications linéaires et familles de vecteurs (suite).\\
+% \bu\ Exercices : feuille n° 18, ex. 13.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 14 mars 2020}\\
+% \bu\ Cours : \bf Chapitre XIX \rm : Applications linéaires et familles de vecteurs (début).\\
+% \bu\ Exercices : feuille n° 18, ex. 18.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 13 mars 2020} \\
+% \bu\ Distribution : DM n° 15 (à rendre le 21 mars).\\
+% \bu\ Cours : Analyse asymptotique (fin).\\
+% \bf Chapitre XIX \rm : Familles de vecteurs et applications linéaires.\\ 
+% (début).\\
+% \bu\ Exercices : feuille n° 18, ex. 08, 09 et 16.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 11 mars 2020} \\
+% \bu\ Interrogation surprise n° 14.\\
+% \bu\ Cours : Analyse asymptotique (suite).\\
+% \bu\ Exercices : feuille n° 17, ex. 07 et 08, et feuille n° 18, ex. 01 à 04, 06, 07, 10 et 12.\\
+% \bu\ À faire pour mercredi 13 : feuille n° 18, ex. 08.\\
+% \bu\ À faire pour jeudi 14 : feuille n° 18, ex. 11.\\
+% \bu\ À faire pour vendredi 15 : feuille n° 18, ex. 13.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Vendredi 08 mars 2020} \\
+% \bu\ Cours : Analyse asymptotique (suite).\\
+% \bu\ Exercices : feuille n° 17, ex. 04 à 06.\\
+% \bu\ À faire pour lundi 11 : feuille n° 17, ex. 07.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 07 mars 2020}\\
+% \bu\ Distribution : DM n° 14 (à rendre le 14 mars).\\
+% \bu\ Cours : Analyse asymptotique (suite).\\
+% \bu\ Exercices : feuille n° 17, ex. 03.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 06 mars 2020} \\
+% \bu\ Cours : Analyse asymptotique (suite).\\
+% \bu\ Exercices : feuille n° 16, ex. 07 et feuille n° 17, ex. 01 et 02.\\
+% \bu\ À faire pour jeudi 07 : feuille n° 17, ex. 03.\\
+% \bu\ À faire pour vendredi 08 : feuille n° 17, ex. 05.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 04 mars 2020} \\
+% \bu\ Interrogation surprise n° 13.\\
+% \bu\ Cours : \bf Chapitre XVIII \rm : Analyse asymptotique 
+% (début).\\
+% \bu\ Exercices : feuille n° 16, ex. 03, 04 et 08.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Vacances d'hiver }\\
+% 
+% \noindent\textbf{Vendredi 15 février 2020}\\
+% \bu\ Devoir surveillé n° 06.\\
+% \bu\ Cours : 2 - Sev (fin) ; 3 - Espaces affines.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 14 février 2020}\\
+% \bu\ Cours : 2 - Sev (suite).\\
+% \bu\ Exercices : feuille n° 15, ex. 18 et feuille n° 16, ex. 5 et 6.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Mercredi 13 février 2020} \\
+% \bu\ Cours : 2 - Sev (suite).\\
+% \bu\ Exercices : feuille n° 15, ex. 14, feuille n° 16, ex. 1 et 8 (début).\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 11 février 2020} \\
+% \bu\ Cours : 1 - Ev (fin) ; 2 - Sev (début).\\
+% \bu\ Exercices : feuille n° 15, ex. 11, 13, 15, 16 et 17.\\
+% \bu\ À faire pour mercredi 13 : feuille n° 15, ex. 14.\\
+% \bu\ À faire pour jeudi 14 : feuille n° 15, ex. 18.\\
+% \bu\ À faire pour vendredi 15 : feuille n° 16, ex. 02.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 08 février 2020}\\
+% \bu\ Cours : Fractions rationnelles (fin).\\
+% \bf Chapitre XVII \rm : Espaces vectoriels : 1 - Ev (début).\\
+% \bu\ Exercices : feuille n° 15, ex. 01 et 12.\\
+% \bu\ À faire pour lundi 11 : feuille n° 15, ex. 11.\\
+% \bu\ À faire pour vendredi 15 : feuille n° 16, ex. 05 et 06.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 07 février 2020}\\
+% \bu\ Distribution : DM n° 13 (à rendre le 14 février).\\
+% \bu\ Cours : Fractions rationnelles (suite).\\
+% \bu\ Exercices : feuille n° 15, ex. 06 et 10.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Mercredi 06 février 2020} \\
+% \bu\ Cours : Fractions rationnelles (suite).\\
+% \bu\ Exercices : feuille n° 15, ex. 04 et 09.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Lundi 04 février 2020} \\
+% \bu\ Interrogation surprise n° 12.\\
+% \bu\ Cours :  Dérivabilité (fin) ;\\
+% \bf Chapitre XVI \rm : Fractions rationnelles (début).\\
+% \bu\ Exercices : feuille n° 14, ex. 05, 13, 14 et 19, et feuille n° 15, ex. 02, 03, 05, 07 et 08.\\
+% \bu\ À faire pour mercredi 06 : feuille n° 15, ex. 09.\\
+% \bu\ À faire pour jeudi 07 : feuille n° 15, ex. 10.\\
+% \bu\ À faire pour vendredi 08 : feuille n° 15, ex. 12.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Vendredi 01 février 2020}\\
+% \bu\ Cours : Dérivabilité (suite).\\
+% \bu\ Exercices : feuille n° 14, ex. 19.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 31 janvier 2020}\\
+% \bu\ Distribution : DM n° 12 (à rendre le 08 février).\\
+% \bu\ Cours : Dérivabilité (suite).\\
+% \bu\ Exercices : feuille n° 14, ex. 10, 17 et 18.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Mercredi 30 janvier 2020} \\
+% \bu\ Cours : Dérivabilité (suite).\\
+% \bu\ Exercices : feuille n° 14, ex. 11, 15 et 16.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 28 janvier 2020} \\
+% \bu\ Cours : \bf Chapitre XV \rm : Dérivabilité (début).\\
+% \bu\ Exercices : feuille n° 14, ex. 01 à 04, 06 à 10 et 12.\\
+% \bu\ À faire pour mercredi 30 : feuille n° 14, ex. 11.\\
+% \bu\ À faire pour jeudi 31 : feuille n° 14, ex. 17.\\
+% \bu\ À faire pour vendredi 25 : feuille n° 14, ex. 05, 13, 14 et 19.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Vendredi 25 janvier 2020}\\
+% \bu\ Devoir surveillé n° 05.\\
+% \bu\ Cours : Polynômes (fin).\\
+% \bu\ Exercices : feuille n° 13, ex. 13 et 14.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 23 janvier 2020} \\
+% \bu\ Cours : Polynômes (suite).\\
+% \bu\ Exercices : feuille n° 13, ex. 07 et 08.\\
+% \bu\ À faire pour lundi 28 : feuille n° 14, ex. 01.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Mardi 22 janvier 2020} \\
+% \bu\ Cours : Polynômes (suite).\\
+% \bu\ Exercices : feuille n° 13, ex. 03 et 07 (début).\\
+% \bu\ À faire pour mercredi 23 : feuille n° 13, ex. 07 (fin).\\
+% \bu\ À faire pour vendredi 25 : feuille n° 13, ex. 13.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 21 janvier 2020} \\
+% \bu\ Cours : Polynômes (suite).\\
+% \bu\ Exercices : feuille n° 13, ex. 04, 05, 09, 10, 11 et 12.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 17 janvier 2020}\\
+% \bu\ Cours : Polynômes (suite).\\
+% \bu\ Exercices : feuille n° 13, ex. 02.\\
+% \bu\ À faire pour lundi 21 : feuille n° 13, ex. 04.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mercredi 16 janvier 2020} \\
+% \bu\ Distribution : DM n° 11 (à rendre le 25 janvier).\\
+% \bu\ Cours : Polynômes (suite).\\
+% \bu\ Exercices : feuille n° 13, ex. 01.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Mardi 15 janvier 2020} \\
+% \bu\ Cours : Polynômes (suite).\\
+% \bu\ Exercices : feuille n° 12, ex. 01.\\
+% \bu\ À faire pour mercredi 16 : feuille n° 13, ex. 01.\\
+% \bu\ À faire pour vendredi 18 : feuille n° 13, ex. 02.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 14 janvier 2020} \\
+% \bu\ Interrogation surprise n° 10.\\
+% \bu\ \bf Chapitre XIV \rm : Polynômes (début).\\
+% \bu\ Exercices : feuille n° 12, ex. 02 à 07.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 11 janvier 2020}\\
+% \bu\ Cours : Continuité (fin).\\
+% \bu\ Exercices : feuille n° 11, ex. 11 et 12.\\
+% \bu\ À faire pour lundi 15 : feuille n° 12, ex. 01.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 10 janvier 2020}\\
+% \bu\ Cours : Continuité (suite).\\
+% \bu\ Distribution : DM n° 10 (à rendre le 18 janvier).\\
+% \bu\ Exercices : feuille n° 11, ex. 08 et 09.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Mercredi 09 janvier 2020} \\
+% \bu\ \bf Chapitre XIII \rm : Continuité (début).\\
+% \bu\ Exercices : feuille n° 11, ex. 07.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 07 janvier 2020} \\
+% % \bu\ Interrogation surprise n° 10.\\
+% \bu\ Cours : Limites d'une fonction (fin).\\
+% \bu\ Exercices : feuille n° 11, ex. 01, 03, 04, 05, 06 et 10.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Vacances de Noël}.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 22 décembre 2019}\\ 
+% \bu\ Cours : Limites d'une fonction (suite).\\
+% \bu\ Exercices : feuille n° 10, ex. 16, 17 et feuille n° 11, ex. 02.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 21 décembre 2019}\\
+% \bu\ Cours : \bf Chapitre XII \rm : Limites d'une fonction (début).\\
+% \bu\ Exercices : feuille n° 10, ex. 13, 14 et 15.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Mercredi 20 décembre 2019}\\
+% \bu\ Cours : Anneaux et corps.\\ 
+% \bu\ Exercices : feuille n° 10, ex. 12.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 17 décembre 2019}\\
+% \bu\ Interrogation surprise n° 09.\\
+% \bu\ Cours : 2 - Groupes (fin).\\ 
+% \bu\ Exercices : feuille n° 10, ex. 08 et 09.\\
+% \bu\ À faire pour mercredi 20 : feuille n° 10, ex. 12.\\
+% \bu\ À faire pour jeudi 21 : feuille n° 10, ex. 13.\\
+% \bu\ À faire pour vendredi 22 : feuille n° 10, ex. 16.\vspace{.4cm}\\ 
+% 
+% \noindent\textbf{Vendredi 14 décembre 2019}\\
+% \bu\ Cours : \bf Chapitre XI \rm : Groupes, anneaux, corps  : 1 - Lci ; 2 - Groupes (début).\\ 
+% \bu\ Exercices : feuille n° 10, ex. 06.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 13 décembre 2019}\\
+% \bu\ Cours : 7 - Suites complexes ; 8 - Premières séries numériques.\\
+% \bu\ Exercices : feuille n° 10, ex. 03, 04, 07 et 11.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Mercredi 12 décembre 2019}\\
+% \bu\ Distribution : DM n° 09 (à rendre le 20 décembre).\\
+% \bu\ Cours : Suites récurrentes.\\
+% \bu\ À faire pour jeudi 13 : feuille n° 10, ex. 07.\\
+% \bu\ À faire pour vendredi 14 : feuille n° 10, ex. 06.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 10 décembre 2019}\\
+% \bu\ Cours : 3 - Résultats de convergence (fin) ; 4 - Traduction séquentielle de certaines propriétés ; 5 - Suites 
+particulières.\\
+% \bu\ Exercices : feuille n° 10, ex. 01, 02 et 05.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Vendredi 07 décembre 2019}\\
+% \bu\ Devoir surveillé n° 04.\\
+% \bu\ Cours : 3 - Résultats de convergence (suite).\\
+% \bu\ Exercices : feuille n° 09, ex. 14 et 17.\\
+% \bu\ À faire pour lundi 03 : feuille n° 10, ex. 05.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 06 décembre 2019}\\
+% \bu\ Cours : 3 - Résultats de convergence (suite).\\
+% \bu\ Exercices : feuille n° 09, ex. 06 (fin), 10, 11, 12, 13, 15, 16, 18 et 19.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Mercredi 05 décembre 2019}\\
+% \bu\ Cours : 3 - Résultats de convergence (début).\\
+% \bu\ Exercices : feuille n° 09, ex. 08 et 06 (début).\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 03 décembre 2019}\\
+% \bu\ Interrogation surprise n° 08.\\
+% \bu\ Cours : 2 - Limite d'une suite réelle (fin).\\
+% \bu\ Exercices : feuille n° 08, ex. 07, 10 et 11, feuille n° 09, ex. 01, 02, 03, 04, 05 et 07.\\
+% \bu\ À faire pour mercredi 06 : feuille n° 09, ex. 08.\\
+% \bu\ À faire pour jeudi 07 : feuille n° 09, ex. 11.\\
+% \bu\ À faire pour vendredi 08 : feuille n° 09, ex. 14.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Vendredi 30 novembre 2019}\\
+% \bu\ Cours : 2 - Limite d'une suite réelle (début).\\
+% \bu\ Exercices : feuille n° 08, ex. 08, 09 et 12.\\
+% \bu\ À faire pour lundi 03 : feuille n° 08, ex. 07.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 29 novembre 2019}\\
+% \bu\ Distribution : DM n° 08 (à rendre le 06 décembre).\\
+% \bf Chapitre X :\rm Suites réelles et complexes : 1 - Vocabulaire.\\
+% \bu\ Exercices : feuille n° 08, ex. 02 et 04.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Mercredi 28 novembre 2019}\\
+% \bu\ Cours : 3 - Nombres premiers (fin).\\
+% \bu\ Exercices : feuille n° 08, ex. 06.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 26 novembre 2019}\\
+% \bu\ Interrogation surprise n° 07.\\
+% \bu\ Cours : 2 - PPCM ; 3 - Nombres premiers (début).\\
+% \bu\ Exercices : feuille n° 07, ex. 10 (fin), et feuille n° 08, ex. 01, 03 et 05.\\
+% \bu\ À faire pour mercredi 28 : feuille n° 08, ex. 06.\\
+% \bu\ À faire pour jeudi 29 : feuille n° 08, ex. 04.\\
+% \bu\ À faire pour vendredi 30 : feuille n° 08, ex. 08.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Vendredi 24 novembre 2019}\\
+% \bu\ Cours : 2 - PGCD (fin).\\
+% \bu\ Exercices : feuille n° 07, ex. 10 (début).\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 23 novembre 2019}\\
+% \bu\ Distribution : DM n° 07 (à rendre le 29 novembre).\\
+% \bu\ Cours : 1 - Divisibilité (fin) ; 2 - PGCD (début).\\
+% \bu\ Exercices : feuille n° 07, ex. 07 et 09.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Mercredi 22 novembre 2019}\\
+% \bf Chapitre IX \rm : Arithmétique : 1 - Divisibilité (début).\\
+% \bu\ Exercices : feuille n° 07, ex. 08 et 11.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 20 novembre 2019}\\
+% \bu\ Cours : 6 - La relation d'ordre naturelle sur \R\ (fin).\\
+% \bu\ Exercices : feuille n° 07, ex. 03, 04, 05 et 06.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 16 novembre 2019}\\
+% \bu\ Devoir surveillé n° 03.\\
+% \bu\ Cours : 5 - La relation d'ordre naturelle sur \N\ ; 6 - La relation d'ordre naturelle sur \R\ (début).\\
+% \bu\ Exercices : feuille n° 06, ex. 08.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 15 novembre 2019}\\
+% \bu\ Cours : 3 - Relations d'ordre ;  4 - Majorants, minorants et compagnie.\\
+% \bu\ Exercices : feuille n° 06, ex. 07 et feuille n° 07, ex. 01 et 02.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Mercredi 14 novembre 2019}\\
+% \bf Chapitre VIII \rm : Relations d'ordre : 1 - Relations binaires ; 2 - Relations d'équivalence.\\
+% \bu\ Exercices : feuille n° 06, ex. 05.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 12 novembre 2019}\\
+% \bu\ Interrogation surprise n° 06.\\
+% \bu\ Cours : 4 - Injectivité, surjectivité, bijectivité ; 5 - Images directe et réciproque.\\
+% \bu\ Exercices : feuille n° 06, ex. 01 à 04.\\
+% \bu\ À faire pour mercredi 14 : ex. 5.2.5 du chapitre de cours VII.\\
+% \bu\ À faire pour jeudi 15 : feuille n° 06, ex. 07.\\
+% \bu\ À faire pour vendredi 16 : feuille n° 06, ex. 08.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 09 novembre 2019}\\
+% \cours\ 2 - Restriction et prolongement ; 3 - Composition ; 4 - Injectivité.\\
+% \bu\ Exercices : feuille n° 05, ex. 08 et 09.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 08 novembre 2019}\\
+% \bu\ Distribution du DM n° 06 (à rendre le 15 novembre).\\
+% \bu\ Cours : Théorie des ensembles (fin).\\
+% \bf Chapitre VII \rm : Notion d'application. 1 - Vocabulaire.\\
+% \bu\ Exercices : feuille n° 05, ex. 06.\\
+% \bu\ À faire pour vendredi 09 : feuille n° 05, ex. 08.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Mercredi 07 novembre 2019}\\
+% \bu\ Cours : Théorie des ensembles (suite).\\
+% \bu\ Cours : Théorie des ensembles (fin).\\
+% \bu\ Exercices : feuille n° 05, ex. 07.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Lundi 05 novembre 2019}\\
+% \bu\ Interrogation surprise n° 05.\\
+% \bu\ Cours : \bf Chapitre VI \rm : Théorie des ensembles (début).\\
+% \bu\ Exercices : feuille n° 05, ex. 02, 04 et 10.\vspace{.4cm}\\
+% 
+% \noindent\textbf{ Vacances de novembre }\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 19 octobre 2019}\\
+% \bu\ Cours : 4 - Équations différentielles du second ordre (fin) ; 5 - Circuits RL et RLC.\\
+% \bu\ Exercices : feuille n° 04, ex. 26.\\
+% \bu\ À faire pour lundi 05 : feuille n° 05, ex. 04 et 07.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 18 octobre 2019}\\
+% \bu\ Cours : 3.2 - Équations différentielles du premier ordre avec second membre ; 4.1 - Équations 
+% différentielles homogènes du second ordre (début)
+% \bu\ Exercices : feuille n° 05, ex. 03.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Mercredi 17 octobre 2019}\\
+% \bu\ Cours : 2 - Généralités (fin) ; 3.1 - Équations différentielles homogène du premier ordre.\\
+% \bu\ Exercices : feuille n° 04, ex. 26 et feuille n° 05, ex. 01 (début).\vspace{.4cm}\\
+%  
+% \noindent\textbf{Lundi 15 octobre 2019}\\
+% \bu\ Distribution du DM n° 05 (à rendre le 08 novembre).\\
+% \bu\ Cours : 1 - Résultats d'analyse relatifs aux fonctions à valeurs complexes d'une variable réelle, et intégration 
+% (fin) ; 2 - Généralités (début).\\
+% \bu\ Exercices : feuille n° 04, ex. 13, 18, 19 et 21 à 25, et feuille n° 05, ex. 01 (début).\\
+% \bu\ À faire pour mercredi 17 : feuille n° 04, ex. 26.\\
+% \bu pour les autres jours : regarder les exercices de la feuille supplémentaire sur l'intégration.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Vendredi 12 octobre 2019}\\
+% \bu\ Devoir surveillé n° 02.\\
+% \bu\ Cours : 1 - Résultats d'analyse relatifs aux fonctions à valeurs complexes d'une variable réelle, et intégration 
+% (suite).\\
+% \bu\ Exercices : feuille n° 04, ex. 14 à 17, et 20.\\
+% \bu\ À faire pour lundi 15 : feuille n° 04, ex. 18 et 19.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 11 octobre 2019}\\
+% \bu\ Cours : \bf Chapitre V \rm : Équations différentielles : 1 - Résultats d'analyse relatifs aux fonctions à valeurs 
+complexes d'une variable réelle, et intégration (début).\\
+% \bu\ Exercices : feuille n° 04, ex. 05 et 08 à 12.\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Mercredi 10 octobre 2019}\\
+% \bu\ Cours : 5 - Nombres complexes et géométrie plane (fin).\\
+% \bu\ Exercices : feuille n° 04, ex. 05 (début).\vspace{.4cm}\\
+%  
+% \noindent\textbf{\bf Lundi 08 octobre 2019}\\
+% \bu\ Interrogation surprise n° 04.\\ 
+% \bu\ Cours : 4 - Techniques de calcul ; 5 - Nombres complexes et géométrie plane (début).\\
+% \bu\ Exercices : feuille n° 03, ex. 10 à 12 et feuille n° 04, ex. 01 à 04, 06 et 07.\\
+% \bu\ À faire pour mercredi 10 : feuille n° 04, ex. 05 et 08.\\
+% \bu\ À faire pour jeudi 11 : feuille n° 04, ex. 12.\\
+% \bu\ À faire pour vendredi 12 : feuille n° 04, ex. 17.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Vendredi 05 octobre 2019}\\
+% \bu\ Cours : 3 - Équations du second degré.\\
+% \bu\ Exercices : feuille n° 03, ex. 01, 02, 04, 05, 08 et 09.\\
+% \bu\ À faire pour lundi 08 : feuille n° 03, ex. 10 à 12.\vspace{.4cm}\\
+% % 
+% \noindent\textbf{Jeudi 04 octobre 2019}\\
+% \bu\ Distribution du DM n° 04 (à rendre le 11 octobre).\\
+% \bu\ Cours : 2 - Le groupe \U\ des nombres complexes de module 1 (fin).
+% \bu\ Exercices : feuille n° 02, ex. 20, et feuille n° 03, ex. 03, 06 et 07.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Mercredi 03 octobre 2019}\\
+% \bu\ Cours : 1 - Construction de \C\ (fin) ; 2 - Le groupe \textbf{U} des nombres 
+% complexes de module 1 (début).\\
+% \bu\ Exercices : feuille n° 02, ex. 15 (fin).\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 01 octobre 2019}\\
+% \bu\ Interrogation surprise n° 03.\\
+% \bu\ Cours : \bf Chapitre IV \rm : Le corps des complexes : 1 - Construction de \C\ (début).\\
+% \bu\ Exercices : feuille n° 02, ex. 14 à 17 et 19, et feuille n° 03, ex. 03 et 07.\\
+% \bu\ À faire pour mercredi 03 : feuille n° 02, ex. 15 (fin).\\
+% \bu\ À faire pour jeudi 04 : feuille n° 02, ex. 20.\\
+% \bu\ À faire pour vendredi 05 : feuille n° 03, ex. 01, 02, 04 et 05.\vspace{.4cm}\\ 
+% 
+% \noindent\textbf{Vendredi 28 septembre 2019}\\
+% \bu\ Cours : Quelques fondamentaux (fin).\\
+% \bu\ Exercices : feuille n° 02, ex. 05 et 10 à 12.\\
+% \bu\ À faire pour lundi 02 : récurrences erronées.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Jeudi 27 septembre 2019}\\
+% \bu\ Cours : \bf Chapitre III \rm : Quelques fondamentaux (suite).\\
+% \bu\ Exercices : feuille n° 02, ex. 02 et 06 à 09.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Mercredi 26 septembre 2019}\\
+% \bu\ Distribution du DM n° 03 (à rendre le 04 octobre).\\
+% \bu\ Cours : \bf Chapitre III \rm : Quelques fondamentaux (début).\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 24 septembre 2019}\\
+% \bu\ Cours : 4 - Matrices (fin) ; 5 - Systèmes linéaires.\\
+% \bu\ Exercices : feuille n° 01, ex. 01, 03 et 04.\\
+% \bu\ À faire pour mercredi 26 : feuille n° 02, ex. 06 et 07.\\
+% \bu\ À faire pour jeudi 27 : feuille n° 02, ex. 02.\\
+% \bu\ À faire pour vendredi 28 : feuille n° 02, ex. 05.\vspace{.4cm}\\ 
+% 
+% \noindent\textbf{Vendredi 21 septembre 2019}\\
+% \bu\ Devoir surveillé n° 01.\\
+% \bu\ Cours : 4 - Matrices (début).\\
+% \bu\ Exercices : feuille n° 01, ex. 16 et 17.\vspace{.4cm}\\
+%  
+% \noindent\textbf{Jeudi 20 septembre 2019}\\
+% \bu\ Cours : 3 - Quelques formules (fin).\\
+% \bu\ Exercices : feuille n° 01, ex. 19.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Mercredi 19 septembre 2019}\\
+% \bu\ Cours : 3 - Quelques formules (suite).\\
+% \bu\ Exercices : feuille n° 01, ex. 15 et 18.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 17 septembre 2019}\\ 
+% \bu\ Interrogation surprise n° 02.\\
+% \bu\ 1 - Sommes (fin) ; 2 - Produits ; 3 - Quelques formules (début).\\
+% \bu\ Exercices : feuille n° 01, ex. 12 à 14.\\
+% \bu\ À faire pour mercredi 19 : feuille n° 01, ex. 18.\\
+% \bu\ À faire pour jeudi 20 : feuille n° 01, ex. 19.\\
+% \bu\ À faire pour vendredi 21 : feuille n° 01, ex. 16.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 14 septembre 2019}\\
+% \bu\ Cours : 9 - Fonctions hyperboliques.\\
+% \bu\ \textbf{Chapitre II} \rm : Un peu de calcul. 1 - Sommes (début).\\
+% \bu\ À faire pour lundi 10 : feuille n° 01, ex. 10 et 11.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Jeudi 13 septembre 2019}\\
+% \bu\ Cours : 7 - Fonctions circulaires ; 8 - Fonctions circulaires inverses.\\
+% \bu\ Exercices : feuille n° 01, ex. 9.\vspace{.4cm}\\
+%     
+% \noindent\textbf{\bf Mercredi 12 septembre 2019}\\
+% \bu\ Cours : 6 - Exponentielle et logarithme.\\
+% \bu\ Distribution du DM n° 02 (à rendre le 20 septembre).\\
+% \bu\ Exercices : feuille n° 01, ex. 7.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Lundi 10 septembre 2019}\\
+% \bu\ Cours : 5 - Puissances.\\
+% \bu\ Interrogation surprise n° 01.\\
+% \bu\ Exercices : feuille n° 01, ex. 1 à 6, et 8.\vspace{.4cm}\\
+% 
+% \noindent\textbf{Vendredi 07 septembre 2019}\\
+% \bu\ Cours : 3 - Réciproques ; 4 - Fonction valeur absolue.\\
+% \bu\ Exercices : feuille n° 01, ex. 3 (fin).\\
+% \bu\ À faire pour lundi 10 : feuille n° 01, ex. 1.\vspace{.4cm}\\
+% 
+% \noindent\textbf{\bf Jeudi 06 septembre 2019}\\
+% \bu\ Cours : 1 - Vocabulaire (fin) ; 2 - Effet d'une transformation sur le graphe ; 3 - Composée de fonctions 
+(début).\\
+% \bu\ Exercices : feuille n° 01, ex. 2 et 3 (début).\\
+% \bu\ À faire pour vendredi 07 : feuille n° 01, ex. 3.\vspace{.4cm}\\
+%     
+% \noindent\textbf{\bf Mercredi 05 septembre 2019}\\
+% \bu\ Cours : \bf Chapitre I \rm : Fonctions usuelles : 1 - Vocabulaire (début).\vspace{.4cm}\\
+%  
+
+\noindent\textbf{\bf Mardi 03 septembre 2019}\\
+Journée de rentrée ; distribution des feuilles de TD, des formulaires, des
+chapitres I et II, et du DM n° 01 (à rendre le 12 septembre).\vspace{.4cm}\\
+
+
+\label{end}
+\end{document}
+
+
