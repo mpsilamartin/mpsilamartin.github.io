@@ -1,0 +1,27 @@
+\begin{exoTD} \textbf{Formulaire de trigonométrie :}
+Redonnez les formules pour $\cos(a + b)$, $\sin(a + b)$, $\tan(a + b)$ et $\cos(a)+\cos(b)$.\\
+Linéarisez $\cos^2(a)\sin^3(a)$.
+\end{exoTD}
+
+\begin{exoTD} \textbf{Coefficients binomiaux :}
+Donner la définition de coefficient binomial.\\
+Donner les valeurs de $\Binom n0$, $\Binom n1$, $\Binom n2$.\\ 
+Démontrer la formule de Pascal.\\
+Expliquer la construction du triangle de Pascal.
+\end{exoTD}
+
+\begin{exoTD} \textbf{Exemple d'analyse-synthèse :} Montrer par analyse-synthèse que toute fonction de \R\ dans \R\ est 
+décomposable de façon unique en somme d'une fonction paire et d'une fonction impaire.
+\end{exoTD}
+
+\begin{exoTD} \textbf{Intégration par parties :}
+Théorème d'intégration par parties à énoncer et à démontrer. Application au calcul de $\dint_0^1 x\e^x\dd x$.
+\end{exoTD}
+
+\begin{exoTD} \textbf{Dérivabilité et monotonie :} Énoncer le théorème de monotonie (large, cas constant, stricte 
+monotonie). Exemple de $x\mapsto x+\sin x$.
+\end{exoTD}
+
+\begin{exoTD} \textbf{Bijectivité :} Définition (en français et avec des quantificateurs), caractérisation par 
+l'existence d'une réciproque. Exemple de la fonction carré. Théorème de la bijection à énoncer.
+\end{exoTD}
