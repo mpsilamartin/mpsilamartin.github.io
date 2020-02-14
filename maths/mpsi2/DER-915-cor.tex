@@ -1,0 +1,148 @@
+\begin{enumerate}
+\item 
+\begin{enumerate}
+<<<<<<< HEAD
+\item Il faut bien remarquer que $f'$ est croissante, donc les pentes des tangentes aussi.
+\begin{figure}[!h]
+\begin{center}
+\xfig{DER-915-cor-convexe}
+=======
+\item 
+\begin{figure}[!h]
+\begin{center}
+	\begin{tikzpicture}[scale=4]
+	  \draw[->] (-.1,0) -- (2.1,0);
+% 	  \draw[->] (0,-.6) -- (0,.6);
+% 	  \clip (-0.3,-0.3) rectangle (pi+0.2,0.7);
+	  \draw[blue,thick] plot[smooth] file {DER-915-cor_carre.dat};
+	  \draw[blue,thick] (1.5,0.3) node {$f$};
+	  \draw[dotted] (0,-.5) -- (0,0) node[anchor = south] {$a$} ;
+	  \draw[dotted] (2,.5) -- (2,0) node[anchor = north] {$b$} ;
+	  \draw[red,thick] (0,-.75) -- (2,.25);
+	  \draw[pink,thick] (.5,-0.4375) -- (1.75,.265625);
+	\end{tikzpicture}
+        \caption{Exemple de fonction convexe.}
+        \label{DER-915-cor.courbe1}
+>>>>>>> 587ea20b9328eb0bc98450250272f801072d36c9
+\end{center}
+\end{figure}
+\item Soit $x_0\in[a,b]$. La tangente à $f$ en $x_0$ a pour équation $y=f'(x_0)(x-x_0)+f(x_0)$. Considérons la fonction $\ffi\ :\ x\mapsto f(x)-f'(x_0)(x-x_0)-f(x_0)$, définie sur $[a,b]$. Il s'agit donc de montrer que $\ffi$ est positive. Nous avons $\ffi'(x)=f'(x)-f'(x_0)$. Ainsi $\ffi'(x_0)=0$, mais $f''\geq 0$ donc $f'$ est croissante, et ainsi $\ffi'$ est négative sur $[a,x_0]$ et positive sur $[x_0,b]$. Et donc $\ffi$ est décroissante sur $[a,x_0]$ et croissante sur $[x_0,b]$. Comme $\ffi(x_0)=0$, alors $\ffi\geq 0$ et donc
+\begin{center}
+\fbox{le graphe de $f$ se situe sous toutes ses tangentes.}
+\end{center}
+\item La fonction $\tau_f(c,\cdot)$ est dérivable sur $[a,b]\setminus\ens{c}$ par opération sur les fonctions dérivables et si $x \in [a,b]\setminus\ens{c}$ : 
+    \begin{equation*}
+        \dfrac{\dd}{\dx}\tau_f(c,x) = \dfrac{(x-c)f'(x) - (f(x)-f(c))}{(x-c)^2}.
+    \end{equation*}
+    Or par le théorème des accroissements finis, il existe $d_x$ entre $x$ et $c$ tel que $f(x)-f(c) = f'(d_x)(x-c)$. On a alors 
+    \begin{equation*}
+        \dfrac{\dd}{\dx}\tau_f(c,x) = \dfrac{f'(x) - f'(d_x)}{x-c}.
+    \end{equation*}
+    Par croissance de $f'$, $f'(x) - f'(d_x)$ est du même signe que $x-c$, donc $\dfrac{\dd}{\dx}\tau_f(c,x)\geq 0$. 
+    
+    Ainsi, $\tau_f(c,\cdot)$ est croissante sur $[a,c[$ et sur $]c,b]$. Comme $f$ est dérivable en $c$, $\tau_f(c,\cdot)$ se prolonge par continuité en $c$.
+    
+    Ainsi, \fbox{ $\tau_f(c,\cdot)$ est croissante sur $[a,b]\setminus\ens{c}$.}
+\item Soit $c<d \in [a,b]$, soit $x \in [c,d]$. Notons $\gamma$ la corde de $f$ entre les points d'abscisses $c$ et $d$. Le point sur $\gamma$ d'abscisse $x$ a pour ordonnée $f(c) + (x-c)\tau_f(c,d)$. Le point sur la courbe de $f$ d'abscisse $x$ a pour ordonnée $f(c) + (x-c) \tau_f(c,x)$. 
+
+    D'après la question précédente, $\tau_d(c,x) \leq \tau_d(c,d)$ et comme $x-c\geq 0$, on a  $f(c) + (x-c)\tau_f(c,d)\geq f(c) + (x-c) \tau_f(c,x)$. 
+    
+    Ainsi, \fbox{le graphe de $f$ est en dessous de toutes ses cordes.}
+\end{enumerate}
+
+\item $f$ est continue, $f(a)<0$ et $f(b)>0$, donc d'après le TVI $f$ s'annule en un point $c\in]a,b[$. Et comme $f$ est strictement croissante, elle est injective et ce point d'annulation est unique. Donc
+\begin{center}
+\fbox{$f$ s'annule en un unique point $c$ de $]a,b[$.}
+\end{center}
+\item 
+\begin{enumerate}
+\item La tangente à $f$ en $u$ a pour équation $y=f'(u)(x-u)+f(u)$. Mais l'équation $f'(u)(x-u)+f(u)=0$ a pour unique solution $x=u-\dfrac{f(u)}{f'(u)}$, qui est bien définie car $f'(u)\neq 0$.
+\begin{center}
+\fbox{La tangente à $f$ en $u$ coupe l'axe des abscisses en $(v,0)$ avec $v=u-\dfrac{f(u)}{f'(u)}$.}
+\end{center}
+\item Puisque $f$ est croissante et comme $f(c)=0$ et $u\geq c$, $f(u)\geq0$. De plus $f'(u)>0$ par hypothèse, donc puisque $v=u-\dfrac{f(u)}{f'(u)}$, nous avons bien
+\begin{center}
+\fbox{$v\leq u$.}
+\end{center}
+\item Le graphe de $f$ se situe au-dessus de la tangente de $f$ en $u$, donc en particulier en $v$, puisque cette tangente y coupe l'axe des abscisses, nous avons $f(v)\geq 0$. Et à nouveau par croissance de $f$,
+\begin{center}
+\fbox{$c\leq v$.}
+\end{center}
+\begin{figure}[!h]
+\begin{center}
+\xfig{DER-915-cor-suite}
+\end{center}
+\end{figure}
+\end{enumerate}
+\item
+\begin{enumerate}
+\item Pour tout $n\in\N$, posons $(H_n)$ : $x_n$ existe et $x_n\in[c,b]$.\\
+$(H_0)$ est évidemment vraie car $x_0=b$.\\
+Soit $n\in\N$ tel que $(H_n)$ est vraie. Alors $f$ et $f'$ sont bien définies en $x_n$, et $f'(x_n)>0$, donc $x_{n+1}$ est bien défini. De plus, la question précédente assure que $x_{n+1}$ est l'abscisse du point d'intersection de la tangente à $f$ en $x_n$ et de l'axe des abscisses, et que $x_{n+1}\in[c,x_n]$. En particulier $x_{n+1}\in[c,b]$, et $(H_{n+1})$ est vérifiée.
+\begin{center}
+\fbox{Ainsi la suite $(x_n)$ est bien définie.}
+\end{center}
+\item Dans la récurrence précédente, nous avons démontré que $(x_n)$ était décroissante, et minorée par $c$. Elle converge donc vers une limite $\ell\in[c,b]$. De plus, $f$ étant continue, par passage à la limite nous avons $\ell=\ell-\dfrac{f(\ell)}{f'(\ell)}$, donc $f(\ell)$ et par unicité du point d'annulation de $f$,
+\begin{center}
+\fbox{$x_n\tend c$.}
+\end{center}
+\end{enumerate}
+\item $f'$ et $f''$ sont continues et $[a,b]$ est un segment, donc
+\begin{center}
+\fbox{$m_1=\underset{[a,b]}{\displaystyle\min} f'$ et $M_2=\underset{[a,b]}{\displaystyle\max} f''$ existent.}
+\end{center}
+\item 
+\begin{enumerate}
+\item \fbox{$g$ est dérivable} comme produit et somme de fonctions dérivables.\\
+Soit $t\in[c,x_n]$. Alors $|g'(t)|=|f'(t)+(t-c)f''(t)-f'(t)|=[(t-c)f''(t)|$. Or $f''$ est positive et majorée par $M_2$, $|t-c|\leq x_n-c$ puisque $t\in[c,x_n]$, donc
+\begin{center}
+\fbox{pour tout $t\in[c,x_n]$, $|g'(t)|\leq M_2(x_n-c)$.}
+\end{center}
+\item $g$ étant dérivable sur $[x_n,c]$, nous pouvons utiliser l'inégalité des accroissements finis entre $c$ et $x_n$, grâce à la majoration de la question précédente : $|g(x_n)-g(c)|\leq M(x_n-c)\times|x_n-c|$. Mais $g(c)=0$ et $|x_n-c|=x_n-c$ donc
+\begin{center}
+\fbox{$|g(x_n)|\leq M_2(x_n-c)^2$.}
+\end{center}
+\item Nous avons $g(x_n)=f'(x_n)\left[x_n-c-\dfrac{f(x_n)}{f'(x_n)}\right]=f'(x_n)\left[x_{n+1}-c\right]$. Grâce à la question précédente, $f'(x_n)(x_{n+1}-c)\leq M_2(x_n-c)^2$.\\
+Mais d'autre part, $m_1\leq f'(x_n)$ et $x_{n+1}-c\geq 0$, donc $m_1(x_{n+1}-c)\leq f'(x_n)(x_{n+1}-c)$. Ainsi $m_1(x_{n+1}-c)\leq M_2(x_n-c)^2$, et en posant $K=\dfrac{M_2}{m_1}$, il vient (car $m_1>0$),
+\begin{center}
+\fbox{$0\leq x_{n+1}-c\leq K(x_n-c)^2$.}
+\end{center}
+\item\label{DER-915-cor:qu:encadrement} Pour tout $n\in\N$, posons $(H_n)$ : $0\leq x_n-c\leq K^{2^n-1}(b-a)^{2^n}$.\\
+$(H_0)$ est vraie car $0\leq x_0-c=b-c\leq b-a$.\\
+Soit $n\in\N$ tel que $(H_n)$ est vraie. Alors $0\leq x_{n+1}-c\leq K(x_n-c)^2
+\leq K\times (K^{2^n-1}(b-a)^{2^n})^2$, soit $0\leq x_{n+1}-c\leq K^{2^{n+1}-1+1}(b-a)^{2^{n+1}}$ et donc $(H_{n+1})$ est vraie. Finalement
+\begin{center}
+\fbox{pour tout $n\in\N$, $0\leq x_n-c\leq K^{2^n-1}(b-a)^{2^n}$.}
+\end{center}
+\end{enumerate}
+\item Immédiatement :  \fbox{$x_1 = c$ puis $x_n=c$ pour tout $n\geq 1$.}
+\item 
+    \begin{enumerate}
+        \item On a $f(a) = \p{\dfrac{5}{4}}^3-3 = \dfrac{5^3-3\times 4^3}{4^3} = -\dfrac{67}{64}<0$ et $f(b) = \p{\dfrac{3}{2}}^3-3 = \dfrac{3^3-3\times 2^3}{2^3} = \dfrac{3}{8}>0$.
+        
+            Immédiatement, $f$ s'annule uniquement en $\sqrt[3]{3}$.
+            
+            La fonction $f$ est polynomiale, donc infiniment dérivable. On a $f' : x \mapsto 3x^2$ et $f'' : x\mapsto 6x$. Ainsi, $f'$ est $f''$ sont croissantes sur $[a,b]$ et $f'$ atteint son minimum en $a$ : $m_1 = f_1'(a) = 3\p{\dfrac{5}{4}}^2 = \dfrac{75}{16}$. On a donc bien $f_1'>0$ sur $[a,b]$. 
+            
+            De même, $f''(a) = \dfrac{15}{2}>0$, donc $f''$ est positive sur $[a,b]$. Enfin, $f''$ atteint son maximum en $b$ et $M_2 = f''(b) =  9$.
+            
+            Ainsi, \fbox{$f$ vérifie les hypothèses de l'énoncé, $c = \sqrt[3]{3}$, $m_1 = \dfrac{75}{16}$, $M_2 = 9$ et $K = \dfrac{144}{75}$.}
+        \item On a $b-a = \dfrac{1}{4}$, donc $K(b-a) = \dfrac{144}{300} < \dfrac{1}{2}$. Comme $K>1$, on obtient par la question~\ref{DER-915-cor:qu:encadrement} : 
+            \begin{equation*}
+                \boxed{0 \leq x_n-c \leq \leq K^{2^n-1}(b-a)^{2^n} \leq K^{2^n}(b-a)^{2^n} \leq (K(b-a))^{2^n} \leq \dfrac{1}{2^n}.}
+            \end{equation*}
+        \item On a $10^{-9} = (1000)^{-3} \geq (1024)^{-3}$, donc $10^{-9} \geq 2^{-30}$. Comme $2^{5} = 32 > 30$, si $n\geq 5$, on a $\p{\dfrac{1}{2}}^{2^n} \leq 10^{-9}$. 
+        
+            Ainsi, \fbox{pour (et à partir de) $N=5$, on sait que $\abs{x_N-c} \leq 10^{-9}$.}
+    \end{enumerate}
+    \emph{Remarque :} on calcule 
+        \begin{itemize}
+            \item $x_1 = \dfrac{13}{9}$,\vspace{.2cm}
+            \item $x_2 = \dfrac{6581}{4563}$,\vspace{.2cm}
+            \item $x_3 = \dfrac{855~058~686~523}{592~864~580~529}$,\vspace{.2cm}
+            \item $x_4 = \dfrac{1875465263332282981525612607701603001}{1300374984984420422451555103711922523}$...\vspace{.2cm}
+        \end{itemize}
+    Python donne $\abs{x_2-c} \leq 10^{-5}$, $\abs{x_3-c} \leq 10^{-11}$. 
+    
+    
+\end{enumerate}
