@@ -200,3 +200,18 @@ let rec min l =
 ;;
 
 
+(** Exercice 10 **)
+let rec evalue liste n =
+  match liste with
+  | [] -> 0
+  | [a0] -> a0
+  | t1::t2::q -> evalue (t1*n+t2::q) n
+;;
+
+let evalue_bis liste n =
+  let rec aux liste acc =
+    match liste with
+    | [] -> acc
+    | t::q -> aux q (t + n*acc)
+  in aux liste 0
+;;
