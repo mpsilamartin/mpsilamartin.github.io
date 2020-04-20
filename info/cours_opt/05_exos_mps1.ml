@@ -105,3 +105,111 @@ let append t1 t2 =
     t.(k+l1) <- t2.(k)
   done;
   t;;
+
+
+(** Exercice 4 **)
+let tri_selection tab=
+  let n=Array.length tab in
+  for k= 0 to n-1 do
+    let i_min= ref k in
+    for i = k+1 to n-1 do
+      if tab.(!i_min)>tab.(i)
+      then i_min := i
+    done;
+    let tmp = tab.(k) in
+    tab.(k)<-tab.(!i_min);
+    tab.(!i_min) <- tmp
+  done
+;;
+(** Tri selection **)
+(* La fonction suivante echange les elements 
+d'indice i et j dans le tableau t *)
+let echange t i j =
+  let tmp = t.(i) in
+  t.(i) <- t.(j);
+  t.(j) <- tmp
+;;
+
+(* Renvoie l'indice du ppe a partir de l'indice i*)
+let rec indice_min t i =
+  let n = Array.length t in
+  if i = n-1
+  then n-1
+  else let j = indice_min t (i+1) in
+       if t.(j) < t.(i)
+       then j
+       else i
+;;
+
+let tri_selection t =
+  let n = Array.length t in
+  let rec trie_droite t k =
+    if k < n-1
+    then 
+      let i = indice_min t k in
+      echange t i k;
+      trie_droite t (k+1)
+  in
+  trie_droite t 0
+;;
+
+
+(* Exercice 5 *)
+
+(** Tri insertion **)
+let tri_insertion t =
+  let n = Array.length t in
+  for i = 1 to n-1 do
+    (* n-1 itérations *)
+    let j = ref i in
+    (* Dans le pire des cas, dans la boucle suivante,
+j atteint 0, il y a dans le pire des cas i itérations, i est majoré par n-1 *)
+    while !j > 0 && t.(!j) <t.(!j-1) do
+      (* Deux instructions en O(1) *)
+      echange t !j (!j-1);
+      decr j (*j := !j - 1*)
+    done
+  done
+;;
+
+let tri_insertion tab=
+  let n=Array.length tab in
+  for i= 0 to n-2 do
+    (* est-ce que tab.(i+1) n'est pas à sa place *)
+    if tab.(i)>tab.(i+1)
+    then
+      (* On cherche le plus petit j tq tab.(i) <= tab.(!j) *)
+      let j=ref 0 in
+      while tab.(i+1)>tab.(!j)do
+        j := !j +1
+      done;      
+      (* On doit mettre tab.(i) à la place de tab.(!j) en décalant tout vers la droite *)
+   let mem=tab.(i+1) in
+    for k = i downto !j do
+      tab.(k+1)<-tab.(k)
+    done;
+    tab.(!j)<-mem
+  done;
+;;
+
+(*Ex6*)
+(* Deux polynômes P et Q représentés par 
+[|a0;a1;..;an|] et [|b0;b1;...;bm|] *)
+(* On doit faire une fonction qui renvoie le tableau qui correspond à la somme *)
+
+
+let add t1 t2=
+  let n1 = Array.length t1 in
+  let n2 = Array.length t2 in
+  let n = max n1 n2 in
+  let somme = Array.make n (t1.(0)+t2.(0))  in
+  for i = 1 to n1-1 do
+    somme.(i) <- t1.(i)
+  done;
+  for i = 1 to n2-1 do
+    somme.(i) <- somme.(i) + t2.(i)
+  done;
+  somme;;
+  
+
+  
