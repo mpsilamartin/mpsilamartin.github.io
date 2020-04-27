@@ -202,11 +202,11 @@ let add t1 t2=
   let n1 = Array.length t1 in
   let n2 = Array.length t2 in
   let n = max n1 n2 in
-  let somme = Array.make n (t1.(0)+t2.(0))  in
-  for i = 1 to n1-1 do
+  let somme = Array.make n 0  in
+  for i = 0 to n1-1 do
     somme.(i) <- t1.(i)
   done;
-  for i = 1 to n2-1 do
+  for i = 0 to n2-1 do
     somme.(i) <- somme.(i) + t2.(i)
   done;
   somme;;
