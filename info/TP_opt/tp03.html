@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>TP04</title>
+<title>TP03 - Introduction aux arbres binaires</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,7 +13077,219 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="TP-n&#176;3---Introduction-aux-arbres-binaires">TP n&#176;3 - Introduction aux arbres binaires<a class="anchor-link" href="#TP-n&#176;3---Introduction-aux-arbres-binaires">&#182;</a></h1>
+<h1 id="TP-n&#176;3---Introduction-aux-arbres-binaires"><em>TP n&#176;3 - Introduction aux arbres binaires</em><a class="anchor-link" href="#TP-n&#176;3---Introduction-aux-arbres-binaires">&#182;</a></h1><h1 id="Remarques-de-correction">Remarques de correction<a class="anchor-link" href="#Remarques-de-correction">&#182;</a></h1><ul>
+<li><p>Une partie non négligeable d'entre vous s'est révélée incapable de suivre les consignes données pour rendre le TP (canal à utiliser, nom du fichier, voire format du fichier), ce qui un peu inquiétant.</p>
+</li>
+<li><p>Lorsqu'on partage un programme informatique, il est préférable que celui-ci ne dysfonctionne pas grossièrement (erreurs de syntaxe par exemple).</p>
+</li>
+<li><p><strong>Respectez scrupuleusement les consignes</strong> de l'énoncé (noms et types des fonctions demandées notamment).</p>
+</li>
+<li>Lorsque vous écrivez des fonctions qui ne sont pas données dans l'énoncé, essayez de leur donner un nom explicite et ajoutez un commentaire pour décrire ce que fait (ou est censée faire) votre fonction.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Évitez de réaliser plusieurs fois le même appel de fonction ; les conséquences sur la complexité peuvent être désastreuses.</li>
+<li>Par exemple, les deux programmes suivants calculent le maximum d'une liste :</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-OCaml"><pre><span></span><span class="k">let</span> <span class="k">rec</span> <span class="n">maxi1</span> <span class="n">liste</span> <span class="o">=</span>
+  <span class="k">match</span> <span class="n">liste</span> <span class="k">with</span>
+  <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="n">failwith</span> <span class="s2">&quot;Liste vide&quot;</span>
+  <span class="o">|</span> <span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">-&gt;</span> <span class="n">x</span>
+  <span class="o">|</span> <span class="n">t</span><span class="o">::</span><span class="n">q</span> <span class="o">-&gt;</span> <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="n">maxi1</span> <span class="n">q</span>
+            <span class="k">then</span> <span class="n">t</span>
+            <span class="k">else</span> <span class="n">maxi1</span> <span class="n">q</span>
+<span class="o">;;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>val maxi1 : &#39;a list -&gt; &#39;a = &lt;fun&gt;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-OCaml"><pre><span></span><span class="k">let</span> <span class="k">rec</span> <span class="n">maxi2</span> <span class="n">liste</span> <span class="o">=</span>
+  <span class="k">match</span> <span class="n">liste</span> <span class="k">with</span>
+  <span class="o">|</span> <span class="bp">[]</span> <span class="o">-&gt;</span> <span class="n">failwith</span> <span class="s2">&quot;Liste vide&quot;</span>
+  <span class="o">|</span> <span class="o">[</span><span class="n">x</span><span class="o">]</span> <span class="o">-&gt;</span> <span class="n">x</span>
+  <span class="o">|</span> <span class="n">t</span><span class="o">::</span><span class="n">q</span> <span class="o">-&gt;</span> <span class="k">let</span> <span class="n">max_q</span> <span class="o">=</span> <span class="n">maxi2</span> <span class="n">q</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="n">max_q</span>
+            <span class="k">then</span> <span class="n">t</span>
+            <span class="k">else</span> <span class="n">max_q</span>
+<span class="o">;;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>val maxi2 : &#39;a list -&gt; &#39;a = &lt;fun&gt;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Si on note $C(n)$ le nombre d'appels nécessaires au calcul du maximum d'une liste de longueur $n$ dans le pire des cas,
+alors $C(0)=C(1)=1$, et on a pour $n \geqslant 2$, $C(n) = 1 + 2C(n-1)$ dans le cas de <code>maxi1</code> et $C(n) = 1 + C(n-1)$ dans le cas de <code>maxi2</code>, ce qui donne $C(n) = 2^n -1$ pour <code>maxi1</code> et $C(n) = n$ dans le cas de <code>maxi2</code>.
+Finalement, la complexité dans le pire des cas de <code>maxi2</code>est linéaire, mais celle de <code>maxi2</code> est exponentielle !</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Dans la dernière question, on vous demander de <strong>prouver</strong> qu'une fonction termine. Cet exemple était certes loin d'être le plus évident, mais il ne s'agit pas d'argumenter à l'aide de termes comme "<em>forcément</em>", "<em>au bout d'un moment</em>" (dans la majorité des cas, le résultat est franchement approximatif), mais bien de rédiger une <strong>preuve</strong>, en utilisant les méthodes vues au chapitre 4.</li>
+<li>La grandeur utilisée pour comparer les éléments sur lesquels se font les appels récursifs doit être la même dans tout le raisonnement, et il faut s'assurer que les cas minimaux terminent bien.<br/>
+Il n'est par exemple pas possible de considérer dans un cas la hauteur de l'arbre et dans un autre cas la hauteur de son fils droit.<br/>
+Considérons la fonction <code>f</code> suivante :</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-OCaml"><pre><span></span><span class="k">type</span> <span class="n">arbre</span> <span class="o">=</span>
+  <span class="o">|</span><span class="nc">Feuille</span> <span class="k">of</span> <span class="kt">int</span>
+  <span class="o">|</span><span class="nc">Noeud</span> <span class="k">of</span> <span class="n">arbre</span><span class="o">*</span><span class="n">arbre</span> <span class="o">;;</span>
+  
+<span class="k">let</span> <span class="k">rec</span> <span class="n">f</span> <span class="n">arbre</span> <span class="o">=</span>
+  <span class="k">match</span> <span class="n">arbre</span> <span class="k">with</span>
+  <span class="o">|</span> <span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Feuille</span> <span class="n">a</span><span class="o">,</span> <span class="nc">Feuille</span> <span class="n">b</span><span class="o">),</span> <span class="nc">Feuille</span> <span class="n">c</span><span class="o">),</span> <span class="nc">Feuille</span> <span class="n">d</span><span class="o">)</span> <span class="o">-&gt;</span>
+     <span class="n">f</span> <span class="o">(</span><span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Feuille</span> <span class="n">a</span><span class="o">,</span> <span class="nc">Feuille</span> <span class="n">b</span><span class="o">),</span> <span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Feuille</span> <span class="n">c</span><span class="o">,</span> <span class="nc">Feuille</span> <span class="n">d</span><span class="o">)))</span>
+  <span class="o">|</span> <span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Feuille</span> <span class="n">a</span><span class="o">,</span> <span class="nc">Feuille</span> <span class="n">b</span><span class="o">),</span> <span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Feuille</span> <span class="n">c</span><span class="o">,</span> <span class="nc">Feuille</span> <span class="n">d</span><span class="o">))</span> <span class="o">-&gt;</span>
+     <span class="n">f</span> <span class="o">(</span><span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Noeud</span> <span class="o">(</span><span class="nc">Feuille</span> <span class="n">a</span><span class="o">,</span> <span class="nc">Feuille</span> <span class="n">b</span><span class="o">),</span> <span class="nc">Feuille</span> <span class="n">c</span><span class="o">),</span> <span class="nc">Feuille</span> <span class="n">d</span><span class="o">))</span>
+  <span class="o">|</span> <span class="o">_</span> <span class="o">-&gt;</span> <span class="n">arbre</span>
+<span class="o">;;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>type arbre = Feuille of int | Noeud of arbre * arbre
+</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>val f : arbre -&gt; arbre = &lt;fun&gt;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dans le premier cas de la fonction <code>f</code>, l'appel récursif se fait sur un arbre dont la hauteur est strictement plus petite que celle de l'arbre initial.</p>
+<p>Dans le deuxième cas, l'appel récursif se fait sur un arbre dont le fils droit a une hauteur strictement plus petite que celle de l'arbre initial.</p>
+<p>Pourtant, la fonction <code>f</code> ne termine pas toujours (elle ne termine que si l'on n'est dans aucun des deux premiers cas).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lorsqu'on a besoin de considérer plusieurs grandeurs pour prouver la terminaison, on essaiera d'utiliser un ordre lexicographique sur un produit cartésien.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#201;l&#233;ments-de-correction">&#201;l&#233;ments de correction<a class="anchor-link" href="#&#201;l&#233;ments-de-correction">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13986,8 +14198,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La longueur d'un plus long chemin passant par la racine est la longueur d'un plus long chemin partant d'une feuille du sous-arbre gauche, passant par la racine, et atteignant une feuille du sous-argre droit.</p>
-<p>Par conséquent, la longueur d'un plus long chemin passant par la racine est égale à la somme des hauteurs des deux sous-arbres à laquelle on ajoute 2.</p>
+<p>La longueur d'un plus long chemin passant par la racine est la longueur d'un plus long chemin partant d'une feuille du sous-arbre gauche, passant par la racine, et atteignant une feuille du sous-arbre droit.</p>
+<p>Par conséquent, la longueur d'un plus long chemin passant par la racine est égale à la somme des hauteurs des deux sous-arbres à laquelle on ajoute 2 (en utilisant la convention que la hauteur de l'arbre vide est -1).</p>
 
 </div>
 </div>
@@ -14531,7 +14743,7 @@ Noeud (Noeud (Noeud (Noeud (Feuille 2, Feuille 5), Feuille 1), Feuille 4),
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Si l'arbre n'est pas un peigne, la fonction <code>rangement</code> termine.</p>
-<p>Pour un peigne $\mathcal{A}$ donné, considérons le couple d'entiers naturels $(n_f, n_{fd})$ où $n_f$ est le nombre de feuilles de $\mathcal{A}$ et $n_{fd}$ le nombre de feuilles du fils droit de $\mathcal{A}$ (arbitrairement $0$ si $\mathcal{A}$ est réduit à une feuille), et considérons l'ordre lexicographique sur $\mathcal{N}^2$.</p>
+<p>Pour un peigne $\mathcal{A}$ donné, considérons le couple d'entiers naturels $(n_f, n_{fd})$ où $n_f$ est le nombre de feuilles de $\mathcal{A}$ et $n_{fd}$ le nombre de feuilles du fils droit de $\mathcal{A}$ (arbitrairement $0$ si $\mathcal{A}$ est réduit à une feuille), et considérons l'ordre lexicographique sur $\mathbb{N}^* \times \mathbb{N}$.</p>
 <ul>
 <li>Si $n_f = 1$, alors $\mathcal{A}$ est réduit à une feuille et <code>rangement</code> termine.</li>
 <li>Si $n_f &gt; 1$ :<ul>
