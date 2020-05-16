@@ -396,16 +396,67 @@ a[href$=".swf"]{
 #outer {  position: relative; left: 50%; float: left; 
 	max-width:900px;}
 #inner {  position: relative; left: -50%; float: left; }
+
 #contenu { 
 	background-color: rgba(255, 255, 255, 0.8);
 	border: 3px #666 solid;
 	border-radius: 12px;
 	box-shadow: 6px 6px 6px #444;
 	padding: 20px;
+	padding-top: 30px;
 	line-height:1.3em;
 }
+
+#contenu2 { 
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px #666 solid;
+	border-radius: 12px;
+	box-shadow: 6px 6px 6px #444;
+	padding: 20px;
+	padding-top: 30px;
+	padding-left: 300px;
+	padding-right: 300px;
+	line-height:1.3em;
+}
+
 #center { text-align:center;
 	  margin-left:auto;
 	  margin-right:auto;
 }
 
+
+	
+#outer1 {  position: relative; left: 50%; float: left; 
+	max-width:1500px;}
+
+#outer2 {  position: relative; right: 0%; float: right; 
+	max-width:1500px;}
+	
+#outer3 {  position: relative; left: 0%; float: left; 
+	max-width:1500px;}
+	
+.wrapper {
+  direction: ltr;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+  grid-template-areas: 
+  	 "a a"
+    "b c"
+    "d d";
+}
+.item1 {
+  grid-area: a;
+  justify-self: center;
+}
+.item2 {
+  grid-area: b;
+}
+.item3 {
+  grid-area: c;
+}
+.item4 {
+  grid-area: d;
+  justify-self: center;
+}
