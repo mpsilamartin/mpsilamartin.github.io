@@ -13077,6 +13077,33 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Devoir-n&#176;2"><em>Devoir n&#176;2</em><a class="anchor-link" href="#Devoir-n&#176;2">&#182;</a></h1><h1 id="Remarques-de-correction">Remarques de correction<a class="anchor-link" href="#Remarques-de-correction">&#182;</a></h1><ul>
+<li>Évitez de réaliser plusieurs fois le même appel de fonction. En effet, cela peut avoir des conséquences désastreuses sur la complexité (voir l'exemple donné dans le corrigé du TP n°3)</li>
+<li>Lorsqu'on vous demande de prouver qu'une fonction termine, il faut <strong>rédiger une preuve rigoureuse</strong> en utilisant les <strong>méthodes</strong> vues au chapitre 4 :<ul>
+<li>Précisez clairement la grandeur utilisée pour le raisonnement.</li>
+<li>Commencez par traiter les cas minimaux.</li>
+<li>Évitez les expressions approximatives du type "<em>au bout d'un moment</em>", "<em>forcément</em>".</li>
+<li>Utilisez un vocabulaire adapté.</li>
+</ul>
+</li>
+<li>Dans l'exercice 2, il fallait montrer qu'une fonction calculant l'étiquette minimum d'un arbre terminait. <ul>
+<li>Il était possible d'utiliser comme grandeur caractéristique la hauteur de l'arbre ou le nombre de noeuds (mais pas le nombre de feuilles, qui peut ne pas décroître strictement lors d'un appel récursif ).</li>
+<li>Encore une fois, il faut mettre en place un raisonnement rigoureux :<ul>
+<li>Non, la fonction ne <em>descend</em> pas dans l'arbre, elle ne <em>finit</em> pas par <em>trouver une feuille</em>, elle ne se promène pas...</li>
+<li>Il peut y avoir plusieurs appels récursifs dans un même cas, évoquer une <em>suite strictement décroissante</em> est ici hors de propos.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Plus généralement, l'écriture de fonctions récursives semble encore poser des problèmes à une partie d'entre vous ; il faut vous y entraîner.</li>
+</ul>
+<img src="https://framaclic.org/h/550-tQza98VXk" alt="">
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Partie-machine">Partie machine<a class="anchor-link" href="#Partie-machine">&#182;</a></h1>
 </div>
 </div>
@@ -13954,7 +13981,7 @@ div#notebook {
 <p>On montre que cette fonction termine en raisonnant sur le nombre de nœuds de l'arbre (on peut aussi utiliser la hauteur). On traitera ici le cas de la première version de la fonction.</p>
 <ul>
 <li>Pour un arbre avec $0$ nœud, c'est-à-dire un arbre vide, la fonction termine.</li>
-<li>Soit $n \in \mathbb{N}^*$, soit <code>a</code> un arbre à $n$ nœuds, alors l'appel <code>mini a</code> réalise deux appels récursifs sur des arbres dont le nombre de nœuds est au plus égal à $n-1$ dont est strictement inférieur à $n$.</li>
+<li>Soit $n \in \mathbb{N}^*$, soit <code>a</code> un arbre à $n$ nœuds, alors l'appel <code>mini a</code> réalise deux appels récursifs sur des arbres dont le nombre de nœuds est au plus égal à $n-1$ donc est strictement inférieur à $n$.</li>
 </ul>
 <p>Par conséquent, la première version de <code>mini</code> termine.</p>
 <p><em>Remarque : pour la deuxième version, on se place dans $\mathbb{N}^</em>$ en commençant avec le cas $n=1$ ; il y a ensuite trois cas possibles lorsque $n \geqslant 2$, chacun avec un ou deux appels récursifs sur des arbres comportant strictement moins que $n$ nœuds*.</p>
@@ -14013,7 +14040,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-OCaml"><pre><span></span><span class="k">let</span> <span class="n">nb_inversion</span> <span class="n">t</span> <span class="o">=</span>
+<div class=" highlight hl-OCaml"><pre><span></span><span class="k">let</span> <span class="n">nb_inversions</span> <span class="n">t</span> <span class="o">=</span>
   <span class="k">let</span> <span class="n">n</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">length</span> <span class="n">t</span> <span class="k">in</span>
   <span class="k">let</span> <span class="n">nb_inv</span> <span class="o">=</span> <span class="n">ref</span> <span class="mi">0</span> <span class="k">in</span>
   <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">to</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span> <span class="k">do</span>
@@ -14042,7 +14069,41 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>val nb_inversion : &#39;a array -&gt; int = &lt;fun&gt;
+<pre>val nb_inversions : &#39;a array -&gt; int = &lt;fun&gt;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-OCaml"><pre><span></span><span class="n">nb_inversions</span> <span class="o">[|</span><span class="mi">2</span><span class="o">;</span><span class="mi">4</span><span class="o">;</span><span class="mi">6</span><span class="o">;</span><span class="mi">8</span><span class="o">;</span><span class="mi">12</span><span class="o">;</span><span class="mi">14</span><span class="o">;</span><span class="mi">1</span><span class="o">;</span><span class="mi">3</span><span class="o">;</span><span class="mi">5</span><span class="o">;</span><span class="mi">7</span><span class="o">;</span><span class="mi">9</span><span class="o">|];;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>- : int = 20
 </pre>
 </div>
 
@@ -14067,9 +14128,22 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pour la fonction <code>fusion</code>, deux stratégies sont possibles pour compter le nombre de couples $(i_1,i_2)$ tels que $t_1.(i_1) &gt; t_2.(i_2)$</p>
+<ul>
+<li>ajouter ces inversions lorsque l'élément courant dans $t_2$ est strictement plus petit que celui dans $t_1$, et donc strictement plus petit que tous les éléments de $t_1$ qui n'ont pas été déjà ajouté à $t$ ; il y a alors $n_1 - i_1$ tels éléments ;</li>
+<li>ou ajouter ces inversions lorsque l'élément courant dans $t_1$ est plus petit que celui dans $t_2$, puisqu'il est aussi strictement plus grand que les éléments de $t_2$ ayant déjà été ajoutés à $t$ ; il y a alors $i_2$ tels éléments.</li>
+</ul>
+<p>Dans le deuxième cas, il faudra continuer de compter les inversions en fin de fonction s'il reste des éléments à parcourir dans $t_1$.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-OCaml"><pre><span></span><span class="k">let</span> <span class="n">fusion</span> <span class="n">t1</span> <span class="n">t2</span> <span class="o">=</span>
@@ -14078,26 +14152,31 @@ div#notebook {
   <span class="k">let</span> <span class="n">nb_inv</span> <span class="o">=</span> <span class="n">ref</span> <span class="mi">0</span> <span class="k">in</span>
   <span class="k">if</span> <span class="n">n1</span><span class="o">+</span><span class="n">n2</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="k">then</span>
+    <span class="c">(* A compléter *)</span>
     <span class="o">[||],</span> <span class="mi">0</span>
   <span class="k">else</span>
     <span class="k">let</span> <span class="n">t</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">make</span> <span class="o">(</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="o">)</span> <span class="o">(-</span><span class="mi">1</span><span class="o">)</span> <span class="k">in</span>
     <span class="k">let</span> <span class="n">i1</span> <span class="o">=</span> <span class="n">ref</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">ref</span> <span class="mi">0</span> <span class="k">in</span>
+    <span class="c">(* Tests à compléter *)</span>
     <span class="k">while</span> <span class="o">!</span><span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span> <span class="k">do</span>
       <span class="c">(* On doit déterminer t.(!i1 + !i2) *)</span>
       <span class="k">if</span> <span class="n">t1</span><span class="o">.(!</span><span class="n">i1</span><span class="o">)</span> <span class="o">&lt;=</span> <span class="n">t2</span><span class="o">.(!</span><span class="n">i2</span><span class="o">)</span>
       <span class="k">then</span>
         <span class="k">begin</span>
+          <span class="c">(* A compléter *)</span>
           <span class="n">t</span><span class="o">.(!</span><span class="n">i1</span> <span class="o">+</span> <span class="o">!</span><span class="n">i2</span><span class="o">)</span> <span class="o">&lt;-</span> <span class="n">t1</span><span class="o">.(!</span><span class="n">i1</span><span class="o">);</span>
           <span class="n">incr</span> <span class="n">i1</span>
         <span class="k">end</span>
       <span class="k">else</span>
         <span class="k">begin</span>
+          <span class="c">(* A compléter *)</span>
           <span class="n">t</span><span class="o">.(!</span><span class="n">i1</span> <span class="o">+</span> <span class="o">!</span><span class="n">i2</span><span class="o">)</span> <span class="o">&lt;-</span> <span class="n">t2</span><span class="o">.(!</span><span class="n">i2</span><span class="o">);</span>
           <span class="n">incr</span> <span class="n">i2</span><span class="o">;</span>
-          <span class="c">(* Il y a un inversion entre chaque élément restant dans t1 et l&#39;élément t2.(i2) *)</span>
+          <span class="c">(* Il y a une inversion entre chaque élément restant dans t1 et l&#39;élément t2.(i2) *)</span>
           <span class="n">nb_inv</span> <span class="o">:=</span> <span class="o">!</span><span class="n">nb_inv</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">-</span> <span class="o">!</span><span class="n">i1</span>
         <span class="k">end</span>
     <span class="k">done</span><span class="o">;</span>
+    <span class="c">(* A compléter *)</span>
     <span class="k">while</span> <span class="o">!</span><span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="k">do</span>
       <span class="n">t</span><span class="o">.(!</span><span class="n">i1</span> <span class="o">+</span> <span class="o">!</span><span class="n">i2</span><span class="o">)</span> <span class="o">&lt;-</span> <span class="n">t1</span><span class="o">.(!</span><span class="n">i1</span><span class="o">);</span>
       <span class="n">incr</span> <span class="n">i1</span>
@@ -14120,7 +14199,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -14138,25 +14217,85 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-OCaml"><pre><span></span><span class="k">let</span> <span class="n">nb_inversion_tri</span> <span class="n">t</span> <span class="o">=</span>
-  <span class="k">let</span> <span class="k">rec</span> <span class="n">trie</span> <span class="n">t</span> <span class="o">=</span>
-    <span class="k">let</span> <span class="n">n</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">length</span> <span class="n">t</span> <span class="k">in</span>
-    <span class="k">match</span> <span class="n">n</span> <span class="k">with</span>
-    <span class="o">|</span> <span class="mi">0</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">,</span> <span class="mi">0</span>
-    <span class="o">|</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">,</span> <span class="mi">0</span>
-    <span class="o">|</span> <span class="o">_</span> <span class="o">-&gt;</span> 
-       <span class="k">let</span> <span class="n">t1</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">sub</span> <span class="n">t</span> <span class="mi">0</span> <span class="o">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">)</span> <span class="k">in</span>
-       <span class="k">let</span> <span class="n">t2</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">sub</span> <span class="n">t</span> <span class="o">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">)</span> <span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">)</span> <span class="k">in</span>
-       <span class="k">let</span> <span class="n">t1trie</span><span class="o">,</span> <span class="n">nb_inv1</span> <span class="o">=</span> <span class="n">trie</span> <span class="n">t1</span> <span class="k">in</span>
-       <span class="k">let</span> <span class="n">t2trie</span><span class="o">,</span> <span class="n">nb_inv2</span> <span class="o">=</span> <span class="n">trie</span> <span class="n">t2</span> <span class="k">in</span>
-       <span class="k">let</span> <span class="n">tab</span><span class="o">,</span> <span class="n">nb_inv_croise</span> <span class="o">=</span> <span class="n">fusion</span> <span class="n">t1trie</span> <span class="n">t2trie</span> <span class="k">in</span>
-       <span class="n">tab</span><span class="o">,</span> <span class="n">nb_inv1</span> <span class="o">+</span> <span class="n">nb_inv2</span> <span class="o">+</span> <span class="n">nb_inv_croise</span>
-  <span class="k">in</span>
-  <span class="k">let</span> <span class="o">_,</span> <span class="n">nb_inv</span> <span class="o">=</span> <span class="n">trie</span> <span class="n">t</span> <span class="k">in</span>
-  <span class="n">nb_inv</span>
+<div class=" highlight hl-OCaml"><pre><span></span><span class="n">fusion</span> <span class="o">[|</span><span class="mi">2</span><span class="o">;</span><span class="mi">4</span><span class="o">;</span><span class="mi">6</span><span class="o">;</span><span class="mi">8</span><span class="o">;</span><span class="mi">12</span><span class="o">;</span><span class="mi">14</span><span class="o">|]</span> <span class="o">[|</span><span class="mi">1</span><span class="o">;</span><span class="mi">3</span><span class="o">;</span><span class="mi">5</span><span class="o">;</span><span class="mi">7</span><span class="o">;</span><span class="mi">9</span><span class="o">|];;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>- : int array * int = ([|1; 2; 3; 4; 5; 6; 7; 8; 9; 12; 14|], 20)
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-OCaml"><pre><span></span><span class="k">let</span> <span class="n">fusion</span> <span class="n">t1</span> <span class="n">t2</span> <span class="o">=</span>
+  <span class="k">let</span> <span class="n">n1</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">length</span> <span class="n">t1</span> <span class="k">in</span>
+  <span class="k">let</span> <span class="n">n2</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">length</span> <span class="n">t2</span> <span class="k">in</span>
+  <span class="k">let</span> <span class="n">nb_inv</span> <span class="o">=</span> <span class="n">ref</span> <span class="mi">0</span> <span class="k">in</span>
+  <span class="k">if</span> <span class="n">n1</span><span class="o">+</span><span class="n">n2</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">then</span>
+    <span class="c">(* A compléter *)</span>
+    <span class="o">[||],</span> <span class="mi">0</span>
+  <span class="k">else</span>
+    <span class="k">let</span> <span class="n">t</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">make</span> <span class="o">(</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="o">)</span> <span class="o">(-</span><span class="mi">1</span><span class="o">)</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="n">i1</span> <span class="o">=</span> <span class="n">ref</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">ref</span> <span class="mi">0</span> <span class="k">in</span>
+    <span class="c">(* Tests à compléter *)</span>
+    <span class="k">while</span> <span class="o">!</span><span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span> <span class="k">do</span>
+      <span class="c">(* On doit déterminer t.(!i1 + !i2) *)</span>
+      <span class="k">if</span> <span class="n">t1</span><span class="o">.(!</span><span class="n">i1</span><span class="o">)</span> <span class="o">&lt;=</span> <span class="n">t2</span><span class="o">.(!</span><span class="n">i2</span><span class="o">)</span>
+      <span class="k">then</span>
+        <span class="k">begin</span>
+          <span class="c">(* A compléter *)</span>
+          <span class="n">t</span><span class="o">.(!</span><span class="n">i1</span> <span class="o">+</span> <span class="o">!</span><span class="n">i2</span><span class="o">)</span> <span class="o">&lt;-</span> <span class="n">t1</span><span class="o">.(!</span><span class="n">i1</span><span class="o">);</span>
+          <span class="n">incr</span> <span class="n">i1</span><span class="o">;</span>
+          <span class="c">(* Il y a une inversion entre l&#39;élément t1.(i1) et tous les éléments de t2 déjà placés dans t *)</span>
+          <span class="n">nb_inv</span> <span class="o">:=</span> <span class="o">!</span><span class="n">nb_inv</span> <span class="o">+</span> <span class="o">!</span><span class="n">i2</span>
+        <span class="k">end</span>
+      <span class="k">else</span>
+        <span class="k">begin</span>
+          <span class="c">(* A compléter *)</span>
+          <span class="n">t</span><span class="o">.(!</span><span class="n">i1</span> <span class="o">+</span> <span class="o">!</span><span class="n">i2</span><span class="o">)</span> <span class="o">&lt;-</span> <span class="n">t2</span><span class="o">.(!</span><span class="n">i2</span><span class="o">);</span>
+          <span class="n">incr</span> <span class="n">i2</span><span class="o">;</span>
+        <span class="k">end</span>
+    <span class="k">done</span><span class="o">;</span>
+    <span class="c">(* A compléter *)</span>
+    <span class="k">while</span> <span class="o">!</span><span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="k">do</span>
+      <span class="n">t</span><span class="o">.(!</span><span class="n">i1</span> <span class="o">+</span> <span class="o">!</span><span class="n">i2</span><span class="o">)</span> <span class="o">&lt;-</span> <span class="n">t1</span><span class="o">.(!</span><span class="n">i1</span><span class="o">);</span>
+      <span class="n">incr</span> <span class="n">i1</span><span class="o">;</span>
+      <span class="c">(* Il y a une inversion entre l&#39;élément t1.(i1) et tous les éléments de t2 déjà placés dans t *)</span>
+      <span class="n">nb_inv</span> <span class="o">:=</span> <span class="o">!</span><span class="n">nb_inv</span> <span class="o">+</span> <span class="n">n2</span>
+    <span class="k">done</span><span class="o">;</span>
+    <span class="k">while</span> <span class="o">!</span><span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span> <span class="k">do</span>
+      <span class="n">t</span><span class="o">.(!</span><span class="n">i1</span> <span class="o">+</span> <span class="o">!</span><span class="n">i2</span><span class="o">)</span> <span class="o">&lt;-</span> <span class="n">t2</span><span class="o">.(!</span><span class="n">i2</span><span class="o">);</span>
+      <span class="n">incr</span> <span class="n">i2</span>
+    <span class="k">done</span><span class="o">;</span>
+    <span class="n">t</span><span class="o">,</span> <span class="o">!</span><span class="n">nb_inv</span>
 <span class="o">;;</span>
 </pre></div>
 
@@ -14170,13 +14309,127 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>val nb_inversion_tri : int array -&gt; int = &lt;fun&gt;
+<pre>val fusion : int array -&gt; int array -&gt; int array * int = &lt;fun&gt;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-OCaml"><pre><span></span><span class="n">fusion</span> <span class="o">[|</span><span class="mi">2</span><span class="o">;</span><span class="mi">4</span><span class="o">;</span><span class="mi">6</span><span class="o">;</span><span class="mi">8</span><span class="o">;</span><span class="mi">12</span><span class="o">;</span><span class="mi">14</span><span class="o">|]</span> <span class="o">[|</span><span class="mi">1</span><span class="o">;</span><span class="mi">3</span><span class="o">;</span><span class="mi">5</span><span class="o">;</span><span class="mi">7</span><span class="o">;</span><span class="mi">9</span><span class="o">|];;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>- : int array * int = ([|1; 2; 3; 4; 5; 6; 7; 8; 9; 12; 14|], 20)
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-OCaml"><pre><span></span><span class="k">let</span> <span class="k">rec</span> <span class="n">nb_inversions_tri</span> <span class="n">t</span> <span class="o">=</span>
+  <span class="k">let</span> <span class="n">n</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">length</span> <span class="n">t</span> <span class="k">in</span>
+  <span class="k">match</span> <span class="n">n</span> <span class="k">with</span>
+  <span class="o">|</span> <span class="mi">0</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">,</span> <span class="mi">0</span>
+  <span class="o">|</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">,</span> <span class="mi">0</span>
+  <span class="o">|</span> <span class="o">_</span> <span class="o">-&gt;</span> 
+     <span class="k">let</span> <span class="n">t1</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">sub</span> <span class="n">t</span> <span class="mi">0</span> <span class="o">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">)</span> <span class="k">in</span>
+     <span class="k">let</span> <span class="n">t2</span> <span class="o">=</span> <span class="nn">Array</span><span class="p">.</span><span class="n">sub</span> <span class="n">t</span> <span class="o">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">)</span> <span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">)</span> <span class="k">in</span>
+     <span class="k">let</span> <span class="n">t1trie</span><span class="o">,</span> <span class="n">nb_inv1</span> <span class="o">=</span> <span class="n">nb_inversions_tri</span> <span class="n">t1</span> <span class="k">in</span>
+     <span class="k">let</span> <span class="n">t2trie</span><span class="o">,</span> <span class="n">nb_inv2</span> <span class="o">=</span> <span class="n">nb_inversions_tri</span> <span class="n">t2</span> <span class="k">in</span>
+     <span class="k">let</span> <span class="n">tab</span><span class="o">,</span> <span class="n">nb_inv_croise</span> <span class="o">=</span> <span class="n">fusion</span> <span class="n">t1trie</span> <span class="n">t2trie</span> <span class="k">in</span>
+     <span class="n">tab</span><span class="o">,</span> <span class="n">nb_inv1</span> <span class="o">+</span> <span class="n">nb_inv2</span> <span class="o">+</span> <span class="n">nb_inv_croise</span>
+<span class="o">;;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>val nb_inversions_tri : int array -&gt; int array * int = &lt;fun&gt;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-OCaml"><pre><span></span><span class="n">nb_inversions_tri</span>  <span class="o">[|</span><span class="mi">2</span><span class="o">;</span><span class="mi">4</span><span class="o">;</span><span class="mi">1</span><span class="o">;</span><span class="mi">5</span><span class="o">;</span><span class="mi">3</span><span class="o">|]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>- : int array * int = ([|1; 2; 3; 4; 5|], 4)
 </pre>
 </div>
 
@@ -14189,15 +14442,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La complexité de la fonction <code>nb_inversion_tri</code> est celle de la fonction auxilliaire <code>trie</code>.</p>
-<p>Dans la fonction <code>trie</code>, lorsque $n \geqslant 2$,</p>
+<p>Dans la fonction <code>nb_inversion_tri</code>, lorsque $n \geqslant 2$,</p>
 <ul>
 <li>La création des tableaux $t_1$ et $t_2$ s'effectue en temps $O\left( \left\lfloor \frac{n}{2} \right\rfloor \right)$ et $O \left( \left\lceil \frac{n}{2} \right\rceil \right)$ respectivement, donc en $O(n)$.</li>
 <li>On réalise deux appels récursifs sur des tableaux de longueurs respectives $\left\lfloor \frac{n}{2} \right\rfloor$ et $\left\lceil \frac{n}{2} \right\rceil$.</li>
+<li>L'appel à fusion s'effectue sur deux tableaux de longueurs respectives $\left\lfloor \frac{n}{2} \right\rfloor$ et $\left\lceil \frac{n}{2} \right\rceil$, donc en temps $O\left( \left\lfloor \frac{n}{2} \right\rfloor+ \left\lceil \frac{n}{2} \right\rceil \right)$ i.e $O(n)$.</li>
 <li>On effectue une addition en temps $O(1)$.</li>
 </ul>
 <p>Les opérations en dehors des deux appels récursifs s'effectuent en temps $O(n)$, donc il existe deux constants $\alpha$ et $\beta$ telles que pour tout $n \geqslant 2$,
-$$C(n) \leqslant \alpha n + \beta + C\left( \left\lfloor \frac{n}{2} \right\rfloor \right)+C(\left\lceil \frac{n}{2} \right\rceil)$$</p>
+$$\boxed{C(n) \leqslant \alpha n + \beta + C\left( \left\lfloor \frac{n}{2} \right\rfloor \right)+C(\left\lceil \frac{n}{2} \right\rceil)}$$</p>
 
 </div>
 </div>
