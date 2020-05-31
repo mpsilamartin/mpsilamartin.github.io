@@ -419,6 +419,18 @@ a[href$=".swf"]{
 	line-height:1.3em;
 }
 
+#contenu3 { 
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px #666 solid;
+	border-radius: 12px;
+	box-shadow: 6px 6px 6px #444;
+	padding: 20px;
+	padding-top: 30px;
+	padding-left: 150px;
+	padding-right: 150px;
+	line-height:1.3em;
+}
+
 #center { text-align:center;
 	  margin-left:auto;
 	  margin-right:auto;
