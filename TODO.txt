@@ -1,2 +1,0 @@
-* Supprimer orga.html et n'utiliser que index.html, puis modifier tous les liens pour que cela fonctionne. 
-* Créer une rubrique "Actualités" et mettre un script dans chaque page (maths / orgas / info etc.) pour afficher les dernière actualités en fin de page (comme ça, pas de copier / coller à faire). 
