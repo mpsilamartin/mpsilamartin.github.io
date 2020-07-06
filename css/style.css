@@ -35,6 +35,10 @@ body {
   background: url(../img/eiffel.jpg) no-repeat center fixed; 
 }
 
+#fondlangues {
+  background: url(../img/cervantes.jpg) no-repeat center fixed; 
+}
+
 
 a {
 	color: #222;
