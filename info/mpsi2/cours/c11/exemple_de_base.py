@@ -14,11 +14,11 @@ def euler(F, a, b, y0, h):
         t = t + h
         t_list.append(t)
     return t_list, y_list
-    
+
 def F(y,t):
     return y
 
-    
+
 t1,y1=euler(F, 0, 3, 1, 1)
 t2,y2=euler(F, 0, 3, 1, 1/10)
 t3,y3=euler(F, 0, 3, 1, 3/100)
