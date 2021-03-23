@@ -24,7 +24,7 @@ plt.clf()
 
 plt.plot(t4,y4)
 
-plt.show()
+#plt.show()
 
 
 from numpy import array
@@ -34,3 +34,9 @@ array([ 1., 2.])
 w = array([-5,2.5])
 v + 3*w
 array([-14. , 9.5])
+
+
+def F(X,t):
+    y,yp=X
+    ypp=-2*yp-y+5
+    return array([yp,ypp])
