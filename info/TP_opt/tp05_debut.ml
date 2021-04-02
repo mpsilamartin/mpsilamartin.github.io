@@ -1,9 +1,3 @@
-(** Evaluation d'expressions arithmétiques postfixées **)
-type lexeme =
-  | Entier of int
-  | Operateur of char
-;;
-
 (** Implémentation d'une file avec deux piles **)
 type 'a file = {
     entree : 'a Stack.t;
