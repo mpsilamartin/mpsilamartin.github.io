@@ -53,7 +53,7 @@ echo "--------------------------------------------------------------------------
 echo "Ajout du noyau OCaml et téléchargement fichier de démarrage"
 echo "------------------------------------------------------------------------------------------"
 ocaml-jupyter-opam-genspec
-jupyter kernelspec install --user --name ocaml-jupyter ~/.opam/default/share/jupyter
+jupyter kernelspec install --user --name ocaml-jupyter $(opam config var share)/jupyter
 
 # Téléchargement du fichier premiers pas
 wget https://mpsilamartin.github.io/info/TP_opt/ocaml_premiers_pas.ipynb
