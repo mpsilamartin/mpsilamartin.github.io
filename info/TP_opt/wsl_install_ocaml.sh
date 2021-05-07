@@ -16,7 +16,7 @@ echo ""
 echo "------------------------------------------------------------------------------------------"
 echo "Installation des paquets nécessaires"
 echo "------------------------------------------------------------------------------------------"
-sudo apt install -y python3-pip gcc binutils-dev make pkg-config libzmq3-dev libgmp-dev opam m4
+sudo apt install -y python3-pip gcc binutils-dev make pkg-config libzmq3-dev libgmp-dev opam m4 zlib1g-dev
 
 # Initialisation de opam
 echo ""
