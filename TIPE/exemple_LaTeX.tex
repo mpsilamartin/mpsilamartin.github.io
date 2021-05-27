@@ -1,0 +1,37 @@
+\documentclass[a4paper,11pt]{scrartcl} % définit la classe
+\usepackage[french]{babel} % support du français
+\usepackage[T1]{fontenc} % gestion des fontes
+\usepackage[utf8]{inputenc} % on travaille en utf8
+\usepackage{hyperref} % pour les liens hypertexte
+\usepackage{amsmath} % pour les maths de base
+
+\author{Vos professeurs}
+\date{\today}
+\title{Exemple de fichier \LaTeX}
+
+\begin{document}
+
+\maketitle{}
+
+\section{Une partie numérotée}
+
+On peut écrire du texte librement, le système s'occupe de le mettre en forme. 
+
+\subsection{Une sous-partie numérotée}
+
+On peut aussi écrire des mathématiques dans le texte : $0 = x^2 - 2x$, mais aussi dans un environnement
+
+\begin{equation*}
+	\frac{1}{2\pi} \int_0^{\pi/2} \cos(t)\mathrm{d}t = 1515. 
+\end{equation*}
+
+\section*{Une partie non numérotée}
+
+Pour un guide complet (lien cliquable) : 
+
+\begin{center}
+	\href{http://mirrors.ctan.org/info/lshort/english/lshort.pdf}{The not so short introduction to \LaTeX$2\varepsilon$}
+\end{center}
+ou bien le \href{https://en.wikibooks.org/wiki/LaTeX}{wikilivre} !
+
+\end{document}
