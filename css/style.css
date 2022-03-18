@@ -95,6 +95,14 @@ a {
 #tip:visited {
 	color: #672F97;
   	text-decoration: none;}
+
+#lang:hover {
+	color: #ec6d04;
+  	text-decoration: none;}
+  	
+#lang:visited {
+	color: #FF0000;
+  	text-decoration: none;}
   		
 a[href$=".pdf"]{
 	background: url(../img/iconepdf.jpg) no-repeat right top;
