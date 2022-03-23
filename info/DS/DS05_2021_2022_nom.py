@@ -12,6 +12,8 @@ def Lu(alpha):
     maxi=m-3*alpha%13
     for i in range(n):
         x = (a * x+c) % m
+        if x<=maxi:
+            M.append(x)
     return M
 
 
