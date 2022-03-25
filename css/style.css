@@ -24,11 +24,11 @@ body {
 }
 
 #fondinfo {
-  background: url(../img/turing.jpg) no-repeat center fixed; 
+  background: url(../img/hamilton.png) no-repeat center fixed; 
 }
 
 #fondorga {
-  background: url(../img/poincare.jpg) no-repeat center fixed; 
+  background: url(../img/johnson2.png) no-repeat center fixed; 
 }
 
 #fondsii {
@@ -94,6 +94,14 @@ a {
   	
 #tip:visited {
 	color: #672F97;
+  	text-decoration: none;}
+
+#lang:hover {
+	color:  #da5402;
+  	text-decoration: none;}
+  	
+#lang:visited {
+	color:  #581845;
   	text-decoration: none;}
   		
 a[href$=".pdf"]{
