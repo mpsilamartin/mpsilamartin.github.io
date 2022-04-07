@@ -24,4 +24,4 @@ def rvector(n, m):
     return np.array([[rd.uniform(0,m)] for i in range(n)])
 
 
-        
+
