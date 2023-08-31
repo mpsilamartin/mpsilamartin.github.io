@@ -1,0 +1,323 @@
+@font-face {
+  font-family: 'simplifica';
+  src: url('https://mpsilamartin.github.io/fonts/simplifica.eot?#iefix') format('embedded-opentype'), 
+  url('https://mpsilamartin.github.io/fonts/simplifica.woff') format('woff'), url('https://mpsilamartin.github.io/fonts/simplifica.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "simplifica", "Lucida Grande", Tahoma, Arial, sans-serif;
+  font-size: 160%;
+  background-color: #ffffff;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+  color: #222;
+}
+
+#fondmaths {
+  background: url(../img/cantor.jpg) no-repeat center fixed; 
+}
+
+#fondphysique {
+  background: url(../img/curie.jpg) no-repeat center fixed; 
+}
+
+#fondinfo {
+  background: url(../img/hamilton.png) no-repeat center fixed; 
+}
+
+#fondorga {
+  background: url(../img/johnson2.png) no-repeat center fixed; 
+}
+
+#fondsii {
+  background: url(../img/eiffel.jpg) no-repeat center fixed; 
+}
+
+#fondlangues {
+  background: url(../img/cervantes.jpg) no-repeat center fixed; 
+}
+
+
+a {
+	color: #222;
+  	text-decoration: none;}
+  	
+#lien1 {
+	color: #D57070;
+  	text-decoration: none;}
+  	
+#organ:hover {
+	color: #4878D7;
+  	text-decoration: none;}
+  	
+#organ:visited {
+	color: #2B278A;
+  	text-decoration: none;}
+  	
+#math:hover {
+	color: #DCC26D;
+  	text-decoration: none;}
+  	
+#math:visited {
+	color: #68550B;
+  	text-decoration: none;}
+  	
+#phys:hover {
+	color: #56C039;
+  	text-decoration: none;}
+  	
+#phys:visited {
+	color: #125A2D;
+  	text-decoration: none;}
+  	
+#ipt:hover {
+	color: #D03A46;
+  	text-decoration: none;}
+  	
+#ipt:visited {
+	color: #5A1218;
+  	text-decoration: none;}
+  	
+#sii:hover {
+	color: #56C039;
+  	text-decoration: none;}
+  	
+#sii:visited {
+	color: #125A2D;
+  	text-decoration: none;}
+  	
+#tip:hover {
+	color: #BB5DEA;
+  	text-decoration: none;}
+  	
+#tip:visited {
+	color: #672F97;
+  	text-decoration: none;}
+
+#lang:hover {
+	color:  #da5402;
+  	text-decoration: none;}
+  	
+#lang:visited {
+	color:  #581845;
+  	text-decoration: none;}
+  		
+a[href$=".pdf"]{
+	background: url(../img/iconepdf.jpg) no-repeat right top;
+	padding-right:20px;
+	}
+	
+a[href*="youtu"]{
+	background: url(../img/iconevideo.jpg) no-repeat right top;
+	padding-right:20px;
+	}
+	
+a[href$=".swf"]{
+	background: url(../img/iconeswf.jpg) no-repeat right top;
+	padding-right:20px;
+	}
+	
+#nav{ 
+	z-index:10;
+  color:#fff;
+	background-color: #222; 
+	position: fixed; 
+	width: 100%; 
+	top: 0;  
+	margin-bottom: 50px;}
+
+#nav-wrapper{margin: 0 auto; text-align: center; margin-bottom: 50px;}
+
+#menu {
+  	background-color: #222;
+  	padding:0;
+  	margin:0;
+  	text-align: center;
+}
+
+#menu li {
+	padding-top:12px;
+  	width: 10%;
+  	min-width: 80px;
+  	display:inline-block;
+  	position: relative;
+  	background: #222;
+	height: 38px;
+}
+#menu li li {
+  	display:inherit;
+	height: 30px;
+	padding-top:0;
+}
+#menu li:hover {
+  	background: #666;
+	height: 38px;
+  	width: 10%;
+}
+#menu a {
+  padding:5px 5px;
+  display:block;
+  text-decoration: none;
+  color:#fff;
+  font-family:arial;
+  font-family: "simplifica", "Lucida Grande", Tahoma, Arial, sans-serif;
+  font-size: 94%;
+  font-weight: bold ;
+}
+
+#menu a#actif0 {
+  color:#75A9DA;
+}
+
+#menu a#actif1 {
+  color:#DCC26D;
+}
+
+#menu a#actif2 {
+  color:#6DB66C;
+}
+
+#menu a#actif3 {
+  color:#D57070;
+}
+
+#menu a#actif4 {
+  color:#A853F3;
+}
+
+#menu a#actif5 {
+  color:#beec04;
+}
+
+#menu a#actif6 {
+  color: #ec6d04;
+}
+
+#menu ul li a {
+  padding:5px 8px;
+}
+
+#menu ul {
+	height: 50px;
+  	padding:0;
+  	margin:0;
+  	list-style: none;
+  	text-align: center;
+  	position: absolute;
+  	z-index: 1000;
+  	min-width:100%;
+  	white-space: nowrap;
+  	text-align: left;
+}
+#menu ul ul {
+	top: 20px;
+  	left:100%;
+  	max-width: 0;
+  	min-width: 0;
+  	transition: 0.3s all;
+}
+#menu ul li:hover ul {
+  max-width: 30em;
+}
+#menu ul li {
+  	width: inherit;
+  	min-width: 10;
+  	max-height:0;
+  	overflow: hidden;
+  	transition:all 0.8s;
+}
+#menu li li li {
+  max-height: inherit;
+}
+#menu li:hover li {
+  	width: inherit;
+  	max-height: 15em;
+  	overflow: visible;
+	height: 30px;
+}
+	
+#hideoverflow { 
+  overflow-y: hidden;
+	margin-top: 60px; 
+}
+#outer {  position: relative; left: 50%; float: left; 
+	max-width:900px;}
+#inner {  position: relative; left: -50%; float: left; }
+
+#contenu { 
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px #666 solid;
+	border-radius: 12px;
+	box-shadow: 6px 6px 6px #444;
+	padding: 20px;
+	padding-top: 30px;
+	line-height:1.3em;
+}
+
+#contenu2 { 
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px #666 solid;
+	border-radius: 12px;
+	box-shadow: 6px 6px 6px #444;
+	padding: 20px;
+	padding-top: 30px;
+	padding-left: 300px;
+	padding-right: 300px;
+	line-height:1.3em;
+}
+
+#contenu3 { 
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 3px #666 solid;
+	border-radius: 12px;
+	box-shadow: 6px 6px 6px #444;
+	padding: 20px;
+	padding-top: 30px;
+	padding-left: 150px;
+	padding-right: 150px;
+	line-height:1.3em;
+}
+
+#center { text-align:center;
+	  margin-left:auto;
+	  margin-right:auto;
+}
+
+
+	
+#outer1 {  position: relative; left: 50%; float: left; 
+	max-width:1500px;}
+
+#outer2 {  position: relative; right: 0%; float: right; 
+	max-width:1500px;}
+	
+#outer3 {  position: relative; left: 0%; float: left; 
+	max-width:1500px;}
+	
+.wrapper {
+  direction: ltr;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+  grid-template-areas: 
+  	 "a a"
+    "b c"
+    "d d";
+}
+.item1 {
+  grid-area: a;
+  justify-self: center;
+}
+.item2 {
+  grid-area: b;
+}
+.item3 {
+  grid-area: c;
+}
+.item4 {
+  grid-area: d;
+  justify-self: center;
+}

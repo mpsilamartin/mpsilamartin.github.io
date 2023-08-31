@@ -1,0 +1,2 @@
+find /home/skanderk/sdc1/prepa/cours_git/maths_mpsi/cours/ -name "*.chap.pdf" | xargs -I{} cp "{}" .&
+cp /home/skanderk/sdc1/prepa/cours_git/maths_mpsi/cours/tou/TOU.pdf .

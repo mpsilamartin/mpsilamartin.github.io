@@ -1,0 +1,2 @@
+SELECT nom
+FROM PERSONNE ; 

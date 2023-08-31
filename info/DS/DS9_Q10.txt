@@ -1,0 +1,14 @@
+dTest={('bf', 8): [('b', 4), ('f', 4), ('ebf', 14)], ('b', 4): [('bf', 8)], ('f', 4): [('bf', 8)], ('ebf', 14): [('e', 6), ('bf', 8), ('ebfacd', 33)], ('cd', 10): [('c', 5), ('d', 5), ('acd', 19)]}
+
+def extremitesGraphe(d:dict)->list:
+    '''fonction qui à partir du dictionnaire d'adjacence de l'arbre binaire renvoie la liste des extrémités de l'arbre
+    '''
+    L=[]
+    for c,v in d.items():
+        if len(v)==1:
+            L.append(k)
+            return L
+
+L1=extremitesGraphe(dTest)
+# la réponse attendue est L1=[('b', 4),('f', 4)]
+print (L1)
