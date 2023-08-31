@@ -1,0 +1,18 @@
+Pb de départ : les commits restent dans l'historique, ce qui permet à tout moment d'accéder à tous les pdf ayant été un jour déposés sur le site. On peut donc retrouver tous les sujets (de ds par exemple) donnés depuis la création du site.
+
+Remède, à faire par exemple tous les ans pendant les grandes vacances :
+
+git checkout --orphan newBranch
+git add -A  # Add all files and commit them
+git commit
+git branch -D master  # Deletes the master branch
+git branch -m master  # Rename the current branch to master
+
+Là on va se connecter sur le site github, et dans les paramètres du dépôt, tout en bas, il y a un encart "Danger Zone". On y clique sur "disable branch protection rules".
+Il y a probablement une commande qui fait ça dans un terminal, mais j'ai la flemme de chercher.
+On peut ensuite continuer :
+
+git push -f origin master  # Force push master branch to github
+git gc --aggressive --prune=all     # remove the old files
+
+Et on remet la protection des branches
