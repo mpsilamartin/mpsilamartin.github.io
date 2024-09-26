@@ -56,7 +56,7 @@ ocaml-jupyter-opam-genspec
 jupyter kernelspec install --user --name ocaml-jupyter $(opam config var share)/jupyter
 
 # Téléchargement du fichier premiers pas
-wget https://mlongmaths.github.io/mpsilamartin/info/TP_opt/ocaml_premiers_pas.ipynb
+wget https://mpsilamartin.github.io/info/TP_opt/ocaml_premiers_pas.ipynb
 
 echo "------------------------------------------------------------------------------------------"
 echo "Vous pouvez désormais lancer JupyterLab à l'aide de la commande : jupyter lab --no-browser"

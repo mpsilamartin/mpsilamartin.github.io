@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'simplifica';
-  src: url('https://mlongmaths.github.io/mpsilamartin/fonts/simplifica.eot?#iefix') format('embedded-opentype'), 
-  url('https://mlongmaths.github.io/mpsilamartin/fonts/simplifica.woff') format('woff'), url('https://mlongmaths.github.io/mpsilamartin/fonts/simplifica.ttf') format('truetype');
+  src: url('https://mpsilamartin.github.io/fonts/simplifica.eot?#iefix') format('embedded-opentype'), 
+  url('https://mpsilamartin.github.io/fonts/simplifica.woff') format('woff'), url('https://mpsilamartin.github.io/fonts/simplifica.ttf') format('truetype');
 }
 
 body {
