@@ -29,7 +29,7 @@ jobs:
       - name: Merge upstream into main
         run: |
           # S'assure que vous êtes sur la branche principale
-          git checkout main 
+          git checkout master
           # Fusionne les changements de la branche master de l'upstream
           git merge upstream/master --allow-unrelated-histories 
 
