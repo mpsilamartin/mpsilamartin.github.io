@@ -19,7 +19,7 @@ jobs:
         with:
           find: 'mpsilamartin.github.io/'
           replace: 'mpsi-lmm-mobile.github.io/'
-          include: '**/*.html, **/*.css, /*.html'
+          include: '**/*.html, **/*.css, *.html'
           exclude: '.github/workflows/**'  # Évite de modifier les fichiers de workflow
           regex: false
 
