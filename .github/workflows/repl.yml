@@ -1,6 +1,5 @@
 
-name: Replace HTML Links Every 12 Hours
-
+name: Replace HTML 
 on:
   schedule:
     - cron: '0 */12 * * *'  # Toutes les 12 heures à la 0ème minute
