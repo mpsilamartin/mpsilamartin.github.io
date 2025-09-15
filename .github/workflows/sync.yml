@@ -1,0 +1,38 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 4,15 * * *' # Exécution tous les jours à 4h et 15h UTC
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Permet de récupérer l'historique complet pour la fusion
+          fetch-depth: 0 
+
+      - name: Configure Git identity
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+      - name: Add and fetch upstream remote
+        run: |
+          git remote add upstream https://github.com/mpsilamartin/mpsilamartin.github.io.git
+          git fetch upstream
+
+      - name: Merge upstream into main
+        run: |
+          # S'assure que vous êtes sur la branche principale
+          git checkout main 
+          # Fusionne les changements de la branche master de l'upstream
+          git merge upstream/master --allow-unrelated-histories 
+
+      - name: Push changes
+        # Utilise l'option --force-with-lease pour éviter d'écraser des changements concurrents
+        run: git push --force-with-lease 
