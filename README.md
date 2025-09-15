@@ -1,5 +1,6 @@
 # Mobile.mpsi
 Un fork du site web d'origine. 
+Non fonctionnel pour le moment 
 
 Objectifs:
 - Améliorer la navbar
