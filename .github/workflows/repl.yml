@@ -1,0 +1,32 @@
+
+name: Replace HTML Links Every 12 Hours
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'  # Toutes les 12 heures à la 0ème minute
+  workflow_dispatch:  # Permet de déclencher manuellement
+
+jobs:
+  replace-links:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Permission nécessaire pour pousser les modifications
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Replace HTML links
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: 'mpsilamartin.github.io/'
+          replace: 'mpsi-lmm-mobile.github.io/'
+          include: '**/*.html'
+          exclude: '.github/workflows/**'  # Évite de modifier les fichiers de workflow
+          regex: false
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'chore: Replace exemple.com links with ex2.com/'
+          commit_user_name: 'GitHub Actions'
+          commit_user_email: 'actions@github.com'
