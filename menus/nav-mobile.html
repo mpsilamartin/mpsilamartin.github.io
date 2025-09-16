@@ -294,11 +294,12 @@ function handleConfirmation(confirmationMessage, redirectionLink, cookieKey) {
     console.log(`Le choix pour la clé '${cookieKey}' a déjà été enregistré : ${userChoice}.`);
   }
 }
-        
+    
+                $(document).ready(function(){    
 handleConfirmation(
 "Vous êtes sûr le site web amateur de MPSILaMartin ayant pour objectif d'améliorer l'expérience mobile. Rester ici ?",
 'https://mpsilamartin.github.io',
 "stay here"
-)
+)      });
             
         </script>
