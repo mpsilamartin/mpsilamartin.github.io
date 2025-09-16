@@ -1,0 +1,325 @@
+    <button class="menu-btn" id="menuButton">☰</button>
+
+
+<div class="modal-overlay" id="modalOverlay"></div>
+
+<div class="modal" id="modal">
+    <div class="modal-header">
+        <h2>Menu</h2>
+        <button class="close-btn" id="closeButton">×</button>
+    </div>
+    <div class="modal-content">
+        <ul id="menu">
+            <li id="target-onglet-orga"></li>   
+        <li id="target-onglet-maths"></li>   
+        <li id="target-onglet-physique"></li>   
+        <li id="target-onglet-info"></li>    
+        <li id="target-onglet-sii"></li>   
+        <li id="target-onglet-tipe"></li>  
+   <li id="target-onglet-langues"></li>  
+        </ul>
+    </div>
+</div>
+
+
+<script>
+  /**  document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('menuButton');
+        const closeButton = document.getElementById('closeButton');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modal = document.getElementById('modal');
+
+        // Ouvrir le modal
+        menuButton.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalOverlay.style.display = 'block';
+            setTimeout(function() {
+                modal.classList.add('open');
+            }, 10);
+        });
+
+        // Fermer le modal
+        function closeModal() {
+            modal.classList.remove('open');
+            setTimeout(function() {
+                modal.style.display = 'none';
+                modalOverlay.style.display = 'none';
+            }, 300);
+        }
+
+        closeButton.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+
+        // Gérer les sous-menus
+        const menuItems = document.querySelectorAll('#menu > li');
+        menuItems.forEach(item => {
+            if (item.querySelector('ul')) {
+                item.querySelector('a').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                });
+            }
+        });
+
+        // Fermer le modal en appuyant sur Echap
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                closeModal();
+            }
+        });
+    });*/
+
+        // Ajout des styles CSS via JavaScript
+        document.head.innerHTML += `
+        <style>
+            /* Styles de base */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+            }
+            
+            .menu-btn {
+                font-size: 24px;
+                padding: 10px 15px;
+                cursor: pointer;
+                background: #f0f0f0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            
+            /* Overlay du modal */
+            .modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                z-index: 1000;
+            }
+            
+            /* Modal */
+            .modal {
+                position: fixed;
+                top: 0;
+                left: -300px;
+                width: 280px;
+                height: 100%;
+                background: white;
+                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+                transition: left 0.3s ease;
+                z-index: 1001;
+                overflow-y: auto;
+            }
+            
+            .modal.active {
+                left: 0;
+            }
+            
+            .modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+                background: #f8f8f8;
+            }
+            
+            .modal-header h2 {
+                margin: 0;
+                font-size: 1.5rem;
+            }
+            
+            .close-btn {
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .modal-content {
+                padding: 15px;
+            }
+            
+            .modal-content ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .modal-content li {
+                margin-bottom: 10px;
+            }
+            
+            .modal-content a {
+                text-decoration: none;
+                color: #333;
+                display: block;
+                padding: 8px 5px;
+                border-radius: 4px;
+            }
+            
+            .modal-content a:hover {
+                background: #f0f0f0;
+            }
+            
+            .modal-content ul ul {
+                padding-left: 15px;
+            }
+        </style>
+        `;
+
+        // Récupération des éléments du DOM
+        const menuButton = document.getElementById('menuButton');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modal = document.getElementById('modal');
+        const closeButton = document.getElementById('closeButton');
+
+        // Fonction pour ouvrir le modal
+        function openModal() {
+            modal.classList.add('active');
+            modalOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Empêcher le défilement
+        }
+
+        // Fonction pour fermer le modal
+        function closeModal() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modalOverlay.style.display = 'none';
+            }, 300); // Attendre la fin de l'animation
+            document.body.style.overflow = ''; // Rétablir le défilement
+        }
+
+        // Ajout des écouteurs d'événements
+        menuButton.addEventListener('click', openModal);
+        closeButton.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+
+        // Fermer le modal avec la touche Échap
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</script>
+
+
+    <script>
+        // Fonction pour créer et afficher la modale d'avertissement
+        function showBetaWarning() {
+            // Vérifier si l'utilisateur a déjà fait son choix
+            if (localStorage.getItem('betaChoiceMade1')) {
+                return;
+            }
+
+            // Créer l'élément modale
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            modal.style.zIndex = '1000';
+
+            // Créer le contenu de la modale
+            const modalContent = document.createElement('div');
+            modalContent.style.backgroundColor = 'white';
+            modalContent.style.padding = '25px';
+            modalContent.style.borderRadius = '10px';
+            modalContent.style.maxWidth = '500px';
+            modalContent.style.textAlign = 'center';
+            modalContent.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+
+            // Ajouter le titre
+            const title = document.createElement('h2');
+            title.textContent = 'Version Mobile Bêta';
+            title.style.color = '#e67e22';
+            title.style.marginTop = '0';
+            modalContent.appendChild(title);
+
+            // Ajouter le message
+            const message = document.createElement('p');
+            message.textContent = 'Vous vous apprêtez à utiliser une version modifiée pour être plus facilement utilisable sur mobile. Celle-ci peut ne pas être à jours et contenir des bugs.';
+            modalContent.appendChild(message);
+
+            const question = document.createElement('p');
+            question.textContent = 'Souhaitez-vous continuer sur la version bêta amateur ou être redirigé vers la version normale et officielle du site ?';
+            modalContent.appendChild(question);
+
+            // Créer les boutons
+            const buttonsContainer = document.createElement('div');
+            buttonsContainer.style.marginTop = '20px';
+            buttonsContainer.style.display = 'flex';
+            buttonsContainer.style.justifyContent = 'center';
+            buttonsContainer.style.gap = '15px';
+
+            const stayButton = document.createElement('button');
+            stayButton.textContent = 'Rester sur la version bêta modifiée';
+            stayButton.style.padding = '10px 20px';
+            stayButton.style.border = 'none';
+            stayButton.style.borderRadius = '5px';
+            stayButton.style.cursor = 'pointer';
+            stayButton.style.fontWeight = 'bold';
+            stayButton.style.backgroundColor = '#3498db';
+            stayButton.style.color = 'white';
+            stayButton.onmouseover = function() { this.style.backgroundColor = '#2980b9'; };
+            stayButton.onmouseout = function() { this.style.backgroundColor = '#3498db'; };
+
+            const leaveButton = document.createElement('button');
+            leaveButton.textContent = 'Aller à la version officielle';
+            leaveButton.style.padding = '10px 20px';
+            leaveButton.style.border = 'none';
+            leaveButton.style.borderRadius = '5px';
+            leaveButton.style.cursor = 'pointer';
+            leaveButton.style.fontWeight = 'bold';
+            leaveButton.style.backgroundColor = '#e74c3c';
+            leaveButton.style.color = 'white';
+            leaveButton.onmouseover = function() { this.style.backgroundColor = '#c0392b'; };
+            leaveButton.onmouseout = function() { this.style.backgroundColor = '#e74c3c'; };
+
+            // Ajouter les boutons au conteneur
+            buttonsContainer.appendChild(stayButton);
+            buttonsContainer.appendChild(leaveButton);
+
+            // Ajouter le conteneur de boutons à la modale
+            modalContent.appendChild(buttonsContainer);
+
+            // Ajouter le contenu à la modale
+            modal.appendChild(modalContent);
+
+            // Ajouter la modale au document
+            document.body.appendChild(modal);
+
+            // Gestion des événements des boutons
+            stayButton.addEventListener('click', function() {
+                localStorage.setItem('betaChoiceMade1', 'true');
+                document.body.removeChild(modal);
+            });
+
+            leaveButton.addEventListener('click', function() {
+                // localStorage.setItem('betaChoiceMade1', 'true');
+                document.body.removeChild(modal);
+                // Redirection vers la version normale - Remplacez par votre URL
+                // alert("Redirection vers la version normale...");
+                window.location.href='https://mpsilamartin.github.io';
+            });
+        }
+
+        // Exécuter la fonction lorsque le DOM est chargé
+        document.addEventListener('DOMContentLoaded', showBetaWarning);
+        </script>
