@@ -1,31 +1,42 @@
 
-name: Replace HTML 
+name: Replace URL Pattern
+
 on:
   schedule:
     - cron: '0 */12 * * *'  # Toutes les 12 heures à la 0ème minute
-  workflow_dispatch:  # Permet de déclencher manuellement
+  workflow_dispatch:      # Permet de déclencher manuellement
+    inputs:
+      old-url:
+        description: 'Ancienne URL à remplacer'
+        required: false
+      new-url:
+        description: 'Nouvelle URL de remplacement'
+        required: false
 
 jobs:
-  replace-links:
+  replace-url:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # Permission nécessaire pour pousser les modifications
+    env:
+      DEFAULT_OLD_URL: 'mpsilamartin.github.io/'
+      DEFAULT_NEW_URL: 'mpsi-lmm-mobile.github.io/'
+      OLD_URL: ${{ github.event.inputs.old-url || env.DEFAULT_OLD_URL }}
+      NEW_URL: ${{ github.event.inputs.new-url || env.DEFAULT_NEW_URL }}
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Replace HTML links
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: 'mpsilamartin.github.io/'
-          replace: 'mpsi-lmm-mobile.github.io/'
-          include: '/*.html, **/*.html, **/*.css'
-          exclude: '.github/workflows/**'  # Évite de modifier les fichiers de workflow
-          regex: false
+    - name: Replace occurrences
+      run: |
+        # Exclure le dossier .github/workflows et rechercher dans les fichiers pertinents
+        find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.css" \) \
+          -not -path "./.github/workflows/*" \
+          -exec sed -i "s|$(echo "$OLD_URL" | sed 's/[\&/]/\\&/g')|$(echo "$NEW_URL" | sed 's/[\&/]/\\&/g')|g" {} +
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'chore: Replace exemple.com links with ex2.com/'
-          commit_user_name: 'GitHub Actions'
-          commit_user_email: 'actions@github.com'
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git diff --staged --quiet || git commit -m "Replace URL: $OLD_URL → $NEW_URL [skip ci]"
+        git push
