@@ -259,110 +259,35 @@
 
 
     <script>
-        // Fonction pour créer et afficher la modale d'avertissement
-        function showBetaWarning() {
-            // Vérifier si l'utilisateur a déjà fait son choix
-            if (localStorage.getItem('betaChoiceMade1')) {
-                return;
-            }
 
-            // Créer l'élément modale
-            const modal = document.createElement('div');
-            modal.style.position = 'fixed';
-            modal.style.top = '0';
-            modal.style.left = '0';
-            modal.style.width = '100%';
-            modal.style.height = '100%';
-            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-            modal.style.display = 'flex';
-            modal.style.justifyContent = 'center';
-            modal.style.alignItems = 'center';
-            modal.style.zIndex = '1000';
+function handleConfirmation(confirmationMessage, redirectionLink, cookieKey) {
+  // Vérifier si l'utilisateur a déjà fait son choix
+  const userChoice = localStorage.getItem(cookieKey);
 
-            // Créer le contenu de la modale
-            const modalContent = document.createElement('div');
-            modalContent.style.backgroundColor = 'white';
-            modalContent.style.padding = '25px';
-            modalContent.style.borderRadius = '10px';
-            modalContent.style.maxWidth = '500px';
-            modalContent.style.textAlign = 'center';
-            modalContent.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+  if (!userChoice) {
+    // Si aucun choix n'a été fait, afficher la boîte de dialogue
+    const isConfirmed = confirm(confirmationMessage);
 
-            // Ajouter le titre
-            const title = document.createElement('h2');
-            title.textContent = 'Version Mobile Bêta';
-            title.style.color = '#e67e22';
-            title.style.marginTop = '0';
-            modalContent.appendChild(title);
-
-            // Ajouter le message
-            const message = document.createElement('p');
-            message.textContent = 'Vous vous apprêtez à utiliser une version modifiée pour être plus facilement utilisable sur mobile. Celle-ci peut ne pas être à jours et contenir des bugs.';
-            modalContent.appendChild(message);
-
-            const question = document.createElement('p');
-            question.textContent = 'Souhaitez-vous continuer sur la version bêta amateur ou être redirigé vers la version normale et officielle du site ?';
-            modalContent.appendChild(question);
-
-            // Créer les boutons
-            const buttonsContainer = document.createElement('div');
-            buttonsContainer.style.marginTop = '20px';
-            buttonsContainer.style.display = 'flex';
-            buttonsContainer.style.justifyContent = 'center';
-            buttonsContainer.style.gap = '15px';
-
-            const stayButton = document.createElement('button');
-            stayButton.textContent = 'Rester sur la version bêta modifiée';
-            stayButton.style.padding = '10px 20px';
-            stayButton.style.border = 'none';
-            stayButton.style.borderRadius = '5px';
-            stayButton.style.cursor = 'pointer';
-            stayButton.style.fontWeight = 'bold';
-            stayButton.style.backgroundColor = '#3498db';
-            stayButton.style.color = 'white';
-            stayButton.onmouseover = function() { this.style.backgroundColor = '#2980b9'; };
-            stayButton.onmouseout = function() { this.style.backgroundColor = '#3498db'; };
-
-            const leaveButton = document.createElement('button');
-            leaveButton.textContent = 'Aller à la version officielle';
-            leaveButton.style.padding = '10px 20px';
-            leaveButton.style.border = 'none';
-            leaveButton.style.borderRadius = '5px';
-            leaveButton.style.cursor = 'pointer';
-            leaveButton.style.fontWeight = 'bold';
-            leaveButton.style.backgroundColor = '#e74c3c';
-            leaveButton.style.color = 'white';
-            leaveButton.onmouseover = function() { this.style.backgroundColor = '#c0392b'; };
-            leaveButton.onmouseout = function() { this.style.backgroundColor = '#e74c3c'; };
-
-            // Ajouter les boutons au conteneur
-            buttonsContainer.appendChild(stayButton);
-            buttonsContainer.appendChild(leaveButton);
-
-            // Ajouter le conteneur de boutons à la modale
-            modalContent.appendChild(buttonsContainer);
-
-            // Ajouter le contenu à la modale
-            modal.appendChild(modalContent);
-
-            // Ajouter la modale au document
-            document.body.appendChild(modal);
-
-            // Gestion des événements des boutons
-            stayButton.addEventListener('click', function() {
-                localStorage.setItem('betaChoiceMade1', 'true');
-                document.body.removeChild(modal);
-            });
-
-            leaveButton.addEventListener('click', function() {
-                // localStorage.setItem('betaChoiceMade1', 'true');
-                document.body.removeChild(modal);
-                // Redirection vers la version normale - Remplacez par votre URL
-                // alert("Redirection vers la version normale...");
-                window.location.href='https://mpsilamartin.github.io';
-            });
-        }
-
-        // Exécuter la fonction lorsque le DOM est chargé
-        document.addEventListener('DOMContentLoaded', showBetaWarning);
+    if (isConfirmed) {
+      // L'utilisateur a accepté, on enregistre le choix
+      localStorage.setItem(cookieKey, 'true');
+      console.log(`Choix enregistré pour la clé '${cookieKey}' : Accepté.`);
+    } else {
+      // L'utilisateur a refusé, on enregistre le choix et on redirige
+      localStorage.setItem(cookieKey, 'false');
+      console.log(`Choix enregistré pour la clé '${cookieKey}' : Refusé. Redirection en cours...`);
+      window.location.href = redirectionLink;
+    }
+  } else {
+    // Le choix a déjà été fait, on ne fait rien
+    console.log(`Le choix pour la clé '${cookieKey}' a déjà été enregistré : ${userChoice}.`);
+  }
+}
+        
+handleConfirmation(
+"Vous êtes sûr le site web amateur de MPSILaMartin ayant pour objectif d'améliorer l'expérience mobile. Rester ici ?",
+'https://mpsilamartin.github.io',
+"stay here"
+)
+            
         </script>
