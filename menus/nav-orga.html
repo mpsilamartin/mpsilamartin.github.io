@@ -63,8 +63,9 @@
     </div>
 </div>
 
+
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+  /**  document.addEventListener('DOMContentLoaded', function() {
         const menuButton = document.getElementById('menuButton');
         const closeButton = document.getElementById('closeButton');
         const modalOverlay = document.getElementById('modalOverlay');
@@ -108,7 +109,151 @@
                 closeModal();
             }
         });
-    });
+    });*/
+
+        // Ajout des styles CSS via JavaScript
+        document.head.innerHTML += `
+        <style>
+            /* Styles de base */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+            }
+            
+            .menu-btn {
+                font-size: 24px;
+                padding: 10px 15px;
+                cursor: pointer;
+                background: #f0f0f0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            
+            /* Overlay du modal */
+            .modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                z-index: 1000;
+            }
+            
+            /* Modal */
+            .modal {
+                position: fixed;
+                top: 0;
+                left: -300px;
+                width: 280px;
+                height: 100%;
+                background: white;
+                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+                transition: left 0.3s ease;
+                z-index: 1001;
+                overflow-y: auto;
+            }
+            
+            .modal.active {
+                left: 0;
+            }
+            
+            .modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+                background: #f8f8f8;
+            }
+            
+            .modal-header h2 {
+                margin: 0;
+                font-size: 1.5rem;
+            }
+            
+            .close-btn {
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .modal-content {
+                padding: 15px;
+            }
+            
+            .modal-content ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .modal-content li {
+                margin-bottom: 10px;
+            }
+            
+            .modal-content a {
+                text-decoration: none;
+                color: #333;
+                display: block;
+                padding: 8px 5px;
+                border-radius: 4px;
+            }
+            
+            .modal-content a:hover {
+                background: #f0f0f0;
+            }
+            
+            .modal-content ul ul {
+                padding-left: 15px;
+            }
+        </style>
+        `;
+
+        // Récupération des éléments du DOM
+        const menuButton = document.getElementById('menuButton');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modal = document.getElementById('modal');
+        const closeButton = document.getElementById('closeButton');
+
+        // Fonction pour ouvrir le modal
+        function openModal() {
+            modal.classList.add('active');
+            modalOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Empêcher le défilement
+        }
+
+        // Fonction pour fermer le modal
+        function closeModal() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modalOverlay.style.display = 'none';
+            }, 300); // Attendre la fin de l'animation
+            document.body.style.overflow = ''; // Rétablir le défilement
+        }
+
+        // Ajout des écouteurs d'événements
+        menuButton.addEventListener('click', openModal);
+        closeButton.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+
+        // Fermer le modal avec la touche Échap
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
 </script>
 
 
@@ -116,7 +261,7 @@
         // Fonction pour créer et afficher la modale d'avertissement
         function showBetaWarning() {
             // Vérifier si l'utilisateur a déjà fait son choix
-            if (localStorage.getItem('betaChoiceMade')) {
+            if (localStorage.getItem('betaChoiceMade1')) {
                 return;
             }
 
@@ -204,12 +349,12 @@
 
             // Gestion des événements des boutons
             stayButton.addEventListener('click', function() {
-                localStorage.setItem('betaChoiceMade', 'true');
+                localStorage.setItem('betaChoiceMade1', 'true');
                 document.body.removeChild(modal);
             });
 
             leaveButton.addEventListener('click', function() {
-                // localStorage.setItem('betaChoiceMade', 'true');
+                // localStorage.setItem('betaChoiceMade1', 'true');
                 document.body.removeChild(modal);
                 // Redirection vers la version normale - Remplacez par votre URL
                 // alert("Redirection vers la version normale...");
