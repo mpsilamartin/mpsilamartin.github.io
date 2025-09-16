@@ -1,4 +1,3 @@
-
 name: Replace URL Pattern
 
 on:
@@ -8,19 +7,17 @@ on:
     inputs:
       old-url:
         description: 'Ancienne URL à remplacer'
-        required: false
+        default: 'mpsilamartin.github.io/'
       new-url:
         description: 'Nouvelle URL de remplacement'
-        required: false
+        default: 'mpsi-lmm-mobile.github.io/'
 
 jobs:
   replace-url:
     runs-on: ubuntu-latest
     env:
-      DEFAULT_OLD_URL: 'mpsilamartin.github.io/'
-      DEFAULT_NEW_URL: 'mpsi-lmm-mobile.github.io/'
-      OLD_URL: ${{ github.event.inputs.old-url || env.DEFAULT_OLD_URL }}
-      NEW_URL: ${{ github.event.inputs.new-url || env.DEFAULT_NEW_URL }}
+      OLD_URL: ${{ github.event.inputs.old-url }}
+      NEW_URL: ${{ github.event.inputs.new-url }}
 
     steps:
     - name: Checkout code
