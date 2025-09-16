@@ -238,6 +238,7 @@ a[href$=".swf"]{
           overflow: visible;
         height: 30px;
 }
+
 */
 
 #hideoverflow { 
@@ -325,7 +326,7 @@ a[href$=".swf"]{
 }
 
 
-/* added */
+/* added 
 
     .logo {
         font-size: 1.5rem;
@@ -446,3 +447,4 @@ a[href$=".swf"]{
             width: 100%;
         }
 	}
+*/
