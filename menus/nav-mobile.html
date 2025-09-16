@@ -247,6 +247,17 @@
         closeButton.addEventListener('click', closeModal);
         modalOverlay.addEventListener('click', closeModal);
 
+document.addEventListener('mousemove', function(event) {
+    const edgeThreshold = 5; // Le nombre de pixels à partir du bord que l'on considère comme le bord.
+    
+    if (event.clientX < edgeThreshold) {
+        console.log('La souris est sur le bord gauche de l\'écran !');
+        // Placez ici le code à exécuter lorsque la souris est au bord.
+openModal();
+    }
+});
+
+
         // Fermer le modal avec la touche Échap
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
