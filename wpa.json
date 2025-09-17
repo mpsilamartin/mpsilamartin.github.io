@@ -1,0 +1,28 @@
+{
+  "name": "MPSI La Martinière WebApp",
+  "short_name": "LMM.MPSI",
+  "description": "Version WebApp de MPSILaMartin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#eeeeff",
+  "icons": [
+    {
+      "src": "/img/favicon.png",
+      "sizes": "650x650",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/Screenshot_2025-09-17-07-03-19-431_org.mozilla.firefox.png",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/img/Screenshot_2025-09-17-07-03-44-813_org.mozilla.firefox.png",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
