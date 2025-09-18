@@ -278,6 +278,31 @@ openModal();
 });
 
 
+
+
+let startX = 0;
+let endX = 0;
+const element = document.getElementById('myElement'); // Remplacez par votre sélecteur
+
+element.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+element.addEventListener('touchend', (e) => {
+  endX = e.changedTouches[0].clientX;
+  
+  // Définit une distance minimale pour éviter les clics accidentels
+  const minSwipeDistance = 50; 
+
+  if (startX - endX > minSwipeDistance) {
+    console.log('Balayage vers la gauche détecté !');
+openModal();
+    // Mettez ici le code à exécuter, par exemple une animation ou un changement de page
+  }
+});
+
+
+
         // Fermer le modal avec la touche Échap
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
@@ -288,38 +313,3 @@ openModal();
 
 </script>
 
-
-    <script>
-
-function handleConfirmation(confirmationMessage, redirectionLink, cookieKey) {
-  // Vérifier si l'utilisateur a déjà fait son choix
-  const userChoice = localStorage.getItem(cookieKey);
-
-  if (!userChoice) {
-    // Si aucun choix n'a été fait, afficher la boîte de dialogue
-    const isConfirmed = confirm(confirmationMessage);
-
-    if (isConfirmed) {
-      // L'utilisateur a accepté, on enregistre le choix
-      localStorage.setItem(cookieKey, 'true');
-      console.log(`Choix enregistré pour la clé '${cookieKey}' : Accepté.`);
-    } else {
-      // L'utilisateur a refusé, on enregistre le choix et on redirige
-      localStorage.setItem(cookieKey, 'false');
-      console.log(`Choix enregistré pour la clé '${cookieKey}' : Refusé. Redirection en cours...`);
-      window.location.href = redirectionLink;
-    }
-  } else {
-    // Le choix a déjà été fait, on ne fait rien
-    console.log(`Le choix pour la clé '${cookieKey}' a déjà été enregistré : ${userChoice}.`);
-  }
-}
-    
-                $(document).ready(function(){    
-handleConfirmation(
-"Vous êtes sur le site web amateur de MPSILaMartin ayant pour objectif d'améliorer l'expérience mobile. Rester ici ?",
-'https://mpsilamartin.github.io',
-"stay here"
-)      });
-            
-        </script>
