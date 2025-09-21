@@ -1,11 +1,287 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Hors ligne</title>
+  <meta charset="UTF-8" />
+  <title>MPSI Hors Connexion</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    #game {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to bottom, #222, #000);
+    }
+
+    #scoreboard {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    #scorePlus {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      color: lime;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    #level {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 16px;
+      opacity: 0.7;
+    }
+
+    .plot {
+      position: absolute;
+      bottom: 20px;
+      left: calc(50% - 30px);
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 80px solid orange;
+      transition: left 0.3s ease-in-out, transform 0.2s ease;
+    }
+
+    .plot::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: -25px;
+      width: 50px;
+      height: 10px;
+      background: white;
+    }
+
+    .plot.tilt-left { transform: rotate(-10deg); }
+    .plot.tilt-right { transform: rotate(10deg); }
+
+    .formula {
+      position: absolute;
+      color: white;
+      font-size: 18px;
+      white-space: nowrap;
+      text-shadow: 1px 1px 2px black;
+      user-select: none;
+    }
+
+    .bonus {
+      color: lime;
+      font-weight: bold;
+    }
+
+    #menu {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #ff8000;
+      color: white;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #ffaa00;
+    }
+  </style>
 </head>
 <body>
-  <h1>Pas de connexion 😢</h1>
-  <p>Veuillez vous reconnecter à Internet pour continuer.</p>
+  <div id="game">
+    <div id="menu">
+      <h1>Erreur: page non disponible hors ligne</h1>
+      <p>Consulte une première fois la page en étant connecté à internet. (ou pert ton temps ici)</p>
+      <p>Choisis ton niveau :</p>
+      <button class="btn" onclick="startGame('easy')">Facile</button>
+      <button class="btn" onclick="startGame('normal')">Normal</button>
+      <button class="btn" onclick="startGame('hard')">Difficile</button>
+    </div>
+    <div id="scoreboard">Score : 0</div>
+    <div id="scorePlus">+1</div>
+    <div id="level"></div>
+    <div class="plot" id="plot"></div>
+  </div>
+
+  <script>
+    const plot = document.getElementById("plot");
+    const game = document.getElementById("game");
+    const menu = document.getElementById("menu");
+    const scoreDisplay = document.getElementById("scoreboard");
+    const levelDisplay = document.getElementById("level");
+    const scorePlus = document.getElementById("scorePlus");
+
+    const lanes = [16.66, 49.99, 83.33];
+    let currentLane = 1;
+    let formulas = [];
+    let gameInterval, formulaInterval;
+    let score = 0;
+    let speed = 2;
+    let difficulty = "normal";
+    let formulaRate = 1200;
+    let baseSpeed = 2;
+
+    const formulasHard = [
+      "∫₀^∞ e^(−x²) dx", "∇·𝐸 = ρ/ε₀", "limₙ→∞ (1+1/n)^n = e",
+      "d/dx(x²+1)/(x−1)", "Tr(AB) = Tr(BA)", "∑ₙ₌₁^∞ 1/n² = π²/6",
+      "det(A) ≠ 0 ⟺ A⁻¹ existe", "d²y/dx² + y = 0", "∑ xⁿ/n!",
+      "⟨ψ|H|ψ⟩", "∇²φ = 0", "lim x→∞ ln(x)/x = 0"
+    ];
+
+    const formulasNormal = [
+      "∫ x dx", "∑ 1/n", "ln(x)", "d/dx(x²)", "lim x→0 sin(x)/x", "xⁿ ln(x)"
+    ];
+
+    const formulasEasy = [
+      "x² + 2x + 1", "a² + b² = c²", "√(x)", "x³ − 3x", "sin(x)", "cos(x)"
+    ];
+
+    function startGame(level) {
+      difficulty = level;
+      menu.style.display = "none";
+      score = 0;
+      updateScore();
+      currentLane = 1;
+      plot.style.left = `calc(${lanes[currentLane]}% - 30px)`;
+
+      baseSpeed = level === "easy" ? 1.5 : level === "normal" ? 2.5 : 3.5;
+      formulaRate = level === "easy" ? 1800 : level === "normal" ? 1200 : 800;
+
+      gameInterval = setInterval(updateFormulas, 16);
+      formulaInterval = setInterval(spawnFormula, formulaRate);
+    }
+
+    function updateScore() {
+      scoreDisplay.textContent = "Score : " + score;
+      scorePlus.style.opacity = 1;
+      scorePlus.style.transform = "translateX(-50%) translateY(-20px)";
+      setTimeout(() => {
+        scorePlus.style.opacity = 0;
+        scorePlus.style.transform = "translateX(-50%) translateY(0)";
+      }, 300);
+
+      speed = baseSpeed + Math.floor(score / 10) * 0.5;
+      levelDisplay.textContent = "Vitesse : " + speed.toFixed(1);
+    }
+
+    function movePlot(dir) {
+      if (dir === "left" && currentLane > 0) {
+        currentLane--;
+        plot.classList.add("tilt-left");
+        setTimeout(() => plot.classList.remove("tilt-left"), 200);
+      }
+      if (dir === "right" && currentLane < 2) {
+        currentLane++;
+        plot.classList.add("tilt-right");
+        setTimeout(() => plot.classList.remove("tilt-right"), 200);
+      }
+      plot.style.left = `calc(${lanes[currentLane]}% - 30px)`;
+    }
+
+    function spawnFormula() {
+      const el = document.createElement("div");
+      el.classList.add("formula");
+
+      const isBonus = Math.random() < 0.15;
+      const lane = Math.floor(Math.random() * 3);
+      el.dataset.lane = lane;
+      el.style.left = `calc(${lanes[lane]}% - 30px)`;
+      el.style.top = "0px";
+
+      const f = difficulty === "easy" ? formulasEasy :
+                difficulty === "normal" ? formulasNormal : formulasHard;
+
+      el.textContent = f[Math.floor(Math.random() * f.length)];
+
+      if (isBonus) {
+        el.classList.add("bonus");
+        el.textContent += " ★";
+      }
+
+      // Animate rotation
+      if (Math.random() < 0.4) {
+        el.style.transform = "rotate(" + (Math.random() * 20 - 10) + "deg)";
+      }
+
+      game.appendChild(el);
+      formulas.push(el);
+    }
+
+    function updateFormulas() {
+      for (let i = formulas.length - 1; i >= 0; i--) {
+        const f = formulas[i];
+        let top = parseFloat(f.style.top);
+        top += speed;
+        f.style.top = top + "px";
+
+        if (top > window.innerHeight - 100) {
+          const isSameLane = parseInt(f.dataset.lane) === currentLane;
+          const isBonus = f.classList.contains("bonus");
+
+          if (isSameLane) {
+            if (isBonus) {
+              score += 3;
+              f.remove();
+              formulas.splice(i, 1);
+              updateScore();
+            } else {
+              endGame();
+              return;
+            }
+          } else {
+            f.remove();
+            formulas.splice(i, 1);
+            score++;
+            updateScore();
+          }
+        }
+      }
+    }
+
+    function endGame() {
+      clearInterval(gameInterval);
+      clearInterval(formulaInterval);
+      formulas.forEach(f => f.remove());
+      formulas = [];
+      alert("💥 Collision ! Score final : " + score);
+      menu.style.display = "block";
+    }
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "ArrowLeft" || e.key === "a") movePlot("left");
+      if (e.key === "ArrowRight" || e.key === "d") movePlot("right");
+    });
+
+    game.addEventListener("click", e => {
+      const x = e.clientX;
+      if (x < window.innerWidth / 2) movePlot("left");
+      else movePlot("right");
+    });
+  </script>
 </body>
 </html>
