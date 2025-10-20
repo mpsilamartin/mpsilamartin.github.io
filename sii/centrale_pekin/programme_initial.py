@@ -22,6 +22,7 @@ def on_forever():
     # distance = maqueenPlusV2.read_ultrasonic(DigitalPin.P13, DigitalPin.P14)
     # si maqueen Plus V3
     distance = matrixLidarDistance.matrix_point_output(matrixLidarDistance.Addr.ADDR4, 3, 3)
+    distance = distance/10
     # si maqueen V3
     L1 = maqueenPlusV2.read_line_sensor_state(maqueenPlusV2.MyEnumLineSensor.SENSOR_L1)
     M = maqueenPlusV2.read_line_sensor_state(maqueenPlusV2.MyEnumLineSensor.SENSOR_M)
